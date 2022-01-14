@@ -2,6 +2,7 @@ import 'package:domus/provider/getit.dart';
 import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
+import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:flutter/material.dart';
 
 void main() async {
@@ -16,7 +17,6 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   ThemeMode themeMode = ThemeMode.system;
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -24,8 +24,62 @@ class _MyAppState extends State<MyApp> {
       navigatorKey: getIt<NavigationService>().navigatorKey,
       debugShowCheckedModeBanner: false,
       themeMode: themeMode,
+      theme: ThemeData(
+        fontFamily: 'Nato Sans',
+        colorScheme: const ColorScheme.light(
+          primary: Color(0xFFF2F2F2),
+          secondary: Color(0xFFF4AE47),
+          surface: Color(0xFFC4C4C4),
+          background: Color(0xFFFFFFFF),
+          error: Color(0xFFB00020),
+          onPrimary: Colors.white,
+          onSecondary: Colors.white,
+          onSurface: Colors.black,
+          onBackground: Colors.black,
+          onError: Colors.white,
+          brightness: Brightness.light,
+        ),
+        textTheme: TextTheme(
+          headline1: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.bold,
+            fontSize: 32,
+            color: Color(0xFF464646),
+          ),
+          headline2: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w700,
+            fontSize: 18,
+            color: Color(0xFF464646),
+          ),
+          headline3: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w400,
+            fontSize: 18,
+            color: Color(0xFF464646),
+          ),
+          headline4: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w400,
+            fontSize: 18,
+            color: Color(0xFFBDBDBD),
+          ),
+          headline5: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w400,
+            fontSize: 12,
+            color: Color(0xFFBDBDBD),
+          ),
+          headline6: TextStyle(
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.w400,
+            fontSize: 14,
+            color: Color(0xFF464646),
+          ),
+        ),
+      ),
       routes: routes,
-      home: HomeScreen(),
+      home: SmartLight(),
     );
   }
 }

@@ -15,31 +15,75 @@ class HomeScreen extends StatelessWidget {
     return BaseView<HomeScreenViewModel>(
         onModelReady: (model) => {},
         builder: (context, model, child) {
-          return Scaffold(
-            appBar: AppBar(
-              automaticallyImplyLeading: false,
-              title: Center(child: Text('Lossy')),
-            ),
-            body: PageView(controller: model.pageController, children: [
-              SingleChildScrollView(
-                child: Body(),
-              ),
-            ]),
-            floatingActionButton: ElevatedButton(
-              onPressed: () {},
-              child: Text(
-                'Add Weight here',
-                style: TextStyle(
-                  fontSize: 15,
-                  color: ThemeData().scaffoldBackgroundColor,
+          return DefaultTabController(
+            length: 3,
+            child: Scaffold(
+              appBar: AppBar(
+                toolbarHeight: 100,
+                //centerTitle: true,
+                elevation: 0,
+                title: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        'Hi, Lex',
+                        style: Theme.of(context).textTheme.headline1,
+                      ),
+                      Image.asset('assets/icons/profile_img.png'),
+                    ],
+                  ),
                 ),
+
+                leadingWidth: 300,
+                bottom: PreferredSize(
+                    child: TabBar(
+                        isScrollable: true,
+                        unselectedLabelColor: Colors.white.withOpacity(0.3),
+                        indicatorColor: Color(0xFF464646),
+                        tabs: [
+                          Tab(
+                            child: Text(
+                              'Living Room',
+                              style: Theme.of(context).textTheme.headline3,
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'Dining',
+                              style: Theme.of(context).textTheme.headline4,
+                            ),
+                          ),
+                          Tab(
+                            child: Text(
+                              'Kitchen',
+                              style: Theme.of(context).textTheme.headline4,
+                            ),
+                          ),
+                        ]),
+                    preferredSize: Size.fromHeight(70.0)),
               ),
-              style: ElevatedButton.styleFrom(
-                shape: StadiumBorder(),
-                padding: EdgeInsets.all(10),
+              body: TabBarView(
+                children: <Widget>[
+                  Body(),
+                  Container(
+                    child: Center(
+                      child: Text(
+                        'To be Built Soon',
+                        style: Theme.of(context).textTheme.headline3,
+                      ),
+                    ),
+                  ),
+                  Container(
+                    child: Center(
+                      child: Text('under construction'),
+                    ),
+                  ),
+                ],
               ),
+              bottomNavigationBar: CustomBottomNavBar(model),
             ),
-            bottomNavigationBar: CustomBottomNavBar(model),
           );
         });
   }
