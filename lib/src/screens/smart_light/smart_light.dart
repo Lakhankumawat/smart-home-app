@@ -1,3 +1,5 @@
+import 'package:domus/provider/base_view.dart';
+import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:sliding_up_panel/sliding_up_panel.dart';
 import 'components/body.dart';
@@ -10,18 +12,36 @@ class SmartLight extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Material(
-      child: SlidingUpPanel(
-        backdropEnabled: true,
-        maxHeight: 700,
-        color: Color(0xFFF2F2F2),
-        boxShadow: [],
-        body: Scaffold(
-          backgroundColor: Color(0xFFF2F2F2),
-          body: Body(),
-        ),
-        panel: ColorPickerSheet(context: context),
-      ),
-    );
+    return BaseView<SmartLightViewModel>(
+        onModelReady: (model) => {},
+        builder: (context, model, child) {
+          return Material(
+            child: SlidingUpPanel(
+              controller: model.pc,
+              backdropEnabled: true,
+              maxHeight: model.isTappedOnColor ? 380 : 700,
+              color: Color(0xFFF2F2F2),
+              boxShadow: [],
+
+              ///no Shadow
+              onPanelClosed: model.onPanelClosed,
+              body: Scaffold(
+                backgroundColor: Color(0xFFF2F2F2),
+                body: Body(
+                  model: model,
+                ),
+              ),
+              panel: model.isTappedOnColor
+                  ? ColorPickerSheet(
+                      context: context,
+                      model: model,
+                    )
+                  : ExpandableBottomSheet(
+                      context: context,
+                      model: model,
+                    ),
+            ),
+          );
+        });
   }
 }

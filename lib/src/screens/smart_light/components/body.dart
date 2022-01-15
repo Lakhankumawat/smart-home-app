@@ -1,7 +1,10 @@
+import 'package:domus/src/screens/smart_light/smart_light.dart';
+import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
-  Body({Key? key}) : super(key: key);
+  final SmartLightViewModel model;
+  Body({Key? key, required this.model}) : super(key: key);
 
   final List<bool> isSelected = [true, false];
 
@@ -49,8 +52,10 @@ class Body extends StatelessWidget {
                     inactiveTrackColor: Colors.white,
                     activeColor: Colors.white,
                     activeTrackColor: Color(0xFF464646),
-                    value: true,
-                    onChanged: (value) {},
+                    value: model.isLightOff,
+                    onChanged: (value) {
+                      model.lightSwitch(value);
+                    },
                   ),
                   SizedBox(
                     height: 35,
@@ -62,9 +67,12 @@ class Body extends StatelessWidget {
                   SizedBox(
                     height: 10,
                   ),
-                  Image.asset(
-                    'assets/images/color_wheel.png',
-                    height: 30,
+                  InkWell(
+                    onTap: model.showColorPanel,
+                    child: Image.asset(
+                      'assets/images/color_wheel.png',
+                      height: 30,
+                    ),
                   ),
                 ],
               ),
@@ -77,11 +85,16 @@ class Body extends StatelessWidget {
                 ),
 
                 ///todo: Position this image in correct manner
-                Image.asset(
-                  'assets/images/orange.png',
-                  height: 200,
-                  alignment: Alignment.topCenter,
-                ),
+                model.isLightOff
+                    ? Image.asset(
+                        model.lightImage,
+                        height: 200,
+                        alignment: Alignment.topCenter,
+                      )
+                    : SizedBox(
+                        height: 245,
+                        width: 245,
+                      ),
               ],
             ),
           ],

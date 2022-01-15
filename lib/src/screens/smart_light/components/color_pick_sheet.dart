@@ -1,9 +1,12 @@
+import 'package:domus/src/models/color_model.dart';
 import 'package:domus/src/screens/smart_light/components/color_dot.dart';
 import 'package:domus/src/screens/smart_light/components/reusable_buttons.dart';
+import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:domus/constant/constant.dart';
 
-Widget ColorPickerSheet({required BuildContext context}) {
+Widget ColorPickerSheet(
+    {required BuildContext context, required SmartLightViewModel model}) {
   BorderRadiusGeometry radius = BorderRadius.only(
     topLeft: Radius.circular(24.0),
     topRight: Radius.circular(24.0),
@@ -58,16 +61,30 @@ Widget ColorPickerSheet({required BuildContext context}) {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
-            children: Constants.dotColors1
-                .map((e) =>
-                    ColorDot(context: context, isSelected: true, dotColor: e))
+            children: Constants.colors
+                .map(
+                  (e) => ColorDot(
+                    index: e.index,
+                    context: context,
+                    isSelected: e.index == model.selectedIndex,
+                    dotColor: e.color,
+                    model: model,
+                  ),
+                )
                 .toList(),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: Constants.dotColors2
-                .map((e) =>
-                    ColorDot(context: context, isSelected: false, dotColor: e))
+                .map(
+                  (e) => ColorDot(
+                    index: e.value,
+                    context: context,
+                    isSelected: false,
+                    dotColor: e,
+                    model: model,
+                  ),
+                )
                 .toList(),
           ),
           SizedBox(
@@ -79,14 +96,25 @@ Widget ColorPickerSheet({required BuildContext context}) {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: ResuableButton(
-                      active: false, buttonText: 'Cancel', context: context),
+                      active: false,
+                      buttonText: 'Cancel',
+                      context: context,
+                      onPress: () {
+                        model.pc.close();
+                      }),
                 ),
               ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: ResuableButton(
-                      active: true, buttonText: 'Set Color', context: context),
+                      active: true,
+                      buttonText: 'Set Color',
+                      context: context,
+                      onPress: () {
+                        model.pc.close();
+                        model.changeImage();
+                      }),
                 ),
               ),
             ],

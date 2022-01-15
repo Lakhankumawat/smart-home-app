@@ -1,11 +1,13 @@
 import 'package:domus/src/screens/smart_light/components/date_container.dart';
 import 'package:domus/src/screens/smart_light/components/reusable_buttons.dart';
 import 'package:domus/src/screens/smart_light/components/time_container.dart';
+import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
 
 import 'advance_setting_container.dart';
 
-Widget ExpandableBottomSheet(BuildContext context) {
+Widget ExpandableBottomSheet(
+    {required BuildContext context, required SmartLightViewModel model}) {
   BorderRadiusGeometry radius = BorderRadius.only(
     topLeft: Radius.circular(24.0),
     topRight: Radius.circular(24.0),
@@ -188,14 +190,20 @@ Widget ExpandableBottomSheet(BuildContext context) {
                 child: Padding(
                   padding: const EdgeInsets.only(right: 8.0),
                   child: ResuableButton(
-                      active: false, buttonText: 'Clear all', context: context),
+                      active: false,
+                      buttonText: 'Clear all',
+                      context: context,
+                      onPress: () {}),
                 ),
               ),
               Expanded(
                 child: Padding(
                   padding: const EdgeInsets.only(left: 8.0),
                   child: ResuableButton(
-                      active: true, buttonText: 'Schedule', context: context),
+                      active: true,
+                      buttonText: 'Schedule',
+                      context: context,
+                      onPress: () {}),
                 ),
               ),
             ],

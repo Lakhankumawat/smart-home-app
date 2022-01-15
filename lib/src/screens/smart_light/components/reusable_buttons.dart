@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 Widget ResuableButton(
     {required String buttonText,
     required BuildContext context,
-    required bool active}) {
+    required bool active,
+    required VoidCallback onPress}) {
   return active
       ? ElevatedButton(
-          onPressed: () {},
+          onPressed: onPress,
           child: Text(
             buttonText,
             style: Theme.of(context).textTheme.headline2!.copyWith(
@@ -22,7 +23,7 @@ Widget ResuableButton(
           ),
         )
       : OutlinedButton(
-          onPressed: () {},
+          onPressed: onPress,
           child: Text(
             buttonText,
             style: Theme.of(context).textTheme.headline2,
