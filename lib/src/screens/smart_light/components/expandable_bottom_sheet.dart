@@ -1,3 +1,4 @@
+import 'package:domus/config/size_config.dart';
 import 'package:domus/src/screens/smart_light/components/date_container.dart';
 import 'package:domus/src/screens/smart_light/components/reusable_buttons.dart';
 import 'package:domus/src/screens/smart_light/components/time_container.dart';
@@ -104,7 +105,7 @@ Widget ExpandableBottomSheet(
             ],
           ),
           SizedBox(
-            height: 20,
+            height: getProportionateScreenHeight(10),
           ),
           SingleChildScrollView(
             scrollDirection: Axis.horizontal,
@@ -129,7 +130,7 @@ Widget ExpandableBottomSheet(
             style: Theme.of(context).textTheme.headline5,
           ),
           SizedBox(
-            height: 20,
+            height: getProportionateScreenHeight(10),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,

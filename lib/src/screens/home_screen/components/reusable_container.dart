@@ -1,31 +1,30 @@
-import 'package:domus/src/screens/smart_light/smart_light.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:domus/config/size_config.dart';
 import 'package:flutter/material.dart';
 
 Widget ReusableCard(
     {required String title,
     required String icon1,
     required String icon2,
+    required VoidCallback onTap,
     required BuildContext context}) {
   return Container(
-    height: 150,
+    height: getProportionateScreenHeight(100),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(15),
       color: Color(0xFFFFFFFF),
     ),
     child: Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 14.0, vertical: 10),
+      padding: EdgeInsets.symmetric(
+        horizontal: getProportionateScreenWidth(10),
+        vertical: getProportionateScreenHeight(6),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              InkWell(
-                  onTap: () {
-                    Navigator.of(context).pushNamed(SmartLight.routeName);
-                  },
-                  child: Image.asset(icon1)),
+              InkWell(onTap: onTap, child: Image.asset(icon1)),
               Image.asset(icon2),
             ],
           ),

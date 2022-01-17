@@ -1,3 +1,4 @@
+import 'package:domus/config/size_config.dart';
 import 'package:flutter/material.dart';
 
 Widget TimeContainer(
@@ -6,8 +7,8 @@ Widget TimeContainer(
     required String meridiem,
     required bool active}) {
   return Container(
-    height: 50,
-    width: 190,
+    height: getProportionateScreenHeight(30),
+    width: getProportionateScreenWidth(115),
     decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(10),
       border: Border.all(

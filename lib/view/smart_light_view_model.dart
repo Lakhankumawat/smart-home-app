@@ -9,6 +9,8 @@ class SmartLightViewModel extends BaseModel {
   PanelController pc = new PanelController();
   bool isTappedOnColor = false;
   bool isLightOff = false;
+  final List<bool> isSelected = [true, false];
+  double lightIntensity = 65;
 
   ///keeping track of all three factors - even index will do the task
   int selectedIndex = 0;
@@ -41,6 +43,18 @@ class SmartLightViewModel extends BaseModel {
 
   void changeImage() {
     lightImage = Constants.colors[selectedIndex].image;
+    notifyListeners();
+  }
+
+  void onToggleTapped(int index) {
+    for (int i = 0; i < isSelected.length; i++) {
+      isSelected[i] = i == index;
+    }
+    notifyListeners();
+  }
+
+  void changeLightIntensity(double newVal) {
+    lightIntensity = newVal;
     notifyListeners();
   }
 }

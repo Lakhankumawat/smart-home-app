@@ -1,3 +1,4 @@
+import 'package:domus/config/size_config.dart';
 import 'package:flutter/material.dart';
 
 Widget DateContainer(
@@ -8,8 +9,8 @@ Widget DateContainer(
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
-      height: 105,
-      width: 100,
+      height: getProportionateScreenHeight(70),
+      width: getProportionateScreenWidth(65),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         color: active ? Color(0xFF464646) : Colors.white,

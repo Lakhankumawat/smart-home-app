@@ -1,3 +1,4 @@
+import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
 import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,9 @@ class SmartLight extends StatelessWidget {
             child: SlidingUpPanel(
               controller: model.pc,
               backdropEnabled: true,
-              maxHeight: model.isTappedOnColor ? 380 : 700,
+              maxHeight: model.isTappedOnColor
+                  ? getProportionateScreenHeight(300)
+                  : getProportionateScreenHeight(510),
               color: Color(0xFFF2F2F2),
               boxShadow: [],
 

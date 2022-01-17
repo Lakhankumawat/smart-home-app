@@ -19,11 +19,15 @@ class HomeScreen extends StatelessWidget {
             length: 3,
             child: Scaffold(
               appBar: AppBar(
-                toolbarHeight: 100,
+                toolbarHeight: getProportionateScreenHeight(60),
                 //centerTitle: true,
                 elevation: 0,
                 title: Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 8.0),
+                  padding: EdgeInsets.symmetric(
+                    horizontal: getProportionateScreenWidth(
+                      4,
+                    ),
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -36,33 +40,38 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                leadingWidth: 300,
+                leadingWidth: getProportionateScreenWidth(170),
                 bottom: PreferredSize(
-                    child: TabBar(
-                        isScrollable: true,
-                        unselectedLabelColor: Colors.white.withOpacity(0.3),
-                        indicatorColor: Color(0xFF464646),
-                        tabs: [
-                          Tab(
-                            child: Text(
-                              'Living Room',
-                              style: Theme.of(context).textTheme.headline3,
-                            ),
+                  child: TabBar(
+                      isScrollable: true,
+                      unselectedLabelColor: Colors.white.withOpacity(0.3),
+                      indicatorColor: Color(0xFF464646),
+                      tabs: [
+                        Tab(
+                          child: Text(
+                            'Living Room',
+                            style: Theme.of(context).textTheme.headline3,
                           ),
-                          Tab(
-                            child: Text(
-                              'Dining',
-                              style: Theme.of(context).textTheme.headline4,
-                            ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Dining',
+                            style: Theme.of(context).textTheme.headline4,
                           ),
-                          Tab(
-                            child: Text(
-                              'Kitchen',
-                              style: Theme.of(context).textTheme.headline4,
-                            ),
+                        ),
+                        Tab(
+                          child: Text(
+                            'Kitchen',
+                            style: Theme.of(context).textTheme.headline4,
                           ),
-                        ]),
-                    preferredSize: Size.fromHeight(70.0)),
+                        ),
+                      ]),
+                  preferredSize: Size.fromHeight(
+                    getProportionateScreenHeight(
+                      35,
+                    ),
+                  ),
+                ),
               ),
               body: TabBarView(
                 children: <Widget>[

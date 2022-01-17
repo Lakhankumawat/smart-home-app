@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.domus.smarthome.domus">
    <application
-        android:label="domus"
+        android:label="Domus"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

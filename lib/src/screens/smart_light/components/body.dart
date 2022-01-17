@@ -1,4 +1,4 @@
-import 'package:domus/src/screens/smart_light/smart_light.dart';
+import 'package:domus/config/size_config.dart';
 import 'package:domus/view/smart_light_view_model.dart';
 import 'package:flutter/material.dart';
 
@@ -6,22 +6,30 @@ class Body extends StatelessWidget {
   final SmartLightViewModel model;
   Body({Key? key, required this.model}) : super(key: key);
 
-  final List<bool> isSelected = [true, false];
-
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 24.0, top: 10),
+              padding: EdgeInsets.only(
+                left: getProportionateScreenWidth(19),
+                top: getProportionateScreenHeight(7),
+              ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Icon(Icons.arrow_back_outlined),
+                  SizedBox(
+                    height: getProportionateScreenHeight(40),
+                  ),
+                  InkWell(
+                      onTap: () {
+                        Navigator.of(context).pop();
+                      },
+                      child: Icon(Icons.arrow_back_outlined)),
                   Stack(
                     children: [
                       Text(
@@ -38,14 +46,14 @@ class Body extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 35,
+                    height: getProportionateScreenHeight(26),
                   ),
                   Text(
                     'Power',
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   SizedBox(
-                    height: 5,
+                    height: getProportionateScreenHeight(4),
                   ),
                   Switch.adaptive(
                     inactiveThumbColor: Color(0xFFE4E4E4),
@@ -58,20 +66,20 @@ class Body extends StatelessWidget {
                     },
                   ),
                   SizedBox(
-                    height: 35,
+                    height: getProportionateScreenHeight(20),
                   ),
                   Text(
                     'Color',
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: getProportionateScreenHeight(7),
                   ),
                   InkWell(
                     onTap: model.showColorPanel,
                     child: Image.asset(
                       'assets/images/color_wheel.png',
-                      height: 30,
+                      height: getProportionateScreenHeight(22),
                     ),
                   ),
                 ],
@@ -81,26 +89,34 @@ class Body extends StatelessWidget {
               children: [
                 Image.asset(
                   'assets/images/lamp.png',
-                  height: 300,
+                  height: getProportionateScreenHeight(180),
+                  width: getProportionateScreenWidth(140),
+                  fit: BoxFit.contain,
                 ),
 
                 ///todo: Position this image in correct manner
                 model.isLightOff
                     ? Image.asset(
                         model.lightImage,
-                        height: 200,
+                        height: getProportionateScreenHeight(190),
+                        width: getProportionateScreenWidth(140),
+                        fit: BoxFit.contain,
                         alignment: Alignment.topCenter,
                       )
                     : SizedBox(
-                        height: 245,
-                        width: 245,
+                        height: getProportionateScreenHeight(190),
+                        width: getProportionateScreenWidth(140),
                       ),
               ],
             ),
           ],
         ),
         Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 10),
+          padding: EdgeInsets.symmetric(
+            horizontal: getProportionateScreenWidth(
+              15,
+            ),
+          ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -109,7 +125,7 @@ class Body extends StatelessWidget {
                 style: Theme.of(context).textTheme.headline2,
               ),
               SizedBox(
-                height: 15,
+                height: getProportionateScreenHeight(9),
               ),
               Container(
                 decoration: BoxDecoration(
@@ -121,45 +137,34 @@ class Body extends StatelessWidget {
                   fillColor: Color(0xFF464646),
                   renderBorder: false,
                   borderRadius: BorderRadius.circular(15),
+                  textStyle: Theme.of(context)
+                      .textTheme
+                      .headline2!
+                      .copyWith(color: Colors.white),
                   children: <Widget>[
                     SizedBox(
-                      width: 187,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Warm',
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context)
-                              .textTheme
-                              .headline2!
-                              .copyWith(color: Colors.white),
-                        ),
+                      width: getProportionateScreenWidth(115),
+                      child: Text(
+                        'Warm',
+                        textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(
-                      width: 187,
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Cold',
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context).textTheme.headline2,
-                        ),
+                      width: getProportionateScreenWidth(115),
+                      child: Text(
+                        'Cold',
+                        textAlign: TextAlign.center,
                       ),
                     ),
                   ],
                   onPressed: (int index) {
-                    // setState(() {
-                    //   for (int i = 0; i < isSelected.length; i++) {
-                    //     isSelected[i] = i == index
-                    //   }
-                    // });
+                    model.onToggleTapped(index);
                   },
-                  isSelected: isSelected,
+                  isSelected: model.isSelected,
                 ),
               ),
               SizedBox(
-                height: 35,
+                height: getProportionateScreenHeight(20),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -169,21 +174,25 @@ class Body extends StatelessWidget {
                     style: Theme.of(context).textTheme.headline2,
                   ),
                   Text(
-                    '35%',
+                    '${model.lightIntensity.toInt()}%',
                     style: Theme.of(context).textTheme.headline2,
                   ),
                 ],
               ),
               SliderTheme(
                 data: SliderThemeData(
-                    trackHeight: 8,
+                    trackHeight: getProportionateScreenHeight(5),
                     thumbColor: Color(0xFF464646),
                     activeTrackColor: Color(0xFF464646),
                     inactiveTrackColor: Colors.white,
-                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 11)),
+                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8)),
                 child: Slider(
-                  value: 0.5,
-                  onChanged: (val) {},
+                  min: 0,
+                  max: 100,
+                  onChanged: (val) {
+                    model.changeLightIntensity(val);
+                  },
+                  value: model.lightIntensity,
                 ),
               ),
               Row(

@@ -4,19 +4,17 @@ import 'package:domus/service/navigation_service.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:flutter/material.dart';
+import 'config/size_config.dart';
 
 void main() async {
   setupLocator();
   runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-class _MyAppState extends State<MyApp> {
-  ThemeMode themeMode = ThemeMode.system;
+  final ThemeMode themeMode = ThemeMode.system;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -28,7 +26,7 @@ class _MyAppState extends State<MyApp> {
         fontFamily: 'Nato Sans',
         colorScheme: const ColorScheme.light(
           primary: Color(0xFFF2F2F2),
-          secondary: Color(0xFFF4AE47),
+          //secondary: Color(0xFFF4AE47),
           surface: Color(0xFFC4C4C4),
           background: Color(0xFFFFFFFF),
           error: Color(0xFFB00020),
@@ -79,7 +77,7 @@ class _MyAppState extends State<MyApp> {
         ),
       ),
       routes: routes,
-      home: SmartLight(),
+      home: HomeScreen(),
     );
   }
 }
