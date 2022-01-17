@@ -2,11 +2,13 @@
 
 
 
-  
-  <a href="https://drive.google.com/file/d/1n3WKzLI9IBFVUpkE3CcnKRhl9-EM_3qg/view?usp=sharing" >
-    <h2>Download App here </h2></a>
+
+ ## [Download App here](https://drive.google.com/file/d/1n3WKzLI9IBFVUpkE3CcnKRhl9-EM_3qg/view?usp=sharing)
+    
 <p  align="center">  
-<img src="https://user-images.githubusercontent.com/55774240/149708029-cf36ddca-1a6e-45eb-88c8-206b6f1c1d10.jpg" align="center" >
+  
+<img src="https://user-images.githubusercontent.com/55774240/149708029-cf36ddca-1a6e-45eb-88c8-206b6f1c1d10.jpg"  >
+  <br>
   
 <img  width="600" src="https://user-images.githubusercontent.com/55774240/149708646-82c4e9e0-1900-4a9f-a4dd-6509b60e852c.jpg" >
 
