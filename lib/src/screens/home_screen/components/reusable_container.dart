@@ -35,9 +35,12 @@ Widget ReusableCard(
               ),
             ],
           ),
-          Text(
-            title,
-            style: Theme.of(context).textTheme.headline2,
+          InkWell(
+            onTap: onTap,
+            child: Text(
+              title,
+              style: Theme.of(context).textTheme.headline2,
+            ),
           ),
         ],
       ),

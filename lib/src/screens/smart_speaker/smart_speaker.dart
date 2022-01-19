@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/body.dart';
 
 class SmartSpeaker extends StatelessWidget {
   static String routeName = 'smart-speaker';
@@ -6,6 +7,9 @@ class SmartSpeaker extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      backgroundColor: Color(0xFFF2F2F2),
+      body: Body(),
+    );
   }
 }

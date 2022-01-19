@@ -4,6 +4,7 @@ import 'package:domus/src/screens/home_screen/components/reusable_container.dart
 import 'package:domus/src/screens/home_screen/components/weather_container.dart';
 import 'package:domus/src/screens/smart_ac/smart_ac.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
+import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 
@@ -37,7 +38,7 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: ReusableCard(
                       title: 'Smart Light',
-                      icon1: 'assets/icons/Light_off.png',
+                      icon1: 'assets/icons/Light.png',
                       isON: model.isLightOn,
                       context: context,
                       onTap: () {
@@ -72,11 +73,13 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: ReusableCard(
-                      title: 'Smart TV',
-                      isON: model.isTVON,
-                      icon1: 'assets/icons/TV.png',
+                      title: 'Smart Speaker',
+                      isON: model.isSpeakerON,
+                      icon1: 'assets/icons/speaker.png',
                       context: context,
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartSpeaker.routeName);
+                      },
                     ),
                   ),
                 ),
