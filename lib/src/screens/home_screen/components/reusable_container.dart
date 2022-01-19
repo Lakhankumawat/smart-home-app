@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 Widget ReusableCard(
     {required String title,
     required String icon1,
-    required String icon2,
+    required bool isON,
     required VoidCallback onTap,
     required BuildContext context}) {
   return Container(
@@ -25,7 +25,14 @@ Widget ReusableCard(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               InkWell(onTap: onTap, child: Image.asset(icon1)),
-              Image.asset(icon2),
+              Switch.adaptive(
+                inactiveThumbColor: Color(0xFFE4E4E4),
+                inactiveTrackColor: Color(0xFFE4E4E4),
+                activeColor: Colors.white,
+                activeTrackColor: Color(0xFF464646),
+                value: isON,
+                onChanged: (value) {},
+              ),
             ],
           ),
           Text(

@@ -13,12 +13,15 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
     return BaseView<HomeScreenViewModel>(
-        onModelReady: (model) => {},
+        onModelReady: (model) => {
+              model.generateRandomNumber(),
+            },
         builder: (context, model, child) {
           return DefaultTabController(
             length: 3,
             child: Scaffold(
               appBar: AppBar(
+                automaticallyImplyLeading: false,
                 toolbarHeight: getProportionateScreenHeight(60),
                 //centerTitle: true,
                 elevation: 0,
@@ -75,7 +78,9 @@ class HomeScreen extends StatelessWidget {
               ),
               body: TabBarView(
                 children: <Widget>[
-                  Body(),
+                  Body(
+                    model: model,
+                  ),
                   Container(
                     child: Center(
                       child: Text(

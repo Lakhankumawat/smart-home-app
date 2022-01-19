@@ -3,6 +3,7 @@ import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
+import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'config/size_config.dart';
 
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: HomeScreen(),
+      home: SplashScreen(),
     );
   }
 }

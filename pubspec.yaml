@@ -38,6 +38,7 @@ dependencies:
   provider: ^6.0.2
   dotted_border: ^2.0.0+2
   sliding_up_panel: ^2.0.0+1
+  sleek_circular_slider: ^2.0.1
 
 dev_dependencies:
   flutter_test:
@@ -76,7 +77,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
-    -
+    - assets/images/weather/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

@@ -177,6 +177,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.99"
+  sleek_circular_slider:
+    dependency: "direct main"
+    description:
+      name: sleek_circular_slider
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   sliding_up_panel:
     dependency: "direct main"
     description:
@@ -263,4 +270,4 @@ packages:
     version: "3.1.0"
 sdks:
   dart: ">=2.15.1 <3.0.0"
-  flutter: ">=1.24.0-7.0"
+  flutter: ">=2.0.0"

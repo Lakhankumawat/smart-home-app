@@ -1,13 +1,17 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/src/screens/home_screen/components/music_widget.dart';
 import 'package:domus/src/screens/home_screen/components/reusable_container.dart';
+import 'package:domus/src/screens/home_screen/components/weather_container.dart';
+import 'package:domus/src/screens/smart_ac/smart_ac.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
+import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 
 import 'add_device_widget.dart';
 
 class Body extends StatelessWidget {
-  const Body({Key? key}) : super(key: key);
+  final HomeScreenViewModel model;
+  const Body({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -22,6 +26,10 @@ class Body extends StatelessWidget {
         ),
         child: Column(
           children: [
+            Padding(
+              padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+              child: WeatherContainer(context: context, model: model),
+            ),
             Row(
               children: [
                 Expanded(
@@ -30,7 +38,7 @@ class Body extends StatelessWidget {
                     child: ReusableCard(
                       title: 'Smart Light',
                       icon1: 'assets/icons/Light_off.png',
-                      icon2: 'assets/icons/off.png',
+                      isON: model.isLightOn,
                       context: context,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartLight.routeName);
@@ -44,9 +52,11 @@ class Body extends StatelessWidget {
                     child: ReusableCard(
                       title: 'Smart Ac',
                       icon1: 'assets/icons/AC.png',
-                      icon2: 'assets/icons/off.png',
                       context: context,
-                      onTap: () {},
+                      isON: model.isACON,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartAC.routeName);
+                      },
                     ),
                   ),
                 ),
@@ -63,8 +73,8 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: ReusableCard(
                       title: 'Smart TV',
+                      isON: model.isTVON,
                       icon1: 'assets/icons/TV.png',
-                      icon2: 'assets/icons/off.png',
                       context: context,
                       onTap: () {},
                     ),
@@ -75,8 +85,8 @@ class Body extends StatelessWidget {
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: ReusableCard(
                       title: 'Smart Fan',
+                      isON: model.isFanON,
                       icon1: 'assets/icons/Fan.png',
-                      icon2: 'assets/icons/off.png',
                       context: context,
                       onTap: () {},
                     ),
