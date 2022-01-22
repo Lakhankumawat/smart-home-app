@@ -99,63 +99,6 @@ class Body extends StatelessWidget {
                   SizedBox(
                     height: getProportionateScreenHeight(40),
                   ),
-                  InkWell(
-                      onTap: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: Icon(Icons.arrow_back_outlined)),
-                  Stack(
-                    children: [
-                      Text(
-                        'Living\nRoom',
-                        style: Theme.of(context).textTheme.headline1!.copyWith(
-                              fontSize: 45,
-                              color: Color(0xFFBDBDBD).withOpacity(0.5),
-                            ),
-                      ),
-                      Text(
-                        'Living\nRoom',
-                        style: Theme.of(context).textTheme.headline1,
-                      ),
-                    ],
-                  ),
-                  SizedBox(
-                    height: getProportionateScreenHeight(26),
-                  ),
-                  Text(
-                    'Power',
-                    style: Theme.of(context).textTheme.headline2,
-                  ),
-                  SizedBox(
-                    height: getProportionateScreenHeight(4),
-                  ),
-                  Switch.adaptive(
-                    inactiveThumbColor: Color(0xFFE4E4E4),
-                    inactiveTrackColor: Colors.white,
-                    activeColor: Colors.white,
-                    activeTrackColor: Color(0xFF464646),
-                    value: model.isLightOff,
-                    onChanged: (value) {
-                      model.lightSwitch(value);
-                    },
-                  ),
-                  SizedBox(
-                    height: getProportionateScreenHeight(20),
-                  ),
-                  Text(
-                    'Color',
-                    style: Theme.of(context).textTheme.headline2,
-                  ),
-                  SizedBox(
-                    height: getProportionateScreenHeight(7),
-                  ),
-                  InkWell(
-                    onTap: model.showColorPanel,
-                    child: Image.asset(
-                      'assets/images/color_wheel.png',
-                      height: getProportionateScreenHeight(22),
-                    ),
-                  ),
                 ],
               ),
             ),
