@@ -18,6 +18,16 @@ class HomeScreenViewModel extends BaseModel {
     notifyListeners();
   }
 
+  void lightSwitch() {
+    isLightOn = !isLightOn;
+    notifyListeners();
+  }
+
+  void acSwitch() {
+    isACON = !isACON;
+    notifyListeners();
+  }
+
   ///On tapping bottom nav bar items
   void onItemTapped(int index) {
     selectedIndex = index;

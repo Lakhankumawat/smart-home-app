@@ -11,6 +11,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import 'add_device_widget.dart';
+import 'darkContainer.dart';
 
 class Body extends StatelessWidget {
   final HomeScreenViewModel model;
@@ -54,137 +55,30 @@ class Body extends StatelessWidget {
                   // ),
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-                    child: InkWell(
+                    child: DarkContainer(
+                      itsOn: model.isLightOn,
+                      switchButton: model.lightSwitch,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartLight.routeName);
                       },
-                      child: Container(
-                        width: 165,
-                        height: 194,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Color.fromRGBO(0, 0, 0, 1),
-                        ),
-                        child: Padding(
-                          padding: EdgeInsets.symmetric(
-                            horizontal: getProportionateScreenWidth(10),
-                            vertical: getProportionateScreenHeight(6),
-                          ),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Container(
-                                    width: 50,
-                                    height: 50,
-                                    decoration: BoxDecoration(
-                                      color: Color.fromRGBO(45, 45, 45, 1),
-                                      borderRadius: BorderRadius.all(
-                                          Radius.elliptical(45, 45)),
-                                    ),
-                                    child: Image.asset(
-                                      'assets/icons/Light.png',
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.star_rounded,
-                                    color: Color(0xFF808080),
-                                  ),
-                                ],
-                              ),
-                              Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    'Lighting',
-                                    textAlign: TextAlign.left,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline2!
-                                        .copyWith(
-                                          color: Colors.white,
-                                        ),
-                                  ),
-                                  Text(
-                                    '4 lamps',
-                                    textAlign: TextAlign.left,
-                                    style: TextStyle(
-                                        color: Color.fromRGBO(166, 166, 166, 1),
-                                        fontSize: 13,
-                                        letterSpacing: 0,
-                                        fontWeight: FontWeight.normal,
-                                        height: 1.6),
-                                  ),
-                                ],
-                              ),
-                              Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'On',
-                                    textAlign: TextAlign.left,
-                                    style: Theme.of(context)
-                                        .textTheme
-                                        .headline2!
-                                        .copyWith(
-                                          color: Colors.white,
-                                        ),
-                                  ),
-                                  Container(
-                                    width: 48,
-                                    height: 25.6,
-                                    padding: EdgeInsets.all(2),
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(20),
-                                      border: Border.all(
-                                        color: Color.fromRGBO(255, 255, 255, 1),
-                                        width: 2,
-                                      ),
-                                    ),
-                                    child: Row(
-                                      children: [
-                                        Spacer(),
-                                        Container(
-                                          width: 20,
-                                          height: 20,
-                                          decoration: BoxDecoration(
-                                            color: Colors.white,
-                                            borderRadius:
-                                                BorderRadius.circular(50),
-                                          ),
-                                          // child: Container(
-                                          //   height: 10,
-                                          //   width: 10,
-                                          // ),
-                                        ),
-                                      ],
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
+                      iconAsset: 'assets/icons/svg/light.svg',
+                      device: 'Lightening',
+                      deviceCount: '4 lamps',
                     ),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-                    child: ReusableCard(
-                      title: 'Smart Ac',
-                      icon1: 'assets/icons/AC.png',
-                      context: context,
-                      isON: model.isACON,
+                    child: DarkContainer(
+                      itsOn: model.isACON,
+                      switchButton: model.acSwitch,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartAC.routeName);
                       },
+                      iconAsset: 'assets/icons/svg/ac.svg',
+                      device: 'AC',
+                      deviceCount: '4 devices',
                     ),
                   ),
                 ),
