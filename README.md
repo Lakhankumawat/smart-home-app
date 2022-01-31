@@ -1,8 +1,6 @@
 
 
 
-
-
  ## [Download App here](https://drive.google.com/file/d/1n3WKzLI9IBFVUpkE3CcnKRhl9-EM_3qg/view?usp=sharing)
     
 <p  align="center">  
@@ -17,6 +15,9 @@
 <img width="600"  src="https://user-images.githubusercontent.com/55774240/149709165-dfdc9ea2-4880-4a81-a542-5c1de3f7a415.jpg" >
   <a href="https://www.figma.com/community/file/1060784421131783646"  >
 <img width="600" src="https://user-images.githubusercontent.com/55774240/149709169-ce8b53aa-f2e6-4d32-8797-2630ec0eb9c6.jpg"  >
+  </a>
+  <a href="https://www.figma.com/@kayson_jett"  >
+<img width="600" src="https://user-images.githubusercontent.com/55774240/151351772-fd10bc8d-916c-4d12-a160-93b04e9ccc27.png"  >
   </a>
  
   <a href="https://www.buymeacoffee.com/LakhanKumawat"  >
