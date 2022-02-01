@@ -3,6 +3,8 @@
 
  ## [Download App here](https://drive.google.com/file/d/1n3WKzLI9IBFVUpkE3CcnKRhl9-EM_3qg/view?usp=sharing)
     
+![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
+
 <p  align="center">  
   
 <img src="https://user-images.githubusercontent.com/55774240/149708029-cf36ddca-1a6e-45eb-88c8-206b6f1c1d10.jpg"  >
