@@ -6,7 +6,7 @@ class AboutUs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return Scaffold( 
       body: new Image.asset(
         "assets/images/about_us.png",
         fit: BoxFit.cover,
