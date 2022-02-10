@@ -1,37 +1,28 @@
-## Welcome to GitHub Pages
+![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
 
-You can use the [editor on GitHub](https://github.com/Lakhankumawat/smart-home-app/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<p  align="center">  
+  
+<img src="https://user-images.githubusercontent.com/55774240/149708029-cf36ddca-1a6e-45eb-88c8-206b6f1c1d10.jpg"  >
+ 
+ <img src="https://user-images.githubusercontent.com/55774240/150630314-e5686044-b161-4dc1-894e-2b93562c65f8.jpg"  >
+  <br>
+  
+<img  width="600" src="https://user-images.githubusercontent.com/55774240/149708646-82c4e9e0-1900-4a9f-a4dd-6509b60e852c.jpg" >
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+<img width="600"  src="https://user-images.githubusercontent.com/55774240/149709165-dfdc9ea2-4880-4a81-a542-5c1de3f7a415.jpg" >
+  <a href="https://www.figma.com/community/file/1060784421131783646"  >
+<img width="600" src="https://user-images.githubusercontent.com/55774240/149709169-ce8b53aa-f2e6-4d32-8797-2630ec0eb9c6.jpg"  >
+  </a>
+  <a href="https://www.figma.com/@kayson_jett"  >
+<img width="600" src="https://user-images.githubusercontent.com/55774240/151351772-fd10bc8d-916c-4d12-a160-93b04e9ccc27.png"  >
+  </a>
+ 
+  <a href="https://www.buymeacoffee.com/LakhanKumawat"  >
+<img width="900" src="https://user-images.githubusercontent.com/55774240/149865974-02f53017-c799-4e16-b7eb-907684292591.jpg"  >
+  </a>
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  </p>
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Lakhankumawat/smart-home-app/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+<hr>
+<!-- <img width="120" src="https://user-images.githubusercontent.com/55774240/149710423-cdd7b528-638c-45e1-bec5-80201827b8a0.png" > -->
