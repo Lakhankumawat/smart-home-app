@@ -1,7 +1,7 @@
 
 
 
- ## [Download App here](https://drive.google.com/file/d/1H9a_El71DdYrG6oUFd0EyZGZ3fXcy3AU/view?usp=sharing) |  [App Shocase Here](https://youtu.be/tO0D1KE0QyI) | [About Project](https://youtu.be/saA8IUyLQ9I)
+ ## [Download App here](https://drive.google.com/file/d/1H9a_El71DdYrG6oUFd0EyZGZ3fXcy3AU/view?usp=sharing) |  [App Showcase Here](https://youtu.be/tO0D1KE0QyI) | [About Project](https://youtu.be/saA8IUyLQ9I)
     
 ![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
 
