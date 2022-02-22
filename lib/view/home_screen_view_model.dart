@@ -28,6 +28,16 @@ class HomeScreenViewModel extends BaseModel {
     notifyListeners();
   }
 
+  void speakerSwitch() {
+    isSpeakerON = !isSpeakerON;
+    notifyListeners();
+  }
+
+  void fanSwitch() {
+    isFanON = !isFanON;
+    notifyListeners();
+  }
+
   ///On tapping bottom nav bar items
   void onItemTapped(int index) {
     selectedIndex = index;

@@ -41,18 +41,6 @@ class Body extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  // child: Padding(
-                  //   padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-                  //   child: ReusableCard(
-                  //     title: 'Smart Light',
-                  //     icon1: 'assets/icons/Light.png',
-                  //     isON: model.isLightOn,
-                  //     context: context,
-                  //     onTap: () {
-                  //       Navigator.of(context).pushNamed(SmartLight.routeName);
-                  //     },
-                  //   ),
-                  // ),
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
@@ -93,26 +81,30 @@ class Body extends StatelessWidget {
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-                    child: ReusableCard(
-                      title: 'Smart Speaker',
-                      isON: model.isSpeakerON,
-                      icon1: 'assets/icons/speaker.png',
-                      context: context,
+                    child: DarkContainer(
+                      itsOn: model.isSpeakerON,
+                      switchButton: model.speakerSwitch,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartSpeaker.routeName);
                       },
+                      iconAsset: 'assets/icons/svg/speaker.svg',
+                      device: 'Speaker',
+                      deviceCount: '1 device',
                     ),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-                    child: ReusableCard(
-                      title: 'Smart Fan',
-                      isON: model.isFanON,
-                      icon1: 'assets/icons/Fan.png',
-                      context: context,
-                      onTap: () {},
+                    child: DarkContainer(
+                      itsOn: model.isFanON,
+                      switchButton: model.fanSwitch,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartAC.routeName);
+                      },
+                      iconAsset: 'assets/icons/svg/fan.svg',
+                      device: 'Fan',
+                      deviceCount: '2 devices',
                     ),
                   ),
                 ),

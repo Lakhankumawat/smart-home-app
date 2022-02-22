@@ -54,6 +54,7 @@ class DarkContainer extends StatelessWidget {
                     ),
                     child: SvgPicture.asset(
                       iconAsset,
+                      color: itsOn ? Colors.amber : Color(0xFF808080),
                     ),
                   ),
                   Icon(

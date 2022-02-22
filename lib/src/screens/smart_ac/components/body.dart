@@ -2,6 +2,7 @@ import 'package:domus/config/size_config.dart';
 import 'package:domus/view/smart_ac_view_model.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
 class Body extends StatelessWidget {
@@ -34,7 +35,7 @@ class Body extends StatelessWidget {
                 Stack(
                   children: [
                     Text(
-                      'Air Conditioner',
+                      'Air\nConditioner',
                       style: Theme.of(context).textTheme.headline1!.copyWith(
                             fontSize: 45,
                             color: Color(0xFFBDBDBD).withOpacity(0.5),
@@ -47,7 +48,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(
-                  height: getProportionateScreenHeight(10),
+                  height: getProportionateScreenHeight(30),
                 ),
               ],
             ),
@@ -88,7 +89,10 @@ class Body extends StatelessWidget {
               },
               innerWidget: (double value) {
                 return Padding(
-                  padding: const EdgeInsets.only(left: 8.0, top: 50),
+                  padding: EdgeInsets.only(
+                    left: getProportionateScreenHeight(12),
+                    top: getProportionateScreenHeight(45),
+                  ),
                   child: Column(
                     children: [
                       Text(
@@ -106,7 +110,7 @@ class Body extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: getProportionateScreenHeight(20),
+            height: getProportionateScreenHeight(30),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -140,7 +144,7 @@ class Body extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 15,
+            height: getProportionateScreenHeight(30),
           ),
           // Divider(
           //   thickness: 2,
@@ -153,9 +157,10 @@ class Body extends StatelessWidget {
             style: Theme.of(context).textTheme.headline2,
           ),
           SizedBox(
-            height: getProportionateScreenHeight(9),
+            height: getProportionateScreenHeight(20),
           ),
           Container(
+            height: getProportionateScreenHeight(50),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(15),
               color: Colors.white,
@@ -171,11 +176,19 @@ class Body extends StatelessWidget {
                   .copyWith(color: Colors.white),
               children: <Widget>[
                 SizedBox(
-                  width: getProportionateScreenWidth(57.5),
+                  width: getProportionateScreenWidth(70),
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset('assets/icons/winter.png'),
+                      SvgPicture.asset(
+                        'assets/icons/svg/cool.svg',
+                        color: model.isSelected[0]
+                            ? Colors.white
+                            : Color(0xFF808080),
+                        height: getProportionateScreenHeight(
+                          22,
+                        ),
+                      ),
                       Text(
                         'Cool',
                         textAlign: TextAlign.center,
@@ -188,7 +201,15 @@ class Body extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset('assets/icons/air.png'),
+                      SvgPicture.asset(
+                        'assets/icons/svg/air.svg',
+                        color: model.isSelected[1]
+                            ? Colors.white
+                            : Color(0xFF808080),
+                        height: getProportionateScreenHeight(
+                          22,
+                        ),
+                      ),
                       Text(
                         'Air',
                         textAlign: TextAlign.center,
@@ -201,7 +222,15 @@ class Body extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset('assets/icons/sun.png'),
+                      SvgPicture.asset(
+                        'assets/icons/svg/sun.svg',
+                        color: model.isSelected[2]
+                            ? Colors.white
+                            : Color(0xFF808080),
+                        height: getProportionateScreenHeight(
+                          22,
+                        ),
+                      ),
                       Text(
                         'Hot',
                         textAlign: TextAlign.center,
@@ -214,7 +243,15 @@ class Body extends StatelessWidget {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      Image.asset('assets/icons/eco.png'),
+                      SvgPicture.asset(
+                        'assets/icons/svg/eco.svg',
+                        color: model.isSelected[3]
+                            ? Colors.white
+                            : Color(0xFF808080),
+                        height: getProportionateScreenHeight(
+                          22,
+                        ),
+                      ),
                       Text(
                         'Eco',
                         textAlign: TextAlign.center,

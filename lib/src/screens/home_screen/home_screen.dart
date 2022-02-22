@@ -3,6 +3,8 @@ import 'package:domus/provider/base_view.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/body.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -38,7 +40,19 @@ class HomeScreen extends StatelessWidget {
                         'Hi, Lex',
                         style: Theme.of(context).textTheme.headline1,
                       ),
-                      Image.asset('assets/icons/profile_img.png'),
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          color: Color(0xffdadada),
+                          borderRadius:
+                              BorderRadius.all(Radius.elliptical(45, 45)),
+                        ),
+                        child: Icon(
+                          FontAwesomeIcons.solidUser,
+                          color: Colors.amber,
+                        ),
+                      ),
                     ],
                   ),
                 ),
