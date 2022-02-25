@@ -20,7 +20,7 @@
     <td>5:00pm – 5:30pm</td>
   </tr>
   <tr>
-   <td> <a target="_blank" href="meet.google.com/fwm-iixv-psp">Click here to join</a><br></td>
+   <td> <a target="_blank" href="https://meet.google.com/xso-fzcw-mcr?authuser=0">Click here to join</a><br></td>
     <td> <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MW1qcDZsZWZjbWN1ajdhdGdlbzVmMDM2ODEga3VtYXdhdGxha2hhbjA3MDcyMDAxQG0&tmsrc=kumawatlakhan07072001%40gmail.com">Click here to save event</a></td>
   </tr>
  </table>
