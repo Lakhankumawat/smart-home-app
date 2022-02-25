@@ -1,4 +1,33 @@
 
+<div align="center">
+ 
+ <table>
+  <th>
+   <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&amp;tmeid=MW1qcDZsZWZjbWN1ajdhdGdlbzVmMDM2ODEga3VtYXdhdGxha2hhbjA3MDcyMDAxQG0&amp;tmsrc=kumawatlakhan07072001%40gmail.com"><img border="0" src="https://cdn4.iconfinder.com/data/icons/logos-brands-in-colors/48/google-meet-512.png" height="100"></a>
+  </th>
+    <th>
+  <a target="_blank" href="https://gssoc.girlscript.tech/"><img border="0" src="https://d1fdloi71mui9q.cloudfront.net/WDPdNJfQt65Ho3qKhZQQ_519jouHPPpyoYg1x" height="100"></a></th>
+  <tr>
+   <td>Smart Home App </td>
+    <td>Contribution Meet</td>
+  </tr>
+  <tr>
+   <td>Date</td>
+    <td>Monday, February 28</td>
+  </tr>
+  <tr>
+   <td>Time</td>
+    <td>5:00pm – 5:30pm</td>
+  </tr>
+  <tr>
+   <td> <a target="_blank" href="meet.google.com/fwm-iixv-psp">Click here to join</a><br></td>
+    <td> <a target="_blank" href="https://calendar.google.com/event?action=TEMPLATE&tmeid=MW1qcDZsZWZjbWN1ajdhdGdlbzVmMDM2ODEga3VtYXdhdGxha2hhbjA3MDcyMDAxQG0&tmsrc=kumawatlakhan07072001%40gmail.com">Click here to save event</a></td>
+  </tr>
+ </table>
+ 
+
+
+</div>
 
 
  ## [Download App here](https://drive.google.com/file/d/1H9a_El71DdYrG6oUFd0EyZGZ3fXcy3AU/view?usp=sharing) |  [App Showcase Here](https://youtu.be/tO0D1KE0QyI) | [About Project](https://youtu.be/saA8IUyLQ9I) | [Figma Files](https://www.figma.com/file/tayD83OorLFuT62vnk401Z/Smart-Home-App-Designs-(Community)?node-id=0%3A1)
