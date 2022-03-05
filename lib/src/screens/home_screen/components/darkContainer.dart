@@ -1,5 +1,4 @@
 import 'package:domus/config/size_config.dart';
-import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
