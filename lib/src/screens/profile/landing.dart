@@ -26,7 +26,7 @@ class _ProfileState extends State<ProfileLandingScreen> {
               child: Row(
                 children: [
                   Text(
-                    "ProfileLandingScreen",
+                    "Profile",
                     style: TextStyle(
                       fontSize: 36,
                       fontWeight: FontWeight.w600,
