@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -73,6 +73,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="http://lakhankumawat.me/"><img src="https://avatars.githubusercontent.com/u/55774240?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LakhanKumawat ᵖ⁺</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Lakhankumawat" title="Code">💻</a> <a href="#projectManagement-Lakhankumawat" title="Project Management">📆</a> <a href="#question-Lakhankumawat" title="Answering Questions">💬</a></td>
+    <td align="center"><a href="https://imgbot.net"><img src="https://avatars.githubusercontent.com/u/31427850?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Imgbot</b></sub></a><br /><a href="#tool-ImgBotApp" title="Tools">🔧</a></td>
   </tr>
 </table>
 
