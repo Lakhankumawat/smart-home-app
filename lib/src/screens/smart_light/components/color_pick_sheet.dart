@@ -1,4 +1,3 @@
-import 'package:domus/src/models/color_model.dart';
 import 'package:domus/src/screens/smart_light/components/color_dot.dart';
 import 'package:domus/src/screens/smart_light/components/reusable_buttons.dart';
 import 'package:domus/view/smart_light_view_model.dart';

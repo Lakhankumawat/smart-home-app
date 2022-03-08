@@ -3,7 +3,6 @@ import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
 import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'config/size_config.dart';
 
 void main() async {
   setupLocator();

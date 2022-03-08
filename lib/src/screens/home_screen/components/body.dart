@@ -1,6 +1,5 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/src/screens/home_screen/components/music_widget.dart';
-import 'package:domus/src/screens/home_screen/components/reusable_container.dart';
 import 'package:domus/src/screens/home_screen/components/savings_container.dart';
 import 'package:domus/src/screens/home_screen/components/weather_container.dart';
 import 'package:domus/src/screens/smart_ac/smart_ac.dart';
@@ -9,7 +8,6 @@ import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 import 'add_device_widget.dart';
 import 'darkContainer.dart';

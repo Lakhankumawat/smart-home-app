@@ -1,5 +1,4 @@
 import 'package:domus/service/navigation_service.dart';
-import 'package:domus/src/screens/smart_fan/smart_fan.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:domus/view/smart_ac_view_model.dart';
 import 'package:domus/view/smart_light_view_model.dart';

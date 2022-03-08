@@ -13,39 +13,42 @@ class Body extends StatefulWidget {
 class _BodyState extends State<Body> with TickerProviderStateMixin {
   late final AnimationController _controller;
   late final AnimationController _Nocontroller;
-  @override
-  int getDuration(double speed) {
-    if(widget.model.speed ==0)
-      return widget.model.duration[0].toInt();
-    if(widget.model.speed>0 && widget.model.speed<=1)
-      return widget.model.duration[1].toInt();
-    if(widget.model.speed>1 && widget.model.speed<=2)
-      return widget.model.duration[2].toInt();
-    if(widget.model.speed>2 && widget.model.speed<=3)
-      return widget.model.duration[3].toInt();
-    if(widget.model.speed>3 && widget.model.speed<=4)
-      return widget.model.duration[4].toInt();
-    if(widget.model.speed>4 && widget.model.speed<=5)
-      return widget.model.duration[5].toInt();
-    else return 0;
 
+  int getDuration(double speed) {
+    if (widget.model.speed == 0) return widget.model.duration[0].toInt();
+    if (widget.model.speed > 0 && widget.model.speed <= 1)
+      return widget.model.duration[1].toInt();
+    if (widget.model.speed > 1 && widget.model.speed <= 2)
+      return widget.model.duration[2].toInt();
+    if (widget.model.speed > 2 && widget.model.speed <= 3)
+      return widget.model.duration[3].toInt();
+    if (widget.model.speed > 3 && widget.model.speed <= 4)
+      return widget.model.duration[4].toInt();
+    if (widget.model.speed > 4 && widget.model.speed <= 5)
+      return widget.model.duration[5].toInt();
+    else
+      return 0;
   }
-  void initState(){
+
+  void initState() {
     super.initState();
-    _Nocontroller = AnimationController(vsync: this,
-      duration:Duration(seconds: 1000),
+    _Nocontroller = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 1000),
     )..repeat();
     print(widget.model.speed);
-    _controller = AnimationController(vsync: this,
-      duration:Duration(milliseconds: getDuration(widget.model.speed)),
+    _controller = AnimationController(
+      vsync: this,
+      duration: Duration(milliseconds: getDuration(widget.model.speed)),
     )..repeat();
   }
-  void changespeed(AnimationController c){
-    c.duration= Duration(milliseconds: getDuration(widget.model.speed));
-    if (c.isAnimating)
-      c.forward();
+
+  void changespeed(AnimationController c) {
+    c.duration = Duration(milliseconds: getDuration(widget.model.speed));
+    if (c.isAnimating) c.forward();
     c.repeat();
   }
+
   @override
   void dispose() {
     _Nocontroller.dispose();
@@ -93,9 +96,9 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                                   .textTheme
                                   .headline1!
                                   .copyWith(
-                                fontSize: 45,
-                                color: Color(0xFFBDBDBD).withOpacity(0.5),
-                              ),
+                                    fontSize: 45,
+                                    color: Color(0xFFBDBDBD).withOpacity(0.5),
+                                  ),
                             ),
                             Text(
                               'Smart\nFan',
@@ -126,7 +129,6 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                         SizedBox(
                           height: getProportionateScreenHeight(20),
                         ),
-
                         SizedBox(
                           height: getProportionateScreenHeight(10),
                         ),
@@ -152,17 +154,22 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child:Lottie.asset('assets/Lottie/fan.json',
+                  child: Lottie.asset(
+                    'assets/Lottie/fan.json',
                     // width: 260,
                     // height: 250,
                     fit: BoxFit.fill,
-                    animate: widget.model.isFanOff? true:false,
-                    controller:widget.model.isFanOff? _controller : _Nocontroller,
+                    animate: widget.model.isFanOff ? true : false,
+                    controller:
+                        widget.model.isFanOff ? _controller : _Nocontroller,
                   ),
                 )
               ],
             ),
-            Padding(padding: EdgeInsets.only(right: 10,)),
+            Padding(
+                padding: EdgeInsets.only(
+              right: 10,
+            )),
           ],
         ),
         Padding(
@@ -277,4 +284,3 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
     );
   }
 }
-

@@ -1,6 +1,5 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/view/smart_speaker_view_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
