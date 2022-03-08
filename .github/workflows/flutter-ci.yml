@@ -10,8 +10,7 @@ on:
       - main
       - master
       - develop
-# on: push    # Default will running for every branch.
-name: "Build & Release"    
+# on: push    # Default will running for every branch.   
 jobs:
   build:
     # This job will run on ubuntu virtual machine
