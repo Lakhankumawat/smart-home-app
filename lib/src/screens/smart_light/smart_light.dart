@@ -28,13 +28,11 @@ class SmartLight extends StatelessWidget {
 
               ///no Shadow
               onPanelClosed: model.onPanelClosed,
-              body: Scaffold(
-                backgroundColor: Color(0xFFF2F2F2),
-                body: Body(
-                  model: model,
-                ),
+              body: Body(
+                model: model,
               ),
-              panel: model.isTappedOnColor
+              // panel:
+              panelBuilder: (sc) => model.isTappedOnColor
                   ? ColorPickerSheet(
                       context: context,
                       model: model,
