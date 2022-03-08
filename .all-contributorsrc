@@ -1,0 +1,53 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Lakhankumawat",
+      "name": "LakhanKumawat ᵖ⁺",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55774240?v=4",
+      "profile": "http://lakhankumawat.me/",
+      "contributions": [
+        "code",
+        "projectManagement",
+        "question"
+      ]
+    },
+    {
+      "login": "ImgBotApp",
+      "name": "Imgbot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31427850?v=4",
+      "profile": "https://imgbot.net",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "HetviSoni",
+      "name": "HetviSoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76479104?v=4",
+      "profile": "https://github.com/HetviSoni",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "smart-home-app",
+  "projectOwner": "Lakhankumawat",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}

@@ -18,6 +18,7 @@ dependencies:
   flutter_svg: ^1.0.3
   font_awesome_flutter: ^9.2.0
   flutter_screenutil: ^5.3.1
+  lottie:
 
 dev_dependencies:
   flutter_test:
@@ -39,6 +40,7 @@ flutter:
     - assets/fonts/
     - assets/images/weather/
     - assets/icons/svg/
+    - assets/Lottie/
 
   fonts:
     - family: "Noto Sans"
