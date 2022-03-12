@@ -1,5 +1,6 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
+import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
@@ -47,9 +48,16 @@ class HomeScreen extends StatelessWidget {
                           borderRadius:
                               BorderRadius.all(Radius.elliptical(45, 45)),
                         ),
-                        child: Icon(
-                          FontAwesomeIcons.solidUser,
-                          color: Colors.amber,
+                        child: IconButton(
+                          splashRadius: 25,
+                          icon: Icon(
+                            FontAwesomeIcons.solidUser,
+                            color: Colors.amber,
+                          ),
+                          onPressed: () {
+                            // Navigator.of(context).pushNamed(EditProfile.routeName);
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile(),));
+                          },
                         ),
                       ),
                     ],
