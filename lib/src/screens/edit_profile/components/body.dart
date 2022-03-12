@@ -1,7 +1,7 @@
 import 'package:domus/config/size_config.dart';
+import 'package:domus/src/screens/edit_profile/components/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -24,7 +24,7 @@ class _BodyState extends State<Body> {
         left: getProportionateScreenWidth(20),
         // top: getProportionateScreenHeight(15),
         right: getProportionateScreenWidth(20),
-        // bottom: getProportionateScreenHeight(15),
+        bottom: getProportionateScreenHeight(15),
       ),
       child: ListView(
         // crossAxisAlignment: CrossAxisAlignment.start,
@@ -92,26 +92,7 @@ class _BodyState extends State<Body> {
                         getProportionateScreenHeight(25),
                         getProportionateScreenWidth(75),
                         getProportionateScreenHeight(25)),
-                    child: Container(
-                      height: 70,
-                      width: 70,
-                      decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          color: Colors.black,
-                          boxShadow: [
-                            BoxShadow(spreadRadius: 6, color: Colors.black38),
-                          ]),
-                      child: IconButton(
-                        icon: Icon(
-                          Icons.upload_rounded,
-                          color: Colors.white,
-                          size: 30,
-                        ),
-                        onPressed: () {
-                          // Image Picker
-                        },
-                      ),
-                    ),
+                    child: UploadImage(),
                   )
                 ],
               ),
@@ -134,8 +115,10 @@ class _BodyState extends State<Body> {
                       return 'Name is required';
                     }
                   },
+                  cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your full name',
+                    hintStyle: TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -178,8 +161,10 @@ class _BodyState extends State<Body> {
                       return 'Username is required';
                     }
                   },
+                  cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Username',
+                    hintStyle: TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -220,8 +205,10 @@ class _BodyState extends State<Body> {
                       return 'Email is required';
                     }
                   },
+                  cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your Email',
+                    hintStyle: TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -242,7 +229,7 @@ class _BodyState extends State<Body> {
                       borderSide: BorderSide(color: Colors.grey),
                     ),
                     focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     errorBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.redAccent),
@@ -262,8 +249,10 @@ class _BodyState extends State<Body> {
                       return 'Phone no. is required';
                     }
                   },
+                  cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your Phone',
+                    hintStyle: TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,

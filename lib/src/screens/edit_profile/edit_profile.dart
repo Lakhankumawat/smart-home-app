@@ -7,9 +7,14 @@ class EditProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Color(0xFFF2F2F2),
-      body: Body(),
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).requestFocus(FocusNode());
+      },
+      child: Scaffold(
+        backgroundColor: Color(0xFFF2F2F2),
+        body: Body(),
+      ),
     );
   }
 }
