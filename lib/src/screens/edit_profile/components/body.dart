@@ -114,6 +114,7 @@ class _BodyState extends State<Body> {
                     if (value!.isEmpty || value.trim().isEmpty) {
                       return 'Name is required';
                     }
+                    return null;
                   },
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
@@ -160,6 +161,7 @@ class _BodyState extends State<Body> {
                     if(value!.isEmpty || value.trim().isEmpty){
                       return 'Username is required';
                     }
+                    return null;
                   },
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
@@ -204,6 +206,7 @@ class _BodyState extends State<Body> {
                     if(value!.isEmpty || value.trim().isEmpty){
                       return 'Email is required';
                     }
+                    return null;
                   },
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
@@ -248,6 +251,7 @@ class _BodyState extends State<Body> {
                     if(value!.isEmpty || value.trim().isEmpty) {
                       return 'Phone no. is required';
                     }
+                    return null;
                   },
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
