@@ -43,11 +43,12 @@ class HomeScreen extends StatelessWidget {
                       Container(
                         width: 50,
                         height: 50,
-                        decoration: BoxDecoration(
+                        decoration: const BoxDecoration(
                           color: Color(0xffdadada),
                           borderRadius:
                               BorderRadius.all(Radius.elliptical(45, 45)),
                         ),
+
                         child: IconButton(
                           splashRadius: 25,
                           icon: const Icon(
@@ -58,6 +59,7 @@ class HomeScreen extends StatelessWidget {
                             // Navigator.of(context).pushNamed(EditProfile.routeName);
                             Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),));
                           },
+
                         ),
                       ),
                     ],
@@ -69,7 +71,7 @@ class HomeScreen extends StatelessWidget {
                   child: TabBar(
                       isScrollable: true,
                       unselectedLabelColor: Colors.white.withOpacity(0.3),
-                      indicatorColor: Color(0xFF464646),
+                      indicatorColor: const Color(0xFF464646),
                       tabs: [
                         Tab(
                           child: Text(
@@ -102,22 +104,18 @@ class HomeScreen extends StatelessWidget {
                   Body(
                     model: model,
                   ),
-                  Container(
-                    child: Center(
-                      child: Text(
-                        'To be Built Soon',
-                        style: Theme.of(context).textTheme.headline3,
-                      ),
+                  Center(
+                    child: Text(
+                      'To be Built Soon',
+                      style: Theme.of(context).textTheme.headline3,
                     ),
                   ),
-                  Container(
-                    child: Center(
-                      child: Text('under construction'),
-                    ),
+                  const Center(
+                    child: Text('under construction'),
                   ),
                 ],
               ),
-              bottomNavigationBar: CustomBottomNavBar(model),
+              bottomNavigationBar: CustomBottomNavBar(model: model),
             ),
           );
         });

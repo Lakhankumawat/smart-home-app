@@ -42,7 +42,7 @@ class HomeScreenViewModel extends BaseModel {
   void onItemTapped(int index) {
     selectedIndex = index;
     pageController.animateToPage(index,
-        duration: Duration(milliseconds: 500), curve: Curves.easeOut);
+        duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
     notifyListeners();
   }
 }
