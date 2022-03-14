@@ -36,17 +36,17 @@ class _BodyState extends State<Body> {
             padding: const EdgeInsets.only(left: 7, right: 7),
             child: Row(
               children: [
-                Text(
+                const Text(
                   'Edit Profile',
                   // style: Theme.of(context).textTheme.headline1,
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                  style: const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                 ),
-                Spacer(),
+                const Spacer(),
                 InkWell(
                   onTap: () {
                     Navigator.of(context).pop();
                   },
-                  child: Icon(
+                  child: const Icon(
                     Icons.close,
                     size: 35,
                   ),
@@ -61,7 +61,7 @@ class _BodyState extends State<Body> {
             child: Container(
               width: 350,
               decoration: BoxDecoration(
-                color: Color(0xFFBDBDBD).withOpacity(0.1),
+                color: const Color(0xFFBDBDBD).withOpacity(0.1),
                 borderRadius: BorderRadius.circular(30),
               ),
               padding: EdgeInsets.only(
@@ -72,18 +72,18 @@ class _BodyState extends State<Body> {
               ),
               child: Column(
                 children: [
-                  Text(
+                  const Text(
                     'Upload image',
                     // style: Theme.of(context).textTheme.headline1,
-                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: getProportionateScreenHeight(15),
                   ),
                   DottedBorder(
                     borderType: BorderType.RRect,
-                    radius: Radius.circular(20),
-                    dashPattern: [7, 7],
+                    radius: const Radius.circular(20),
+                    dashPattern: const [7, 7],
                     color: Colors.black38,
                     strokeWidth: 2,
                     // padding: EdgeInsets.fromLTRB(115, 37, 115, 37),
@@ -92,7 +92,7 @@ class _BodyState extends State<Body> {
                         getProportionateScreenHeight(25),
                         getProportionateScreenWidth(75),
                         getProportionateScreenHeight(25)),
-                    child: UploadImage(),
+                    child: const UploadImage(),
                   )
                 ],
               ),
@@ -119,7 +119,7 @@ class _BodyState extends State<Body> {
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your full name',
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -127,25 +127,25 @@ class _BodyState extends State<Body> {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: Colors.white,
                       ),
                     ),
                     // prefixIcon: Icon(Icons.person, size: 25, color: Colors.grey,),
                     // contentPadding: EdgeInsets.only(left: 30),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    border: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black),
                     ),
-                    errorBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.redAccent),
+                    errorBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -166,7 +166,7 @@ class _BodyState extends State<Body> {
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Username',
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -174,23 +174,23 @@ class _BodyState extends State<Body> {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: Colors.white,
                       ),
                     ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    border: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black),
                     ),
-                    errorBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.redAccent),
+                    errorBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -211,7 +211,7 @@ class _BodyState extends State<Body> {
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your Email',
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -219,23 +219,23 @@ class _BodyState extends State<Body> {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: Colors.white,
                       ),
                     ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey),
+                    border: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.grey),
                     ),
                     enabled: true,
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.grey),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.grey),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black),
                     ),
-                    errorBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.redAccent),
+                    errorBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -256,7 +256,7 @@ class _BodyState extends State<Body> {
                   cursorColor: Colors.black12,
                   decoration: InputDecoration(
                     hintText: 'Your Phone',
-                    hintStyle: TextStyle(color: Colors.grey),
+                    hintStyle: const TextStyle(color: Colors.grey),
                     icon: Container(
                       height: 50,
                       width: 40,
@@ -264,23 +264,23 @@ class _BodyState extends State<Body> {
                         color: Colors.black,
                         borderRadius: BorderRadius.circular(15),
                       ),
-                      child: Icon(
+                      child: const Icon(
                         Icons.person,
                         color: Colors.white,
                       ),
                     ),
-                    border: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    border: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
-                    enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black38),
+                    enabledBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black38),
                     ),
-                    focusedBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black),
+                    focusedBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.black),
                     ),
-                    errorBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.redAccent),
+                    errorBorder: const UnderlineInputBorder(
+                      borderSide: const BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -296,8 +296,8 @@ class _BodyState extends State<Body> {
               color: Colors.black87,
               borderRadius: BorderRadius.circular(20),
             ),
-            child: Center(
-                child: Text('Save Changes', style: TextStyle(fontSize: 18, color: Colors.white70, fontWeight: FontWeight.bold),)
+            child: const Center(
+                child: const Text('Save Changes', style: const TextStyle(fontSize: 18, color: Colors.white70, fontWeight: FontWeight.bold),)
             ),
           ),
         ],

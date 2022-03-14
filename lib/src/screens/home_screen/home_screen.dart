@@ -50,13 +50,13 @@ class HomeScreen extends StatelessWidget {
                         ),
                         child: IconButton(
                           splashRadius: 25,
-                          icon: Icon(
+                          icon: const Icon(
                             FontAwesomeIcons.solidUser,
                             color: Colors.amber,
                           ),
                           onPressed: () {
                             // Navigator.of(context).pushNamed(EditProfile.routeName);
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => EditProfile(),));
+                            Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),));
                           },
                         ),
                       ),

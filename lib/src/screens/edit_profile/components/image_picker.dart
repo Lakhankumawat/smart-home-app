@@ -32,14 +32,14 @@ class _UploadImageState extends State<UploadImage> {
     return Container(
       height: 70,
       width: 70,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black,
-          boxShadow: [
-            BoxShadow(spreadRadius: 6, color: Colors.black38),
+          boxShadow: const [
+            const BoxShadow(spreadRadius: 6, color: Colors.black38),
           ]),
       child: _image == null ? IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.upload_rounded,
           color: Colors.white,
           size: 30,
