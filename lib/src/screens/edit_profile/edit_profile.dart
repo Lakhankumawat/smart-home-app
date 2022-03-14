@@ -12,8 +12,8 @@ class EditProfile extends StatelessWidget {
         FocusScope.of(context).requestFocus(FocusNode());
       },
       child: const Scaffold(
-        backgroundColor: const Color(0xFFF2F2F2),
-        body: const Body(),
+        backgroundColor: Color(0xFFF2F2F2),
+        body: Body(),
       ),
     );
   }

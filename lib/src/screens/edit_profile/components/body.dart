@@ -39,7 +39,7 @@ class _BodyState extends State<Body> {
                 const Text(
                   'Edit Profile',
                   // style: Theme.of(context).textTheme.headline1,
-                  style: const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
                 ),
                 const Spacer(),
                 InkWell(
@@ -75,7 +75,7 @@ class _BodyState extends State<Body> {
                   const Text(
                     'Upload image',
                     // style: Theme.of(context).textTheme.headline1,
-                    style: const TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(
                     height: getProportionateScreenHeight(15),
@@ -135,17 +135,17 @@ class _BodyState extends State<Body> {
                     // prefixIcon: Icon(Icons.person, size: 25, color: Colors.grey,),
                     // contentPadding: EdgeInsets.only(left: 30),
                     border: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
                     enabledBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     errorBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.redAccent),
+                      borderSide: BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -180,17 +180,17 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     border: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
                     enabledBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     errorBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.redAccent),
+                      borderSide: BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -225,17 +225,17 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     border: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: Colors.grey),
                     ),
                     enabled: true,
                     enabledBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.grey),
+                      borderSide: BorderSide(color: Colors.grey),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     errorBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.redAccent),
+                      borderSide: BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -270,17 +270,17 @@ class _BodyState extends State<Body> {
                       ),
                     ),
                     border: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     enabled: true,
                     enabledBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black38),
+                      borderSide: BorderSide(color: Colors.black38),
                     ),
                     focusedBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: BorderSide(color: Colors.black),
                     ),
                     errorBorder: const UnderlineInputBorder(
-                      borderSide: const BorderSide(color: Colors.redAccent),
+                      borderSide: BorderSide(color: Colors.redAccent),
                     ),
                   ),
                 ),
@@ -297,7 +297,7 @@ class _BodyState extends State<Body> {
               borderRadius: BorderRadius.circular(20),
             ),
             child: const Center(
-                child: const Text('Save Changes', style: const TextStyle(fontSize: 18, color: Colors.white70, fontWeight: FontWeight.bold),)
+                child: Text('Save Changes', style: TextStyle(fontSize: 18, color: Colors.white70, fontWeight: FontWeight.bold),)
             ),
           ),
         ],

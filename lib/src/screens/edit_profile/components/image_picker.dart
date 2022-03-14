@@ -35,8 +35,8 @@ class _UploadImageState extends State<UploadImage> {
       decoration: const BoxDecoration(
           shape: BoxShape.circle,
           color: Colors.black,
-          boxShadow: const [
-            const BoxShadow(spreadRadius: 6, color: Colors.black38),
+          boxShadow: [
+            BoxShadow(spreadRadius: 6, color: Colors.black38),
           ]),
       child: _image == null ? IconButton(
         icon: const Icon(
