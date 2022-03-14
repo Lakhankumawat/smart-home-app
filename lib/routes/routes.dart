@@ -8,6 +8,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
+
   HomeScreen.routeName: (context) => HomeScreen(),
   SmartLight.routeName: (context) => SmartLight(),
   SplashScreen.routeName: (context) => SplashScreen(),
@@ -15,4 +16,5 @@ final Map<String, WidgetBuilder> routes = {
   SmartSpeaker.routeName: (context) => SmartSpeaker(),
   SmartFan.routeName: (context) => SmartFan(),
   EditProfile.routeName: (context) => EditProfile(),
+
 };

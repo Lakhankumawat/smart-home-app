@@ -28,7 +28,9 @@ class DarkContainer extends StatelessWidget {
         height: getProportionateScreenHeight(140),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(20),
-          color: itsOn ? Color.fromRGBO(0, 0, 0, 1) : Color(0xffededed),
+          color: itsOn
+              ? const Color.fromRGBO(0, 0, 0, 1)
+              : const Color(0xffededed),
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -47,16 +49,17 @@ class DarkContainer extends StatelessWidget {
                     height: 50,
                     decoration: BoxDecoration(
                       color: itsOn
-                          ? Color.fromRGBO(45, 45, 45, 1)
-                          : Color(0xffdadada),
-                      borderRadius: BorderRadius.all(Radius.elliptical(45, 45)),
+                          ? const Color.fromRGBO(45, 45, 45, 1)
+                          : const Color(0xffdadada),
+                      borderRadius:
+                          const BorderRadius.all(Radius.elliptical(45, 45)),
                     ),
                     child: SvgPicture.asset(
                       iconAsset,
-                      color: itsOn ? Colors.amber : Color(0xFF808080),
+                      color: itsOn ? Colors.amber : const Color(0xFF808080),
                     ),
                   ),
-                  Icon(
+                  const Icon(
                     Icons.star_rounded,
                     color: Color(0xFF808080),
                   ),
@@ -75,7 +78,7 @@ class DarkContainer extends StatelessWidget {
                   Text(
                     deviceCount,
                     textAlign: TextAlign.left,
-                    style: TextStyle(
+                    style: const TextStyle(
                         color: Color.fromRGBO(166, 166, 166, 1),
                         fontSize: 13,
                         letterSpacing: 0,
@@ -99,18 +102,18 @@ class DarkContainer extends StatelessWidget {
                     child: Container(
                       width: 48,
                       height: 25.6,
-                      padding: EdgeInsets.all(2),
+                      padding: const EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: itsOn ? Colors.black : Color(0xffd6d6d6),
+                        color: itsOn ? Colors.black : const Color(0xffd6d6d6),
                         border: Border.all(
-                          color: Color.fromRGBO(255, 255, 255, 1),
+                          color: const Color.fromRGBO(255, 255, 255, 1),
                           width: itsOn ? 2 : 0,
                         ),
                       ),
                       child: Row(
                         children: [
-                          itsOn ? Spacer() : SizedBox(),
+                          itsOn ? const Spacer() : const SizedBox(),
                           Container(
                             width: 20,
                             height: 20,
