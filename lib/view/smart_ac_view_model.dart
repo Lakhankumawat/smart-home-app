@@ -3,7 +3,7 @@ import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class SmartACViewModel extends BaseModel {
   //--------------VARIABLES----------//
-  PanelController pc = new PanelController();
+  PanelController pc = PanelController();
   bool isACon = true;
   final List<bool> isSelected = [true, false, false, false];
   double timerHours = 8;
