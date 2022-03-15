@@ -1,8 +1,8 @@
 import 'dart:html';
 
-import 'package:domus/src/screens/set_event_screen/theme/calendar_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
+import 'package:domus/src/screens/set_event_screen/resources.dart';
 
 class SetEventScreen extends StatefulWidget {
   static String routeName = '/set-event-screen';
@@ -32,27 +32,31 @@ class _SetEventScreenState extends State<SetEventScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(16),
+      padding: EdgeInsets.all(20),
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           automaticallyImplyLeading: false,
+          backgroundColor: Colors.white,
           iconTheme: Theme.of(context).iconTheme,
           title: Text(
             'Set Events',
-            style: Theme.of(context).textTheme.headline1,
+            style: AlertDialogTheme.appBarTextStyle,
           ),
           elevation: 0,
           actions: <Widget>[
             CloseButton(),
           ],
         ),
-        body: Column(
+        body: ListView(
           children: [
             TableCalendar(
               firstDay: DateTime.utc(2010, 10, 16),
-              lastDay: DateTime.utc(2030, 3, 14),
+              lastDay: DateTime.utc(2023, 3, 14),
               focusedDay: focusedDay,
               calendarStyle: CalendarTheme.calendarStyle(),
+              headerStyle: CalendarTheme.headerStyle(),
+              daysOfWeekStyle: CalendarTheme.daysOfWeekStyle(),
               startingDayOfWeek: StartingDayOfWeek.monday,
               selectedDayPredicate: (day) => isSameDay(selectedDay, day),
               onDaySelected: (selectedDay, focusedDay) {
@@ -63,37 +67,53 @@ class _SetEventScreenState extends State<SetEventScreen> {
               },
               eventLoader: getEventsForDay,
             ),
-            SizedBox(height: 8),
+            SizedBox(height: 32),
             ...getEventsForDay(selectedDay).map(
-              (event) => ListTile(
-                title: Text(event.type),
-              ),
+              (event) => EventListTile(text: event.type),
             )
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
             if (selectedDay == null) {
-              print('Please Select a Day!');
+              showDialog(
+                context: context,
+                builder: (context) => AlertDialog(
+                  title: Text('Please Select a Day!'),
+                  titleTextStyle: AlertDialogTheme.titleTextStyle,
+                  actions: <Widget>[
+                    TextButton(
+                      onPressed: () => Navigator.pop(context),
+                      child: Text(
+                        'Ok',
+                        style: AlertDialogTheme.buttonTextStyle,
+                      ),
+                    ),
+                  ],
+                ),
+              );
             } else {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
                   title: Text('Add an Event'),
+                  titleTextStyle: AlertDialogTheme.titleTextStyle,
                   content: TextField(
+                    style: AlertDialogTheme.textFieldStyle,
+                    textCapitalization: TextCapitalization.words,
                     controller: controller,
+                    cursorColor: Colors.grey,
                     decoration: InputDecoration(
                       hintText: 'Your Event',
+                      hintStyle: AlertDialogTheme.textFieldStyle,
                     ),
                   ),
-                  actions: [
+                  actions: <Widget>[
                     TextButton(
                       onPressed: () => Navigator.pop(context),
                       child: Text(
                         'Cancel',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
+                        style: AlertDialogTheme.buttonTextStyle,
                       ),
                     ),
                     TextButton(
@@ -117,9 +137,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
                       },
                       child: Text(
                         'Ok',
-                        style: TextStyle(
-                          color: Colors.black,
-                        ),
+                        style: AlertDialogTheme.buttonTextStyle,
                       ),
                     ),
                   ],
@@ -127,7 +145,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
               );
             }
           },
-          label: Text('Submit New Event'),
+          label: Text('Add New Event'),
           icon: Icon(Icons.add_rounded),
           backgroundColor: Color(0xFF464646),
         ),

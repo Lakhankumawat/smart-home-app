@@ -55,4 +55,9 @@ flutter:
         - asset: "assets/fonts/Poppins-700.ttf"
           style: "normal"
           weight: 700
-
+    - family: ABeeZee
+      fonts:
+        - asset: assets/fonts/ABeeZee-Italic.ttf
+          style: italic
+        - asset: assets/fonts/ABeeZee-Regular.ttf
+          style: normal
