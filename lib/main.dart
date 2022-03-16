@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 
 void main() async {
   setupLocator();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       themeMode: themeMode,
       theme: ThemeData(
         fontFamily: 'Nato Sans',
-        textSelectionTheme: TextSelectionThemeData(
+        textSelectionTheme: const TextSelectionThemeData(
           // Set Up for TextFields
           cursorColor: Colors.grey,
           selectionColor: Colors.blueGrey,
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
           onError: Colors.white,
           brightness: Brightness.light,
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headline1: TextStyle(
             fontStyle: FontStyle.normal,
             fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }

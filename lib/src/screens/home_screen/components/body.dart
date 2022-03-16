@@ -11,7 +11,7 @@ import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 
 import 'add_device_widget.dart';
-import 'darkContainer.dart';
+import 'dark_container.dart';
 
 class Body extends StatelessWidget {
   final HomeScreenViewModel model;
@@ -25,18 +25,18 @@ class Body extends StatelessWidget {
           horizontal: getProportionateScreenWidth(7),
           vertical: getProportionateScreenHeight(7),
         ),
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: Color(0xFFF2F2F2),
         ),
         child: Column(
           children: [
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: WeatherContainer(context: context, model: model),
+              child: WeatherContainer(model: model),
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: SavingsContainer(context: context, model: model),
+              child: SavingsContainer(model: model),
             ),
             Row(
               children: [
@@ -74,7 +74,7 @@ class Body extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: MusicWidget(context),
+              child: const MusicWidget(),
             ),
             Row(
               children: [
@@ -112,13 +112,13 @@ class Body extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(8)),
-              child: AddNewDevice(context),
+              child: const AddNewDevice(),
             ),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushNamed(SetEventScreen.routeName);
               },
-              child: Text(
+              child: const Text(
                 'To SetEventScreen',
                 style: TextStyle(
                   color: Colors.black,

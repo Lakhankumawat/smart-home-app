@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -11,6 +11,7 @@
  ## [Download App here](https://drive.google.com/file/d/1H9a_El71DdYrG6oUFd0EyZGZ3fXcy3AU/view?usp=sharing) |  [App Showcase Here](https://youtu.be/tO0D1KE0QyI) | [About Project](https://youtu.be/saA8IUyLQ9I) | [Figma Files](https://www.figma.com/file/tayD83OorLFuT62vnk401Z/Smart-Home-App-Designs-(Community)?node-id=0%3A1)
     
 ![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
+
 
 ## 🛠️ Installation Steps
 
@@ -76,6 +77,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://imgbot.net"><img src="https://avatars.githubusercontent.com/u/31427850?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Imgbot</b></sub></a><br /><a href="#tool-ImgBotApp" title="Tools">🔧</a></td>
     <td align="center"><a href="https://github.com/HetviSoni"><img src="https://avatars.githubusercontent.com/u/76479104?v=4?s=100" width="100px;" alt=""/><br /><sub><b>HetviSoni</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=HetviSoni" title="Code">💻</a></td>
     <td align="center"><a href="https://allcontributors.org"><img src="https://avatars.githubusercontent.com/u/46410174?v=4?s=100" width="100px;" alt=""/><br /><sub><b>All Contributors</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=all-contributors" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/mariam199911"><img src="https://avatars.githubusercontent.com/u/64384533?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mariam</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=mariam199911" title="Code">💻</a></td>
+    <td align="center"><a href="https://twitter.com/DomesticMouse"><img src="https://avatars.githubusercontent.com/u/30503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brett Morgan</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/pulls?q=is%3Apr+reviewed-by%3Adomesticmouse" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=domesticmouse" title="Code">💻</a></td>
+    <td align="center"><a href="https://vrishtigupta.azurewebsites.net/"><img src="https://avatars.githubusercontent.com/u/53931644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vrishti Gupta</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=VrishtiGupta11" title="Code">💻</a></td>
   </tr>
 </table>
 

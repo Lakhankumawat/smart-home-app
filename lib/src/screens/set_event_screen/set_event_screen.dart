@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter
+
 import 'dart:html';
 
 import 'package:flutter/material.dart';
@@ -33,7 +35,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
       child: Scaffold(
         backgroundColor: Colors.white,
         appBar: AppBar(
@@ -45,7 +47,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
             style: AlertDialogTheme.appBarTextStyle,
           ),
           elevation: 0,
-          actions: <Widget>[
+          actions: const <Widget>[
             CloseButton(),
           ],
         ),
@@ -69,7 +71,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
               },
               eventLoader: getEventsForDay,
             ),
-            SizedBox(height: 32),
+            const SizedBox(height: 32),
             ...getEventsForDay(selectedDay).map(
               (event) => EventListTile(text: event.type),
             )
@@ -81,7 +83,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text('Please Select a Day!'),
+                  title: const Text('Please Select a Day!'),
                   titleTextStyle: AlertDialogTheme.titleTextStyle,
                   actions: <Widget>[
                     TextButton(
@@ -98,7 +100,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
               showDialog(
                 context: context,
                 builder: (context) => AlertDialog(
-                  title: Text('Add an Event'),
+                  title: const Text('Add an Event'),
                   titleTextStyle: AlertDialogTheme.titleTextStyle,
                   content: TextField(
                     autofocus: true,
@@ -147,9 +149,9 @@ class _SetEventScreenState extends State<SetEventScreen> {
               );
             }
           },
-          label: Text('Add New Event'),
-          icon: Icon(Icons.add_rounded),
-          backgroundColor: Color(0xFF464646),
+          label: const Text('Add New Event'),
+          icon: const Icon(Icons.add_rounded),
+          backgroundColor: const Color(0xFF464646),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       ),

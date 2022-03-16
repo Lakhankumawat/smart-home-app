@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 abstract class AlertDialogTheme {
   static TextStyle get appBarTextStyle {
-    return TextStyle(
+    return const TextStyle(
       fontFamily: 'ABeeZee',
       color: Colors.black,
       fontSize: 36,
@@ -11,14 +11,14 @@ abstract class AlertDialogTheme {
   }
 
   static TextStyle get buttonTextStyle {
-    return TextStyle(
+    return const TextStyle(
       fontFamily: 'ABeeZee',
       color: Colors.black,
     );
   }
 
   static TextStyle get titleTextStyle {
-    return TextStyle(
+    return const TextStyle(
       fontFamily: 'ABeeZee',
       color: Colors.black,
       fontSize: 16,
@@ -26,7 +26,7 @@ abstract class AlertDialogTheme {
   }
 
   static TextStyle get textFieldStyle {
-    return TextStyle(
+    return const TextStyle(
       fontFamily: 'ABeeZee',
       color: Colors.black,
       fontSize: 14,

@@ -5,7 +5,7 @@ import 'package:table_calendar/table_calendar.dart';
 
 abstract class CalendarTheme {
   static CalendarStyle calendarStyle() {
-    return CalendarStyle(
+    return const CalendarStyle(
       outsideDaysVisible: false,
       defaultTextStyle: TextStyle(
         color: Colors.black,
@@ -36,7 +36,7 @@ abstract class CalendarTheme {
   }
 
   static HeaderStyle headerStyle() {
-    return HeaderStyle(
+    return const HeaderStyle(
       formatButtonVisible: false,
       titleCentered: true,
       decoration: BoxDecoration(
@@ -56,7 +56,7 @@ abstract class CalendarTheme {
   }
 
   static DaysOfWeekStyle daysOfWeekStyle() {
-    return DaysOfWeekStyle(
+    return const DaysOfWeekStyle(
       decoration: BoxDecoration(
         color: Color(0xFFF2F2F2),
         border: Border.symmetric(horizontal: BorderSide()),

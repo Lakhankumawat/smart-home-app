@@ -5,7 +5,7 @@ import 'getit.dart';
 
 class BaseModel extends ChangeNotifier {
   final navigationService = getIt<NavigationService>();
-  ViewState _state = ViewState.Idle;
+  ViewState _state = ViewState.idle;
 
   ViewState get state => _state;
   void setState(ViewState viewState) {

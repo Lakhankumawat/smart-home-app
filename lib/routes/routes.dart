@@ -1,4 +1,5 @@
 import 'package:domus/src/screens/set_event_screen/set_event_screen.dart';
+import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/screens/smart_ac/smart_ac.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
@@ -8,11 +9,12 @@ import 'package:flutter/cupertino.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 
 final Map<String, WidgetBuilder> routes = {
-  HomeScreen.routeName: (context) => HomeScreen(),
-  SetEventScreen.routeName: (context) => SetEventScreen(),
-  SmartLight.routeName: (context) => SmartLight(),
-  SplashScreen.routeName: (context) => SplashScreen(),
-  SmartAC.routeName: (context) => SmartAC(),
-  SmartSpeaker.routeName: (context) => SmartSpeaker(),
-  SmartFan.routeName: (context) => SmartFan(),
+  HomeScreen.routeName: (context) => const HomeScreen(),
+  SetEventScreen.routeName: (context) => const SetEventScreen(),
+  SmartLight.routeName: (context) => const SmartLight(),
+  SplashScreen.routeName: (context) => const SplashScreen(),
+  SmartAC.routeName: (context) => const SmartAC(),
+  SmartSpeaker.routeName: (context) => const SmartSpeaker(),
+  SmartFan.routeName: (context) => const SmartFan(),
+  EditProfile.routeName: (context) => const EditProfile(),
 };

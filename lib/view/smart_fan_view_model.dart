@@ -4,7 +4,7 @@ import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class SmartFanViewModel extends BaseModel {
   //--------------VARIABLES----------//
-  PanelController pc = new PanelController();
+  PanelController pc = PanelController();
   // bool isTappedOnColor = false;
   bool isFanOff = false;
   final List<bool> isSelected = [true, false, false];
@@ -13,7 +13,7 @@ class SmartFanViewModel extends BaseModel {
 
   ///keeping track of all three factors - even index will do the task
   int selectedIndex = 0;
-  Color lightColor = Color(0xFF7054FF);
+  Color lightColor = const Color(0xFF7054FF);
   String fanImage = 'assets/images/fan.png';
 
   void fanSwitch(bool value) {
