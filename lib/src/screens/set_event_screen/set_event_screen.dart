@@ -16,6 +16,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
   Map<DateTime, List<Event>> eventsForDay = {};
   TextEditingController controller = TextEditingController();
 
+  DateTime today = DateTime.now();
   DateTime focusedDay = DateTime.now();
   DateTime? selectedDay;
 
@@ -51,12 +52,13 @@ class _SetEventScreenState extends State<SetEventScreen> {
         body: ListView(
           children: [
             TableCalendar(
-              firstDay: DateTime.utc(2010, 10, 16),
-              lastDay: DateTime.utc(2023, 3, 14),
+              firstDay: DateTime.utc(today.year, today.month),
+              lastDay: DateTime.utc(today.year + 1, today.month),
               focusedDay: focusedDay,
               calendarStyle: CalendarTheme.calendarStyle(),
               headerStyle: CalendarTheme.headerStyle(),
               daysOfWeekStyle: CalendarTheme.daysOfWeekStyle(),
+              daysOfWeekHeight: 32,
               startingDayOfWeek: StartingDayOfWeek.monday,
               selectedDayPredicate: (day) => isSameDay(selectedDay, day),
               onDaySelected: (selectedDay, focusedDay) {
@@ -99,10 +101,10 @@ class _SetEventScreenState extends State<SetEventScreen> {
                   title: Text('Add an Event'),
                   titleTextStyle: AlertDialogTheme.titleTextStyle,
                   content: TextField(
+                    autofocus: true,
                     style: AlertDialogTheme.textFieldStyle,
                     textCapitalization: TextCapitalization.words,
                     controller: controller,
-                    cursorColor: Colors.grey,
                     decoration: InputDecoration(
                       hintText: 'Your Event',
                       hintStyle: AlertDialogTheme.textFieldStyle,

@@ -57,7 +57,10 @@ abstract class CalendarTheme {
 
   static DaysOfWeekStyle daysOfWeekStyle() {
     return DaysOfWeekStyle(
-      decoration: BoxDecoration(color: Color(0xFFF2F2F2)),
+      decoration: BoxDecoration(
+        color: Color(0xFFF2F2F2),
+        border: Border.symmetric(horizontal: BorderSide()),
+      ),
       weekendStyle: TextStyle(
         color: Color(0xFFFF8178),
         fontFamily: 'ABeeZee',
