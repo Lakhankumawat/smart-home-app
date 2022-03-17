@@ -1,7 +1,3 @@
-// ignore_for_file: avoid_web_libraries_in_flutter
-
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
 import 'package:domus/src/screens/set_event_screen/resources.dart';
@@ -34,7 +30,8 @@ class _SetEventScreenState extends State<SetEventScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      color: Colors.white,
       padding: const EdgeInsets.all(20),
       child: Scaffold(
         backgroundColor: Colors.white,
@@ -57,6 +54,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
               firstDay: DateTime.utc(today.year, today.month),
               lastDay: DateTime.utc(today.year + 1, today.month),
               focusedDay: focusedDay,
+              sixWeekMonthsEnforced: true,
               calendarStyle: CalendarTheme.calendarStyle(),
               headerStyle: CalendarTheme.headerStyle(),
               daysOfWeekStyle: CalendarTheme.daysOfWeekStyle(),
@@ -73,8 +71,9 @@ class _SetEventScreenState extends State<SetEventScreen> {
             ),
             const SizedBox(height: 32),
             ...getEventsForDay(selectedDay).map(
-              (event) => EventListTile(text: event.type),
-            )
+              (event) => EventListTile(text: event.toString()),
+            ),
+            const SizedBox(height: 32),
           ],
         ),
         floatingActionButton: FloatingActionButton.extended(
@@ -154,6 +153,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
           backgroundColor: const Color(0xFF464646),
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        resizeToAvoidBottomInset: false,
       ),
     );
   }
