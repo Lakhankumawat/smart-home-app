@@ -5,8 +5,8 @@ abstract class AlertDialogTheme {
     return const TextStyle(
       fontFamily: 'ABeeZee',
       color: Colors.black,
-      fontSize: 36,
-      fontWeight: FontWeight.bold,
+      fontSize: 30,
+      fontWeight: FontWeight.w500,
     );
   }
 

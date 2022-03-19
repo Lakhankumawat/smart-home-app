@@ -12,7 +12,7 @@ abstract class CalendarTheme {
         fontFamily: 'ABeeZee',
       ),
       todayDecoration: BoxDecoration(
-        color: Color(0xFFAEFFDF),
+        color: Color(0xFF8CF0C8),
         shape: BoxShape.circle,
       ),
       todayTextStyle: TextStyle(
@@ -59,7 +59,12 @@ abstract class CalendarTheme {
     return const DaysOfWeekStyle(
       decoration: BoxDecoration(
         color: Color(0xFFF2F2F2),
-        border: Border.symmetric(horizontal: BorderSide()),
+        border: Border.symmetric(
+          horizontal: BorderSide(
+            width: 0.25,
+            color: Color(0xFF696969),
+          ),
+        ),
       ),
       weekendStyle: TextStyle(
         color: Color(0xFFFF8178),
