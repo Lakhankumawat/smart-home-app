@@ -1,3 +1,4 @@
+import 'package:domus/src/screens/login_screen/login_screen.dart';
 import 'package:domus/src/screens/smart_ac/smart_ac.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
@@ -9,6 +10,7 @@ final Map<String, WidgetBuilder> routes = {
   HomeScreen.routeName: (context) => HomeScreen(),
   SmartLight.routeName: (context) => SmartLight(),
   SplashScreen.routeName: (context) => SplashScreen(),
+	LoginScreen.routeName: (context) => LoginScreen(),
   SmartAC.routeName: (context) => SmartAC(),
   SmartSpeaker.routeName: (context) => SmartSpeaker(),
 };

@@ -1,5 +1,6 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
+import 'package:domus/src/screens/login_screen/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -39,7 +40,7 @@ class Body extends StatelessWidget {
           ),
           ElevatedButton(
             onPressed: () {
-              Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);
             },
             child: Text(
               'Get Started',
