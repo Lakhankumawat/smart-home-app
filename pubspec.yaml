@@ -63,3 +63,9 @@ flutter:
           style: italic
         - asset: assets/fonts/ABeeZee-Regular.ttf
           style: normal
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Lexend-ExtraLight.ttf
+          weight: 200

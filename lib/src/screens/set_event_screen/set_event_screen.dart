@@ -86,67 +86,29 @@ class _SetEventScreenState extends State<SetEventScreen> {
           if (selectedDay == null) {
             showDialog(
               context: context,
-              builder: (context) => AlertDialog(
-                title: const Text('Please Select a Day!'),
-                titleTextStyle: AlertDialogTheme.titleTextStyle,
-                actions: <Widget>[
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text(
-                      'Ok',
-                      style: AlertDialogTheme.buttonTextStyle,
-                    ),
-                  ),
-                ],
-              ),
+              builder: (context) => const SelectDayDialog(),
             );
           } else {
             showDialog(
               context: context,
-              builder: (context) => AlertDialog(
-                title: const Text('Add an Event'),
-                titleTextStyle: AlertDialogTheme.titleTextStyle,
-                content: TextField(
-                  autofocus: true,
-                  style: AlertDialogTheme.textFieldStyle,
-                  textCapitalization: TextCapitalization.words,
-                  controller: controller,
-                  decoration: InputDecoration(
-                    hintText: 'Your Event',
-                    hintStyle: AlertDialogTheme.textFieldStyle,
-                  ),
-                ),
-                actions: <Widget>[
-                  TextButton(
-                    onPressed: () => Navigator.pop(context),
-                    child: Text(
-                      'Cancel',
-                      style: AlertDialogTheme.buttonTextStyle,
-                    ),
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      if (controller.text.isNotEmpty) {
-                        // Add the Event to the List of Events
-                        if (eventsForDay[selectedDay] == null) {
-                          // If this is the first event
-                          eventsForDay[selectedDay!] = [Event(controller.text)];
-                        } else {
-                          eventsForDay[selectedDay]!
-                              .add(Event(controller.text));
-                        }
-                      }
+              builder: (context) => AddEventDialog(
+                controller: controller,
+                onCancel: () => Navigator.pop(context),
+                onAccept: () {
+                  if (controller.text.isNotEmpty) {
+                    // Add the Event to the List of Events
+                    if (eventsForDay[selectedDay] == null) {
+                      // If this is the first event
+                      eventsForDay[selectedDay!] = [Event(controller.text)];
+                    } else {
+                      eventsForDay[selectedDay]!.add(Event(controller.text));
+                    }
+                  }
 
-                      Navigator.pop(context);
-                      controller.clear();
-                      setState(() {});
-                    },
-                    child: Text(
-                      'Ok',
-                      style: AlertDialogTheme.buttonTextStyle,
-                    ),
-                  ),
-                ],
+                  Navigator.pop(context);
+                  controller.clear();
+                  setState(() {});
+                },
               ),
             );
           }

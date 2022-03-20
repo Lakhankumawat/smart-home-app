@@ -1,4 +1,6 @@
 export 'components/event.dart';
 export 'components/event_list_tile.dart';
-export 'theme/alert_dialog_theme.dart';
-export 'theme/calendar_theme.dart';
+export 'components/add_event_dialog.dart';
+export 'components/select_day_dialog.dart';
+export 'components/alert_dialog_theme.dart';
+export 'components/calendar_theme.dart';
