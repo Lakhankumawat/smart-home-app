@@ -1,6 +1,5 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/view/smart_speaker_view_model.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
@@ -11,7 +10,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,14 +29,14 @@ class Body extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: Icon(Icons.arrow_back_outlined)),
+                    child: const Icon(Icons.arrow_back_outlined)),
                 Stack(
                   children: [
                     Text(
                       'Smart\nSpeaker',
                       style: Theme.of(context).textTheme.headline1!.copyWith(
                             fontSize: 45,
-                            color: Color(0xFFBDBDBD).withOpacity(0.5),
+                            color: const Color(0xFFBDBDBD).withOpacity(0.5),
                           ),
                     ),
                     Text(
@@ -63,10 +62,10 @@ class Body extends StatelessWidget {
                 startAngle: 250,
                 angleRange: 360,
                 customColors: CustomSliderColors(
-                  trackColor: Color(0xFFBDBDBD),
-                  progressBarColor: Color(0xFF464646),
+                  trackColor: const Color(0xFFBDBDBD),
+                  progressBarColor: const Color(0xFF464646),
                   // hideShadow: true,
-                  shadowColor: Color(0xFFBDBDBD).withOpacity(0.1),
+                  shadowColor: const Color(0xFFBDBDBD).withOpacity(0.1),
                   shadowMaxOpacity: 1,
                   shadowStep: 25,
                 ),
@@ -124,13 +123,13 @@ class Body extends StatelessWidget {
                   'Justin Bieber Ft. Kid Laroi',
                   style: Theme.of(context).textTheme.headline4,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
-                Divider(
+                const Divider(
                   thickness: 2,
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Row(
@@ -138,42 +137,42 @@ class Body extends StatelessWidget {
                   children: [
                     ElevatedButton(
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.first_page_rounded,
                         size: 30,
                         color: Color(0xFF464646),
                       ),
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.all(10),
+                        shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(10),
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.play_arrow_rounded,
                         size: 35,
                         color: Color(0xFFF2F2F2),
                       ),
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
-                        primary: Color(0xFF464646),
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.all(8),
+                        primary: const Color(0xFF464646),
+                        shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(8),
                       ),
                     ),
                     ElevatedButton(
                       onPressed: () {},
-                      child: Icon(
+                      child: const Icon(
                         Icons.last_page_rounded,
                         size: 30,
                         color: Color(0xFF464646),
                       ),
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
-                        shape: CircleBorder(),
-                        padding: EdgeInsets.all(10),
+                        shape: const CircleBorder(),
+                        padding: const EdgeInsets.all(10),
                       ),
                     )
                   ],
@@ -189,67 +188,67 @@ class Body extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.playlist_play_rounded,
                   size: 30,
                   color: Color(0xFF464646),
                 ),
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
                 ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.shuffle_rounded,
                   size: 25,
                   color: Color(0xFF464646),
                 ),
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
                 ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.repeat_rounded,
                   size: 25,
                   color: Color(0xFF464646),
                 ),
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
                 ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.equalizer_rounded,
                   size: 25,
                   color: Color(0xFF464646),
                 ),
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
                 ),
               ),
               ElevatedButton(
                 onPressed: () {},
-                child: Icon(
+                child: const Icon(
                   Icons.favorite_rounded,
                   size: 25,
                   color: Color(0xFF464646),
                 ),
                 style: ElevatedButton.styleFrom(
                   elevation: 0.0,
-                  shape: CircleBorder(),
-                  padding: EdgeInsets.all(10),
+                  shape: const CircleBorder(),
+                  padding: const EdgeInsets.all(10),
                 ),
               )
             ],
@@ -267,7 +266,7 @@ class Body extends StatelessWidget {
                     'Kakao Mini C',
                     style: Theme.of(context).textTheme.headline2,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 5,
                   ),
                   Text(
@@ -277,10 +276,10 @@ class Body extends StatelessWidget {
                 ],
               ),
               Switch.adaptive(
-                inactiveThumbColor: Color(0xFFE4E4E4),
+                inactiveThumbColor: const Color(0xFFE4E4E4),
                 inactiveTrackColor: Colors.white,
                 activeColor: Colors.white,
-                activeTrackColor: Color(0xFF464646),
+                activeTrackColor: const Color(0xFF464646),
                 value: model.isSpeakeron,
                 onChanged: (value) {
                   model.speakerSwitch(value);

@@ -9,11 +9,11 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         horizontal: 14,
         vertical: 14,
       ),
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: Color(0xFF464646),
       ),
       child: Column(
@@ -35,7 +35,7 @@ class Body extends StatelessWidget {
           Text(
             'Smart Home can change\nway you live in the future',
             style: Theme.of(context).textTheme.headline3!.copyWith(
-                  color: Color(0xFFBDBDBD),
+                  color: const Color(0xFFBDBDBD),
                 ),
           ),
           ElevatedButton(

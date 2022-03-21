@@ -18,13 +18,16 @@ dependencies:
   flutter_svg: ^1.0.3
   font_awesome_flutter: ^9.2.0
   flutter_screenutil: ^5.3.1
+  lottie: ^1.2.2
+  image_picker: ^0.8.4+11
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
 
   flutter_native_splash: ^1.3.3
-  #flutter_lints: ^1.0.0
+  flutter_lints: ^1.0.0
+
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/splash_1024.png
@@ -39,6 +42,7 @@ flutter:
     - assets/fonts/
     - assets/images/weather/
     - assets/icons/svg/
+    - assets/Lottie/
 
   fonts:
     - family: "Noto Sans"

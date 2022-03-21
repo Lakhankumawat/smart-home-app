@@ -3,11 +3,10 @@ import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
 import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-import 'config/size_config.dart';
 
 void main() async {
   setupLocator();
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -36,7 +35,7 @@ class MyApp extends StatelessWidget {
           onError: Colors.white,
           brightness: Brightness.light,
         ),
-        textTheme: TextTheme(
+        textTheme: const TextTheme(
           headline1: TextStyle(
             fontStyle: FontStyle.normal,
             fontWeight: FontWeight.bold,
@@ -76,7 +75,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: SplashScreen(),
+      home: const SplashScreen(),
     );
   }
 }
