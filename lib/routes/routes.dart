@@ -17,7 +17,7 @@ final Map<String, WidgetBuilder> routes = {
   SmartSpeaker.routeName: (context) => const SmartSpeaker(),
   SmartFan.routeName: (context) => const SmartFan(),
   EditProfile.routeName: (context) => const EditProfile(),
-  LoginScreen.routeName: (context) => LoginScreen(),
+  LoginScreen.routeName: (context) => const LoginScreen(),
 
 
 };

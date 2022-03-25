@@ -8,12 +8,10 @@ class Body extends StatelessWidget {
 	@override
   Widget build(BuildContext context) {
 
-    return Container(
-
-        child: Column(
+    return Column(
 	        crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Stack(
+      children: [
+        Stack(
 	        children: [
 	        	Image.asset('assets/images/login.png',
 				        height: getProportionateScreenHeight(300),
@@ -33,9 +31,9 @@ class Body extends StatelessWidget {
 				      ],
 		        )),
 	        ],
-            ),
-	          Padding(
-	            padding: const EdgeInsets.all(20.0),
+        ),
+	          const Padding(
+	            padding: EdgeInsets.all(20.0),
 	            child: Text('sign into \nmange your device & accessory',style: TextStyle(fontSize: 18),),
 	          ),
 
@@ -45,10 +43,10 @@ class Body extends StatelessWidget {
 		          child: TextField(
 
 			          decoration: InputDecoration(
-				          contentPadding: EdgeInsets.only(left: 40.0, right: 20.0),
+				          contentPadding: const EdgeInsets.only(left: 40.0, right: 20.0),
 				          border: OutlineInputBorder(borderRadius: BorderRadius.circular(70.0),),
 				          hintText: 'Email',
-				          suffixIcon: Icon(Icons.email, color: Colors.black,)
+				          suffixIcon: const Icon(Icons.email, color: Colors.black,)
 			          ),),
 	          ),
 
@@ -58,10 +56,10 @@ class Body extends StatelessWidget {
 		          child: TextField(
 
 			          decoration: InputDecoration(
-				          contentPadding: EdgeInsets.only(left: 40.0, right: 20.0),
+				          contentPadding: const EdgeInsets.only(left: 40.0, right: 20.0),
 				          border: OutlineInputBorder(borderRadius: BorderRadius.circular(70.0),),
 				          hintText: 'Password',
-				          suffixIcon: Icon(Icons.lock, color: Colors.black,)
+				          suffixIcon: const Icon(Icons.lock, color: Colors.black,)
 			          ),),
 	          ),
 	          SizedBox(height: getProportionateScreenHeight(20)),
@@ -74,24 +72,21 @@ class Body extends StatelessWidget {
 		            },
 	              child: Container(
 		          width: double.infinity,
-		          padding: EdgeInsets.all(16.0),
+		          padding: const EdgeInsets.all(16.0),
 		          decoration:BoxDecoration(
-			          color: Color(0xFF464646),
+			          color: const Color(0xFF464646),
 			          borderRadius:BorderRadius.circular(70.0), ),
-		          child: Text('Get Started', style: TextStyle(color: Colors.white),),alignment: Alignment.center,),
+		          child: const Text('Get Started', style: TextStyle(color: Colors.white),),alignment: Alignment.center,),
 	            ),
 	          ),
 	          SizedBox(height: getProportionateScreenHeight(10)),
 
-	          Center(child: Text('Don\'t have an account yet?'))
+	          const Center(child: Text('Don\'t have an account yet?'))
 
 
 
 
-          ],
-        ),
-
-
+      ],
     );
   }
 }
