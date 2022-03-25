@@ -1,6 +1,6 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -80,6 +80,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/mariam199911"><img src="https://avatars.githubusercontent.com/u/64384533?v=4?s=100" width="100px;" alt=""/><br /><sub><b>mariam</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=mariam199911" title="Code">💻</a></td>
     <td align="center"><a href="https://twitter.com/DomesticMouse"><img src="https://avatars.githubusercontent.com/u/30503?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Brett Morgan</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/pulls?q=is%3Apr+reviewed-by%3Adomesticmouse" title="Reviewed Pull Requests">👀</a> <a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=domesticmouse" title="Code">💻</a></td>
     <td align="center"><a href="https://vrishtigupta.azurewebsites.net/"><img src="https://avatars.githubusercontent.com/u/53931644?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vrishti Gupta</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=VrishtiGupta11" title="Code">💻</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="http://rachanasolanki.in"><img src="https://avatars.githubusercontent.com/u/12000313?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rachana Solanki</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=RanchoDbest" title="Code">💻</a></td>
   </tr>
 </table>
 
