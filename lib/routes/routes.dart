@@ -7,6 +7,8 @@ import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 
+import 'package:domus/src/screens/menu_page/menu_screen.dart';
+
 final Map<String, WidgetBuilder> routes = {
 
   HomeScreen.routeName: (context) => const HomeScreen(),
