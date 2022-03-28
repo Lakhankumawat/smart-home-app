@@ -16,22 +16,25 @@ class MenuListItems extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return InkWell(
       onTap: () => function,
-      child: Row(
-        children: [
-          SvgPicture.asset(iconPath),
-          SizedBox(
-            width: getProportionateScreenWidth(25),
-          ),
-          Text(
-            itemName,
-            style: const TextStyle(
-              fontSize: 24,
-              fontWeight: FontWeight.w300,
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Row(
+          children: [
+            SvgPicture.asset(iconPath),
+            SizedBox(
+              width: getProportionateScreenWidth(25),
             ),
-          )
-        ],
+            Text(
+              itemName,
+              style: const TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.w300,
+              ),
+            )
+          ],
+        ),
       )
     );
   }

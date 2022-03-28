@@ -17,7 +17,7 @@ class MenuList extends StatelessWidget {
           function: (){},
         ),
         SizedBox(
-          height: getProportionateScreenHeight(30),
+          height: getProportionateScreenHeight(10),
         ),
         MenuListItems(
           iconPath: 'assets/icons/menu_icons/devices.svg',
@@ -25,7 +25,7 @@ class MenuList extends StatelessWidget {
           function: (){},
         ),
         SizedBox(
-          height: getProportionateScreenHeight(30),
+          height: getProportionateScreenHeight(10),
         ),
         MenuListItems(
           iconPath: 'assets/icons/menu_icons/settings.svg',
@@ -33,7 +33,7 @@ class MenuList extends StatelessWidget {
           function: (){},
         ),
         SizedBox(
-          height: getProportionateScreenHeight(30),
+          height: getProportionateScreenHeight(10),
         ),
         MenuListItems(
           iconPath: 'assets/icons/menu_icons/notifications.svg',
@@ -41,7 +41,7 @@ class MenuList extends StatelessWidget {
           function: (){},
         ),
         SizedBox(
-          height: getProportionateScreenHeight(30),
+          height: getProportionateScreenHeight(10),
         ),
         MenuListItems(
           iconPath: 'assets/icons/menu_icons/faq.svg',

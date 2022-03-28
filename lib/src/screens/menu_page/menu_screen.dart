@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../menu_page/components/body.dart';
+import 'package:domus/src/screens/menu_page/components/body.dart';
 
 class Menu extends StatelessWidget {
   static String routeName = '/menu-screen';
