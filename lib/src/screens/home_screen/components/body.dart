@@ -1,6 +1,4 @@
 import 'package:domus/config/size_config.dart';
-import 'package:domus/popups/popup_success.dart';
-import 'package:domus/popups/popup_widgets.dart';
 import 'package:domus/src/screens/home_screen/components/music_widget.dart';
 import 'package:domus/src/screens/home_screen/components/savings_container.dart';
 import 'package:domus/src/screens/home_screen/components/weather_container.dart';
@@ -115,22 +113,6 @@ class Body extends StatelessWidget {
               padding: EdgeInsets.all(getProportionateScreenHeight(8)),
               child: const AddNewDevice(),
             ),
-            ElevatedButton(
-              onPressed: () => showDialog(
-                context: context,
-                builder: (context) => PopupSuccess(
-                  popupTitle: 'File deleted',
-                  popupSubtitle: "Your file has been successfully deleted.",
-                  popupActions: [
-                    PopupFilledButton(
-                      onPressed: () => Navigator.pop(context),
-                      text: 'Done',
-                    )
-                  ],
-                ),
-              ),
-              child: const Text('Popup'),
-            )
           ],
         ),
       ),
