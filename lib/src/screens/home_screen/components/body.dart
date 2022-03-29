@@ -1,4 +1,6 @@
 import 'package:domus/config/size_config.dart';
+import 'package:domus/popups/popup_warning.dart';
+import 'package:domus/popups/popup_widgets.dart';
 import 'package:domus/src/screens/home_screen/components/music_widget.dart';
 import 'package:domus/src/screens/home_screen/components/savings_container.dart';
 import 'package:domus/src/screens/home_screen/components/weather_container.dart';
@@ -113,6 +115,29 @@ class Body extends StatelessWidget {
               padding: EdgeInsets.all(getProportionateScreenHeight(8)),
               child: const AddNewDevice(),
             ),
+            ElevatedButton(
+              onPressed: () => showDialog(
+                context: context,
+                builder: (context) => PopupWarning(
+                  popupTitle: 'Do you want to delete?',
+                  popupSubtitle: "You won't be able to restore the file",
+                  popupActions: [
+                    PopupOutlinedButton(
+                      onPressed: () => Navigator.pop(context),
+                      text: 'Cancel',
+                    ),
+                    PopupFilledButton(
+                      onPressed: () => Navigator.pop(context),
+                      text: 'Confirm',
+                    ),
+                  ],
+                ),
+              ),
+              child: const Text(
+                'Popup',
+                style: TextStyle(color: Colors.black),
+              ),
+            )
           ],
         ),
       ),
