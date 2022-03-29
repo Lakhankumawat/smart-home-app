@@ -4,6 +4,8 @@
 
 ![flutter-ci](https://github.com/Lakhankumawat/smart-home-app/actions/workflows/flutter-ci.yml/badge.svg)
 ![greetings](https://github.com/Lakhankumawat/smart-home-app/actions/workflows/greetings.yml/badge.svg)
+
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
