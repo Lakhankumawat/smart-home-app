@@ -10,13 +10,16 @@ class AboutUs extends StatelessWidget {
     return Scaffold(
       body: ListView(
       children: [
+        SizedBox(height: 60,),
         ListTile(
           leading: Text('About',
           style: TextStyle(
             fontSize: 36,
+            // fontFamily:
             fontWeight: FontWeight.w600
           ),),
-          trailing: Icon(Icons.info, color: Colors.black, size: 32,),
+          trailing: SvgPicture.asset('assets/icons/info.svg')
+          // Icon(Icons.info, color: Colors.black, size: 32,),
         ),
         Center(child: Column(
           children: [
@@ -34,7 +37,9 @@ class AboutUs extends StatelessWidget {
             ),),
           ],
         )),
+        SizedBox(height: 39,),
         ListTile(
+          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
           leading: Icon(Icons.account_circle, color: Colors.black,size: 24,),
           title: Text('Lead Developer',
             style: TextStyle(
@@ -49,6 +54,7 @@ class AboutUs extends StatelessWidget {
           onTap: (){},
         ),
         ListTile(
+          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
           leading: Icon(Icons.account_circle, color: Colors.black),
           title: Text('Domus Team',
             style: TextStyle(
@@ -56,13 +62,14 @@ class AboutUs extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          subtitle: Text('People who help with development and testing',
+          subtitle: Text('People who help with development \nand testing',
             style: TextStyle(
                 fontSize: 14
             ),),
           onTap: (){},
         ),
         ListTile(
+          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
           leading: Icon(Icons.account_circle, color: Colors.black),
           title: Text('Acknowledgement',
             style: TextStyle(
@@ -70,13 +77,14 @@ class AboutUs extends StatelessWidget {
               fontSize: 20,
             ),
           ),
-          subtitle: Text('People and open source projects that helped the development of Domus',
+          subtitle: Text('People and open source projects that helped \nthe development of Domus',
             style: TextStyle(
                 fontSize: 14
             ),),
           onTap: (){},
         ),
         ListTile(
+          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
           leading: Icon(Icons.account_circle, color: Colors.black),
           title: Text('Help',
             style: TextStyle(
@@ -91,6 +99,7 @@ class AboutUs extends StatelessWidget {
           onTap: (){},
         ),
         ListTile(
+          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
           leading: Icon(Icons.account_circle, color: Colors.black),
           title: Text('Social Networks',
             style: TextStyle(
@@ -104,19 +113,22 @@ class AboutUs extends StatelessWidget {
             ),),
           onTap: (){},
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('Made with ',style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.w300
-            ),),
-            Icon(Icons.favorite,size: 13,),
-            Text(' in IN',style: TextStyle(
+        Padding(
+          padding: const EdgeInsets.only(top: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text('Made with ',style: TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w300
-            ),),
-          ],
+              ),),
+              Icon(Icons.favorite,size: 13,),
+              Text(' in IN',style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.w300
+              ),),
+            ],
+          ),
         )
       ],
       ),
