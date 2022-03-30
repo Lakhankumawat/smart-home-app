@@ -1,3 +1,22 @@
+<img  align="left" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=LakhanKumawat&repo=smart-home-app&countColorcountColor&countColor=%237B1E7B"/><img align="right" src="https://img.shields.io/github/repo-size/Lakhankumawat/smart-home-app?style=for-the-badge&logo=appveyor" alt="GitHub repo size"/>
+
+
+
+![smart-home-app](https://socialify.git.ci/Lakhankumawat/smart-home-app/image?description=1&font=KoHo&forks=1&issues=1&language=1&logo=https%3A%2F%2Fd1fdloi71mui9q.cloudfront.net%2FWDPdNJfQt65Ho3qKhZQQ_519jouHPPpyoYg1x&name=1&pattern=Brick%20Wall&pulls=1&stargazers=1&theme=Dark)
+
+
+<!-------------Swags------------------------->
+
+<p align="center">
+
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/built-by-codebabes.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/made-with-c-plus-plus.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/makes-people-smile.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" alt=" forks"/>
+
+</p>
+
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
