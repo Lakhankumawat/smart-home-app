@@ -15,7 +15,18 @@
 
  ## [Download App here](https://drive.google.com/file/d/1H9a_El71DdYrG6oUFd0EyZGZ3fXcy3AU/view?usp=sharing) |  [App Showcase Here](https://youtu.be/tO0D1KE0QyI) | [About Project](https://youtu.be/saA8IUyLQ9I) | [Figma Files](https://www.figma.com/file/tayD83OorLFuT62vnk401Z/Smart-Home-App-Designs-(Community)?node-id=0%3A1)
     
-![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
+<!-- ![Cover](https://user-images.githubusercontent.com/55774240/151917713-aeb8defb-75ee-4734-8df6-1c2cdf5d6070.png)
+ -->
+
+
+## See the following videos before contributing.
+
+
+|     Follow Steps      |  Get Started           |
+|----------------|-------------------------------|
+| [![Alt text](https://user-images.githubusercontent.com/55774240/160747628-1aada8f7-e6d7-4aae-9800-d846a43d642a.jpg)](https://youtu.be/saA8IUyLQ9I)| [![Alt text](https://user-images.githubusercontent.com/55774240/160747628-1aada8f7-e6d7-4aae-9800-d846a43d642a.jpg)](https://youtu.be/tO0D1KE0QyI) | 
+| [![Alt text](https://user-images.githubusercontent.com/55774240/160747747-0947e34e-8f96-4beb-b6ac-eeaea0ffb1be.jpg)](https://youtu.be/ByWh5Ttboqc)| [![Alt text](https://user-images.githubusercontent.com/55774240/160747816-57e8bf03-6744-45b8-8beb-ce3df39cafaf.jpg)](https://youtu.be/bHtmKF38JZk) | 
+
 
 
 ## 🛠️ Installation Steps
@@ -43,6 +54,9 @@
 ```
   Happy Coding !!
 ```
+
+<br>
+
 <p  align="center">  
   
 <!-- <img src="https://user-images.githubusercontent.com/55774240/149708029-cf36ddca-1a6e-45eb-88c8-206b6f1c1d10.jpg"  >
