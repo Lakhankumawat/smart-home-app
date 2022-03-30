@@ -42,6 +42,52 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mariam199911",
+      "name": "mariam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64384533?v=4",
+      "profile": "https://github.com/mariam199911",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "domesticmouse",
+      "name": "Brett Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30503?v=4",
+      "profile": "https://twitter.com/DomesticMouse",
+      "contributions": [
+        "review",
+        "code"
+      ]
+    },
+    {
+      "login": "VrishtiGupta11",
+      "name": "Vrishti Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53931644?v=4",
+      "profile": "https://vrishtigupta.azurewebsites.net/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "RanchoDbest",
+      "name": "Rachana Solanki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12000313?v=4",
+      "profile": "http://rachanasolanki.in",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Pavel401",
+      "name": "SK MABUD ALAM",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47685150?v=4",
+      "profile": "https://github.com/Pavel401",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
