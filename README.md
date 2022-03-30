@@ -10,8 +10,8 @@
 <p align="center">
 
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" alt=" forks"/>
-<img src="https://forthebadge.com/images/badges/built-by-codebabes.svg" alt=" forks"/>
-<img src="https://forthebadge.com/images/badges/made-with-c-plus-plus.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/built-by-developers.svg" alt=" forks"/>
+<img src="https://forthebadge.com/images/badges/built-for-android.svg" alt=" forks"/>
 <img src="https://forthebadge.com/images/badges/makes-people-smile.svg" alt=" forks"/>
 <img src="https://forthebadge.com/images/badges/powered-by-coffee.svg" alt=" forks"/>
 
