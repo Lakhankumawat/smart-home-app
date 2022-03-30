@@ -76,8 +76,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: AboutUs()
-      // SplashScreen(),
+      home: SplashScreen(),
     );
   }
 }
