@@ -19,12 +19,7 @@
 
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
-
-![flutter-ci](https://github.com/Lakhankumawat/smart-home-app/actions/workflows/flutter-ci.yml/badge.svg)
-![greetings](https://github.com/Lakhankumawat/smart-home-app/actions/workflows/greetings.yml/badge.svg)
-
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -121,6 +116,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="http://rachanasolanki.in"><img src="https://avatars.githubusercontent.com/u/12000313?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rachana Solanki</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=RanchoDbest" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Pavel401"><img src="https://avatars.githubusercontent.com/u/47685150?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SK MABUD ALAM</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Pavel401" title="Code">💻</a></td>
   </tr>
 </table>
 
