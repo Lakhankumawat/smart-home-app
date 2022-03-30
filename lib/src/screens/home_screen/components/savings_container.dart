@@ -12,7 +12,7 @@ class SavingsContainer extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: getProportionateScreenHeight(70),
+          height: getProportionateScreenHeight(85),
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             color: const Color(0xFFFFFFFF),
