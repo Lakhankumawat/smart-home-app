@@ -43,6 +43,7 @@ flutter:
     - assets/images/weather/
     - assets/icons/svg/
     - assets/Lottie/
+    - assets/icons/menu_icons/
 
   fonts:
     - family: "Noto Sans"
