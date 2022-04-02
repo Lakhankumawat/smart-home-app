@@ -11,8 +11,8 @@ class AboutUs extends StatelessWidget {
       body: ListView(
       children: [
         ListTile(
-          leading: Text('About',
-          style: TextStyle(
+          leading: const Text('About',
+          style: const TextStyle(
             fontSize: 36,
             fontFamily: 'Lexend',
             fontWeight: FontWeight.w600
@@ -24,18 +24,18 @@ class AboutUs extends StatelessWidget {
           padding: const EdgeInsets.only(top: 12),
           child: Center(child: Column(
             children: [
-              Text('Domus',style: TextStyle(fontFamily: 'Lexend',
+              const Text('Domus',style: const TextStyle(fontFamily: 'Lexend',
                 fontSize: 48,
                 fontWeight: FontWeight.w700
               ),),
-              Text('Smart Home App',style: TextStyle(
+              const Text('Smart Home App',style: const TextStyle(
                   fontSize: 24,
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w300,
-                color: Color(0xff9B9B9B)
+                color: const Color(0xff9B9B9B)
               ),),
-              SizedBox(height: 11,),
-              Text('Version: 1.0.1 (alpha)',style: TextStyle(
+              const SizedBox(height: 11,),
+              const Text('Version: 1.0.1 (alpha)',style: const TextStyle(
                   fontSize: 18,
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w300
@@ -43,93 +43,93 @@ class AboutUs extends StatelessWidget {
             ],
           )),
         ),
-        SizedBox(height: 39,),
+        const SizedBox(height: 39,),
         ListTile(
-          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
+          contentPadding: const EdgeInsets.only(left: 33.7,right: 10),
           leading: SvgPicture.asset('assets/icons/svg/profile.svg'),
-          title: Text('Lead Developer',
-            style: TextStyle(
+          title: const Text('Lead Developer',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: 'Lexend',
               fontSize: 20,
             ),
           ),
-          subtitle: Text('Lakhan Kumawat',
-          style: TextStyle(
+          subtitle: const Text('Lakhan Kumawat',
+          style: const TextStyle(
             fontSize: 14,
             fontFamily: 'Lexend',
             fontWeight: FontWeight.w300
           ),),
           onTap: (){},
         ),
-        SizedBox(height: 12,),
+        const SizedBox(height: 12,),
         ListTile(
-          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
+          contentPadding: const EdgeInsets.only(left: 33.7,right: 10),
           leading: SvgPicture.asset('assets/icons/svg/team.svg'),
-          title: Text('Domus Team',
-            style: TextStyle(
+          title: const Text('Domus Team',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: 'Lexend',
               fontSize: 20,
             ),
           ),
-          subtitle: Text('People who help with development and testing',
-            style: TextStyle(
+          subtitle: const Text('People who help with development and testing',
+            style: const TextStyle(
                 fontSize: 14,
               fontFamily: 'Lexend',
             ),),
           onTap: (){},
         ),
-        SizedBox(height: 12,),
+        const SizedBox(height: 12,),
         ListTile(
-          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
+          contentPadding: const EdgeInsets.only(left: 33.7,right: 10),
           leading: SvgPicture.asset('assets/icons/svg/star.svg',),
-          title: Text('Acknowledgement',
-            style: TextStyle(
+          title: const Text('Acknowledgement',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: 'Lexend',
               fontSize: 20,
             ),
           ),
 
-          subtitle: Text('People and open source projects that helped the development of Domus',
-            style: TextStyle(
+          subtitle: const Text('People and open source projects that helped the development of Domus',
+            style: const TextStyle(
                 fontSize: 14,
               fontFamily: 'Lexend',
             ),),
           onTap: (){},
         ),
-        SizedBox(height: 12,),
+        const SizedBox(height: 12,),
         ListTile(
-          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
+          contentPadding: const EdgeInsets.only(left: 33.7,right: 10),
           leading: SvgPicture.asset('assets/icons/svg/help.svg'),
-          title: Text('Help',
-            style: TextStyle(
+          title: const Text('Help',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: 'Lexend',
               fontSize: 20,
             ),
           ),
-          subtitle: Text('Answers to frequently asked questions',
+          subtitle: const Text('Answers to frequently asked questions',
             style: TextStyle(
                 fontSize: 14,
               fontFamily: 'Lexend',
             ),),
           onTap: (){},
         ),
-        SizedBox(height: 12,),
+        const SizedBox(height: 12,),
         ListTile(
-          contentPadding: EdgeInsets.only(left: 33.7,right: 10),
+          contentPadding: const EdgeInsets.only(left: 33.7,right: 10),
           leading: SvgPicture.asset('assets/icons/svg/chat.svg'),
-          title: Text('Social Networks',
-            style: TextStyle(
+          title: const Text('Social Networks',
+            style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontFamily: 'Lexend',
               fontSize: 20,
             ),
           ),
-          subtitle: Text('Follow Domus on social networks',
-            style: TextStyle(
+          subtitle: const Text('Follow Domus on social networks',
+            style: const TextStyle(
                 fontSize: 14,
               fontFamily: 'Lexend',
             ),),
@@ -140,13 +140,13 @@ class AboutUs extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text('Made with ',style: TextStyle(
+              const Text('Made with ',style: const TextStyle(
                 fontSize: 18,
                   fontFamily: 'Lexend',
                 fontWeight: FontWeight.w300
               ),),
               SvgPicture.asset('assets/icons/svg/heart.svg'),
-              Text(' in IN',style: TextStyle(
+              const Text(' in IN',style: const TextStyle(
                   fontSize: 18,
                   fontFamily: 'Lexend',
                   fontWeight: FontWeight.w300
