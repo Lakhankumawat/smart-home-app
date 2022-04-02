@@ -1,5 +1,6 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/view/smart_fan_view_model.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -12,31 +13,39 @@ class Body extends StatefulWidget {
 
 class _BodyState extends State<Body> with TickerProviderStateMixin {
   late final AnimationController _controller;
-  late final AnimationController _Nocontroller;
+  late final AnimationController _noController;
 
   int getDuration(double speed) {
     if (widget.model.speed == 0) return widget.model.duration[0].toInt();
-    if (widget.model.speed > 0 && widget.model.speed <= 1)
+    if (widget.model.speed > 0 && widget.model.speed <= 1) {
       return widget.model.duration[1].toInt();
-    if (widget.model.speed > 1 && widget.model.speed <= 2)
+    }
+    if (widget.model.speed > 1 && widget.model.speed <= 2) {
       return widget.model.duration[2].toInt();
-    if (widget.model.speed > 2 && widget.model.speed <= 3)
+    }
+    if (widget.model.speed > 2 && widget.model.speed <= 3) {
       return widget.model.duration[3].toInt();
-    if (widget.model.speed > 3 && widget.model.speed <= 4)
+    }
+    if (widget.model.speed > 3 && widget.model.speed <= 4) {
       return widget.model.duration[4].toInt();
-    if (widget.model.speed > 4 && widget.model.speed <= 5)
+    }
+    if (widget.model.speed > 4 && widget.model.speed <= 5) {
       return widget.model.duration[5].toInt();
-    else
+    } else {
       return 0;
+    }
   }
 
+  @override
   void initState() {
     super.initState();
-    _Nocontroller = AnimationController(
+    _noController = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 1000),
+      duration: const Duration(seconds: 1000),
     )..repeat();
-    print(widget.model.speed);
+    if (kDebugMode) {
+      print(widget.model.speed);
+    }
     _controller = AnimationController(
       vsync: this,
       duration: Duration(milliseconds: getDuration(widget.model.speed)),
@@ -51,7 +60,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    _Nocontroller.dispose();
+    _noController.dispose();
     _controller.dispose();
     super.dispose();
   }
@@ -87,7 +96,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                             onTap: () {
                               Navigator.of(context).pop();
                             },
-                            child: Icon(Icons.arrow_back_outlined)),
+                            child: const Icon(Icons.arrow_back_outlined)),
                         Stack(
                           children: [
                             Text(
@@ -97,7 +106,8 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                                   .headline1!
                                   .copyWith(
                                     fontSize: 45,
-                                    color: Color(0xFFBDBDBD).withOpacity(0.5),
+                                    color: const Color(0xFFBDBDBD)
+                                        .withOpacity(0.5),
                                   ),
                             ),
                             Text(
@@ -117,10 +127,10 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                           height: getProportionateScreenHeight(4),
                         ),
                         Switch.adaptive(
-                          inactiveThumbColor: Color(0xFFE4E4E4),
+                          inactiveThumbColor: const Color(0xFFE4E4E4),
                           inactiveTrackColor: Colors.white,
                           activeColor: Colors.white,
-                          activeTrackColor: Color(0xFF464646),
+                          activeTrackColor: const Color(0xFF464646),
                           value: widget.model.isFanOff,
                           onChanged: (value) {
                             widget.model.fanSwitch(value);
@@ -144,7 +154,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
             // SizedBox(width: 10,),
             Column(
               children: [
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Container(
@@ -161,12 +171,12 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                     fit: BoxFit.fill,
                     animate: widget.model.isFanOff ? true : false,
                     controller:
-                        widget.model.isFanOff ? _controller : _Nocontroller,
+                        widget.model.isFanOff ? _controller : _noController,
                   ),
                 )
               ],
             ),
-            Padding(
+            const Padding(
                 padding: EdgeInsets.only(
               right: 10,
             )),
@@ -195,7 +205,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                 ),
                 child: ToggleButtons(
                   selectedColor: Colors.white,
-                  fillColor: Color(0xFF464646),
+                  fillColor: const Color(0xFF464646),
                   renderBorder: false,
                   borderRadius: BorderRadius.circular(15),
                   textStyle: Theme.of(context)
@@ -205,21 +215,21 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                   children: <Widget>[
                     SizedBox(
                       width: getProportionateScreenWidth(76),
-                      child: Text(
+                      child: const Text(
                         'Air',
                         textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(
                       width: getProportionateScreenWidth(76),
-                      child: Text(
+                      child: const Text(
                         'Mild',
                         textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(
                       width: getProportionateScreenWidth(76),
-                      child: Text(
+                      child: const Text(
                         'Breeze',
                         textAlign: TextAlign.center,
                       ),
@@ -250,10 +260,11 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
               SliderTheme(
                 data: SliderThemeData(
                     trackHeight: getProportionateScreenHeight(5),
-                    thumbColor: Color(0xFF464646),
-                    activeTrackColor: Color(0xFF464646),
+                    thumbColor: const Color(0xFF464646),
+                    activeTrackColor: const Color(0xFF464646),
                     inactiveTrackColor: Colors.white,
-                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8)),
+                    thumbShape:
+                        const RoundSliderThumbShape(enabledThumbRadius: 8)),
                 child: Slider(
                   min: 0,
                   max: 5,

@@ -23,24 +23,20 @@ class SmartLight extends StatelessWidget {
               maxHeight: model.isTappedOnColor
                   ? getProportionateScreenHeight(300)
                   : getProportionateScreenHeight(510),
-              color: Color(0xFFF2F2F2),
-              boxShadow: [],
+              color: const Color(0xFFF2F2F2),
+              boxShadow: const [],
 
               ///no Shadow
               onPanelClosed: model.onPanelClosed,
-              body: Scaffold(
-                backgroundColor: Color(0xFFF2F2F2),
-                body: Body(
-                  model: model,
-                ),
+              body: Body(
+                model: model,
               ),
-              panel: model.isTappedOnColor
+              // panel:
+              panelBuilder: (sc) => model.isTappedOnColor
                   ? ColorPickerSheet(
-                      context: context,
                       model: model,
                     )
                   : ExpandableBottomSheet(
-                      context: context,
                       model: model,
                     ),
             ),
