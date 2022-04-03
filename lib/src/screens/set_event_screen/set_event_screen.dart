@@ -41,7 +41,7 @@ class _SetEventScreenState extends State<SetEventScreen> {
           padding: const EdgeInsets.only(top: 20, left: 15),
           child: Text(
             'Set Events',
-            style: AlertDialogTheme.appBarTextStyle,
+            style: SetEventScreenTheme.appBarTextStyle,
           ),
         ),
         elevation: 0,
