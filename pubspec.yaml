@@ -58,4 +58,9 @@ flutter:
         - asset: "assets/fonts/Poppins-700.ttf"
           style: "normal"
           weight: 700
-
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Lexend-ExtraLight.ttf
+          weight: 200
