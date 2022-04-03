@@ -1,6 +1,7 @@
+import 'package:domus/config/size_config.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:domus/src/screens/set_event_screen/resources.dart';
+import 'package:domus/src/screens/set_event_screen/components.dart';
 
 class SetEventScreen extends StatefulWidget {
   static String routeName = '/set-event-screen';
@@ -81,7 +82,9 @@ class _SetEventScreenState extends State<SetEventScreen> {
         ],
       ),
       floatingActionButton: FloatingActionButton.extended(
-        extendedPadding: const EdgeInsets.symmetric(horizontal: 48),
+        extendedPadding: EdgeInsets.symmetric(
+          horizontal: getProportionateScreenWidth(48),
+        ),
         onPressed: () {
           if (selectedDay == null) {
             showDialog(

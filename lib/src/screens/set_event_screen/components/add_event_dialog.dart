@@ -1,4 +1,5 @@
-import 'package:domus/src/screens/set_event_screen/components/alert_dialog_theme.dart';
+import 'package:domus/popups/popup_form.dart';
+import 'package:domus/popups/popup_widgets.dart';
 import 'package:flutter/material.dart';
 
 class AddEventDialog extends StatelessWidget {
@@ -15,35 +16,28 @@ class AddEventDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Add an Event'),
-      titleTextStyle: AlertDialogTheme.titleTextStyle,
-      content: TextField(
-        autofocus: true,
-        style: AlertDialogTheme.textFieldStyle,
-        textCapitalization: TextCapitalization.words,
-        controller: controller,
-        decoration: InputDecoration(
-          hintText: 'Your Event',
-          hintStyle: AlertDialogTheme.textFieldStyle,
-        ),
+    return SingleChildScrollView(
+      child: PopupForm(
+        popupTitle: 'Add an Event',
+        popupSubtitle: 'Add an event to mark it on the calendar',
+        popupFormContent: [
+          PopupFormField(
+            popupHintText: 'Your Event',
+            popupIcon: const Icon(Icons.event_rounded),
+            textController: controller,
+          ),
+        ],
+        popupFormActions: <Widget>[
+          PopupOutlinedButton(
+            onPressed: onCancel,
+            text: 'Cancel',
+          ),
+          PopupFilledButton(
+            onPressed: onAccept,
+            text: 'Ok',
+          ),
+        ],
       ),
-      actions: <Widget>[
-        TextButton(
-          onPressed: onCancel,
-          child: Text(
-            'Cancel',
-            style: AlertDialogTheme.buttonTextStyle,
-          ),
-        ),
-        TextButton(
-          onPressed: onAccept,
-          child: Text(
-            'Ok',
-            style: AlertDialogTheme.buttonTextStyle,
-          ),
-        ),
-      ],
     );
   }
 }

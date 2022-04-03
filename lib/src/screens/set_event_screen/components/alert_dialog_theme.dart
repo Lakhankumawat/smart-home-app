@@ -10,28 +10,12 @@ abstract class AlertDialogTheme {
     );
   }
 
-  static TextStyle get buttonTextStyle {
-    return const TextStyle(
-      fontFamily: 'Lexend',
-      fontWeight: FontWeight.w200,
-      color: Colors.black,
-    );
-  }
-
   static TextStyle get titleTextStyle {
     return const TextStyle(
       fontFamily: 'Lexend',
       fontWeight: FontWeight.w500,
       color: Colors.black,
       fontSize: 16,
-    );
-  }
-
-  static TextStyle get textFieldStyle {
-    return const TextStyle(
-      fontFamily: 'ABeeZee',
-      color: Colors.black,
-      fontSize: 12,
     );
   }
 }

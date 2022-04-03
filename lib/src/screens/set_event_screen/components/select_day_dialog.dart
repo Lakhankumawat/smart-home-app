@@ -1,4 +1,5 @@
-import 'package:domus/src/screens/set_event_screen/components/alert_dialog_theme.dart';
+import 'package:domus/popups/popup_warning.dart';
+import 'package:domus/popups/popup_widgets.dart';
 import 'package:flutter/material.dart';
 
 class SelectDayDialog extends StatelessWidget {
@@ -6,16 +7,13 @@ class SelectDayDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AlertDialog(
-      title: const Text('Please Select a Day!'),
-      titleTextStyle: AlertDialogTheme.titleTextStyle,
-      actions: <Widget>[
-        TextButton(
+    return PopupWarning(
+      popupTitle: 'Please Select a Day!',
+      popupSubtitle: 'Select by tapping on a day',
+      popupActions: <Widget>[
+        PopupFilledButton(
           onPressed: () => Navigator.pop(context),
-          child: Text(
-            'Ok',
-            style: AlertDialogTheme.buttonTextStyle,
-          ),
+          text: 'Ok',
         ),
       ],
     );
