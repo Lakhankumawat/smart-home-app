@@ -20,6 +20,7 @@ dependencies:
   flutter_screenutil: ^5.3.1
   lottie: ^1.2.2
   image_picker: ^0.8.4+11
+  awesome_circular_chart: ^1.0.0
 
 dev_dependencies:
   flutter_test:

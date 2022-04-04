@@ -5,7 +5,7 @@ import 'package:flutter_svg/svg.dart';
 class MenuListItems extends StatelessWidget {
   final String iconPath;
   final String itemName;
-  final Function function;
+  final VoidCallback function;
   const MenuListItems({
     Key? key,
     required this.iconPath,
@@ -17,7 +17,7 @@ class MenuListItems extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => function,
+      onTap: function,
       child: Padding(
         padding: const EdgeInsets.all(15.0),
         child: Row(
