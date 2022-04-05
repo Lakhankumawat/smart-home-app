@@ -16,12 +16,17 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Lossy',
+      title: 'Domus',
       navigatorKey: getIt<NavigationService>().navigatorKey,
       debugShowCheckedModeBanner: false,
       themeMode: themeMode,
       theme: ThemeData(
         fontFamily: 'Nato Sans',
+        textSelectionTheme: const TextSelectionThemeData(
+          // Set Up for TextFields
+          cursorColor: Colors.grey,
+          selectionColor: Colors.blueGrey,
+        ),
         colorScheme: const ColorScheme.light(
           primary: Color(0xFFF2F2F2),
           //secondary: Color(0xFFF4AE47),

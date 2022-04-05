@@ -10,6 +10,7 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  cached_network_image: ^3.2.0
   get_it: ^7.2.0
   provider: ^6.0.2
   dotted_border: ^2.0.0+2
@@ -19,6 +20,7 @@ dependencies:
   font_awesome_flutter: ^9.2.0
   flutter_screenutil: ^5.3.1
   lottie: ^1.2.2
+  table_calendar: ^3.0.4
   image_picker: ^0.8.4+11
   awesome_circular_chart: ^1.0.0
 
@@ -58,4 +60,15 @@ flutter:
         - asset: "assets/fonts/Poppins-700.ttf"
           style: "normal"
           weight: 700
-
+    - family: ABeeZee
+      fonts:
+        - asset: assets/fonts/ABeeZee-Italic.ttf
+          style: italic
+        - asset: assets/fonts/ABeeZee-Regular.ttf
+          style: normal
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Lexend-ExtraLight.ttf
+          weight: 200
