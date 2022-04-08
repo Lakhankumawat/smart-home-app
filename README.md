@@ -97,6 +97,24 @@
 <hr>
 <!-- <img width="120" src="https://user-images.githubusercontent.com/55774240/149710423-cdd7b528-638c-45e1-bec5-80201827b8a0.png" > -->
 
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Lakhankumawat/smart-home-app.svg)](https://starchart.cc/Lakhankumawat/smart-home-app)
+
+
+## Project Maintainers ❤️ 
+<br>
+ <table>
+  <tr>
+    <td align="center"><a href="http://lakhankumawat.me/"><img src="https://avatars.githubusercontent.com/u/55774240?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LakhanKumawat ᵖ⁺</b></sub></a><br /><a href="https://github.com/Lakhankumawat/LearnCPP/commits?author=Lakhankumawat" title="Code">💻</a> <a href="https://github.com/Lakhankumawat/LearnCPP/pulls?q=is%3Apr+reviewed-by%3ALakhankumawat" title="Reviewed Pull Requests">👀</a> <a href="#projectManagement-Lakhankumawat" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/chandan0000"><img src="https://avatars.githubusercontent.com/u/60910265?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chandan kumar yadav</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/pull/23#issuecomment-1060314965" title="Code">💻</a> <a href="https://github.com/Lakhankumawat/LearnCPP/pulls?q=is%3Apr+reviewed-by%3Achandan0000" title="Reviewed Pull Requests">👀 🚧</a></td>
+  </tr>
+</table>
+
+<br>
+<br>
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
