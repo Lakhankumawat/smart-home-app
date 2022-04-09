@@ -6,17 +6,21 @@ import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:domus/src/screens/smart_fan/smart_fan.dart';
 import 'package:domus/src/screens/splash_screen/splash_screen.dart';
+import 'package:domus/src/screens/stats_screen/stats_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
 
+// Routes arranged in ascending order
+
 final Map<String, WidgetBuilder> routes = {
-  HomeScreen.routeName: (context) => const HomeScreen(),
-  SetEventScreen.routeName: (context) => const SetEventScreen(),
-  SmartLight.routeName: (context) => const SmartLight(),
-  SplashScreen.routeName: (context) => const SplashScreen(),
-  SmartAC.routeName: (context) => const SmartAC(),
-  SmartSpeaker.routeName: (context) => const SmartSpeaker(),
-  SmartFan.routeName: (context) => const SmartFan(),
   EditProfile.routeName: (context) => const EditProfile(),
+  HomeScreen.routeName: (context) => const HomeScreen(),
   LoginScreen.routeName: (context) => const LoginScreen(),
+  SetEventScreen.routeName: (context) => const SetEventScreen(),
+  SmartAC.routeName: (context) => const SmartAC(),
+  SmartFan.routeName: (context) => const SmartFan(),
+  SmartLight.routeName: (context) => const SmartLight(),
+  SmartSpeaker.routeName: (context) => const SmartSpeaker(),
+  SplashScreen.routeName: (context) => const SplashScreen(),
+  StatsScreen.routeName: (context) => const StatsScreen(),
 };

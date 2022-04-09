@@ -22,6 +22,7 @@ dependencies:
   lottie: ^1.2.2
   table_calendar: ^3.0.4
   image_picker: ^0.8.4+11
+  syncfusion_flutter_charts: ^20.1.47+1
 
 dev_dependencies:
   flutter_test:
