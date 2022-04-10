@@ -27,49 +27,17 @@ class StatsScreen extends StatelessWidget {
       body: Container(
         color: Colors.grey[100],
         child: Column(
-          children: [
-            Container(
-              margin: const EdgeInsets.only(
-                top: 20,
-                left: 20,
-                right: 20,
-              ),
-              decoration: const BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.horizontal(
-                  left: Radius.circular(18),
-                  right: Radius.circular(18),
-                ),
-              ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  TextButton(
-                    child: const Text(
-                      'Weekly',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    onPressed: () {},
-                  ),
-                  TextButton(
-                    child: const Text(
-                      'Daily',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    onPressed: () {},
-                  ),
-                  TextButton(
-                    child: const Text(
-                      'Monthly',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
+          children: const [
+            TypeSelection(),
+            SizedBox(height: 20),
+            Expanded(
+              child: StatsElectricityUsageChart(),
             ),
-            const StatsSplineChart(),
-            // const Expanded(flex: 2, child: StatsBarGraph()),
+            SizedBox(height: 20),
+            Expanded(
+              child: StatsDeviceConsumptionChart(),
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
