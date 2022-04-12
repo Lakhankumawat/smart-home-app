@@ -1,4 +1,5 @@
 import 'package:domus/src/screens/menu_page/components/list_tile.dart';
+import 'package:domus/src/screens/savings_screen/savings_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:domus/config/size_config.dart';
 
@@ -23,6 +24,16 @@ class MenuList extends StatelessWidget {
           iconPath: 'assets/icons/menu_icons/devices.svg',
           itemName: 'Devices',
           function: (){},
+        ),
+        SizedBox(
+          height: getProportionateScreenHeight(10),
+        ),
+        MenuListItems(
+          iconPath: 'assets/icons/menu_icons/savings.svg',
+          itemName: 'Savings',
+          function: () {
+            Navigator.of(context).pushNamed(SavingsScreen.routeName);
+          }
         ),
         SizedBox(
           height: getProportionateScreenHeight(10),
