@@ -58,7 +58,7 @@ class WeatherContainer extends StatelessWidget {
           ),
         ),
         Image.asset(
-          'assets/images/weather/${model.randomNumber}.png',
+          'assets/images/weather/0.png',
           height: getProportionateScreenHeight(110),
           width: getProportionateScreenWidth(140),
           fit: BoxFit.contain,

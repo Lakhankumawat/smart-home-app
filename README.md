@@ -19,7 +19,7 @@
 
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -97,6 +97,24 @@
 <hr>
 <!-- <img width="120" src="https://user-images.githubusercontent.com/55774240/149710423-cdd7b528-638c-45e1-bec5-80201827b8a0.png" > -->
 
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/Lakhankumawat/smart-home-app.svg)](https://starchart.cc/Lakhankumawat/smart-home-app)
+
+
+## Project Maintainers ❤️ 
+<br>
+ <table>
+  <tr>
+    <td align="center"><a href="http://lakhankumawat.me/"><img src="https://avatars.githubusercontent.com/u/55774240?v=4?s=100" width="100px;" alt=""/><br /><sub><b>LakhanKumawat ᵖ⁺</b></sub></a><br /><a href="https://github.com/Lakhankumawat/LearnCPP/commits?author=Lakhankumawat" title="Code">💻</a> <a href="https://github.com/Lakhankumawat/LearnCPP/pulls?q=is%3Apr+reviewed-by%3ALakhankumawat" title="Reviewed Pull Requests">👀</a> <a href="#projectManagement-Lakhankumawat" title="Project Management">📆</a></td>
+    <td align="center"><a href="https://github.com/chandan0000"><img src="https://avatars.githubusercontent.com/u/60910265?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Chandan kumar yadav</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/pull/23#issuecomment-1060314965" title="Code">💻</a> <a href="https://github.com/Lakhankumawat/LearnCPP/pulls?q=is%3Apr+reviewed-by%3Achandan0000" title="Reviewed Pull Requests">👀 🚧</a></td>
+  </tr>
+</table>
+
+<br>
+<br>
+
 ## Contributors ✨
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
@@ -117,6 +135,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="http://rachanasolanki.in"><img src="https://avatars.githubusercontent.com/u/12000313?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Rachana Solanki</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=RanchoDbest" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Pavel401"><img src="https://avatars.githubusercontent.com/u/47685150?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SK MABUD ALAM</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Pavel401" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Fredorixo"><img src="https://avatars.githubusercontent.com/u/80041092?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fredorixo</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Fredorixo" title="Code">💻</a></td>
+    <td align="center"><a href="https://github.com/Chitrakshi2531"><img src="https://avatars.githubusercontent.com/u/99464268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chitrakshi bohra</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Chitrakshi2531" title="Code">💻</a></td>
   </tr>
 </table>
 

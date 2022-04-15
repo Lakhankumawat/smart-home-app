@@ -6,6 +6,7 @@ import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/body.dart';
+import 'package:domus/src/screens/menu_page/menu_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   static String routeName = '/home-screen';
@@ -23,10 +24,11 @@ class HomeScreen extends StatelessWidget {
             length: 3,
             child: Scaffold(
               appBar: AppBar(
-                automaticallyImplyLeading: false,
+                // automaticallyImplyLeading: false,
                 toolbarHeight: getProportionateScreenHeight(60),
                 //centerTitle: true,
                 elevation: 0,
+                iconTheme: const IconThemeData(color: Colors.black),
                 title: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getProportionateScreenWidth(
@@ -66,7 +68,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                leadingWidth: getProportionateScreenWidth(170),
+                //leadingWidth: getProportionateScreenWidth(170),
                 bottom: PreferredSize(
                   child: TabBar(
                       isScrollable: true,
@@ -99,6 +101,9 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              drawer: SizedBox(
+                 width: getProportionateScreenWidth(270),
+                  child: const Menu()),
               body: TabBarView(
                 children: <Widget>[
                   Body(

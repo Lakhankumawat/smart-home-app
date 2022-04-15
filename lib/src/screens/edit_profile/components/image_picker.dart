@@ -38,28 +38,30 @@ class _UploadImageState extends State<UploadImage> {
           boxShadow: [
             BoxShadow(spreadRadius: 6, color: Colors.black38),
           ]),
-      child: _image == null ? IconButton(
-        icon: const Icon(
-          Icons.upload_rounded,
-          color: Colors.white,
-          size: 30,
-        ),
-        onPressed: () {
-          getImageFromGallery();
-          // Save Image to some storage
-        },
-      ) : InkWell(
-        onTap: () {
-          getImageFromGallery();
-        },
-        child: ClipRRect(
-            child: Image.file(
-              _image!,
-              fit: BoxFit.cover,
+      child: _image == null
+          ? IconButton(
+              icon: const Icon(
+                Icons.upload_rounded,
+                color: Colors.white,
+                size: 30,
+              ),
+              onPressed: () {
+                getImageFromGallery();
+                // Save Image to some storage
+              },
+            )
+          : InkWell(
+              onTap: () {
+                getImageFromGallery();
+              },
+              child: ClipRRect(
+                child: Image.file(
+                  _image!,
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.circular(35),
+              ),
             ),
-          borderRadius: BorderRadius.circular(35),
-        ),
-      ),
     );
   }
 }

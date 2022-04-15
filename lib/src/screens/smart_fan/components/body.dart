@@ -71,7 +71,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Padding(
               padding: EdgeInsets.only(
@@ -83,7 +83,6 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(
-                      left: getProportionateScreenWidth(19),
                       top: getProportionateScreenHeight(7),
                     ),
                     child: Column(
@@ -159,7 +158,7 @@ class _BodyState extends State<Body> with TickerProviderStateMixin {
                 ),
                 Container(
                   height: getProportionateScreenHeight(260),
-                  width: getProportionateScreenWidth(140),
+                  width: getProportionateScreenWidth(120),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(30),
