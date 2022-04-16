@@ -10,6 +10,7 @@ class StatsChart extends StatelessWidget {
     this.trailing,
     required this.plotOffset,
     required this.content,
+    this.paddingBelow,
   }) : super(key: key);
 
   final String title;
@@ -17,6 +18,7 @@ class StatsChart extends StatelessWidget {
   final Widget? trailing;
   final double plotOffset;
   final XyDataSeries<Consumption, String> content;
+  final double? paddingBelow;
 
   @override
   Widget build(BuildContext context) {
@@ -69,6 +71,7 @@ class StatsChart extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(height: paddingBelow),
         ],
       ),
     );

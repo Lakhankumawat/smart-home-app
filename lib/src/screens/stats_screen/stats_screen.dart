@@ -9,37 +9,47 @@ class StatsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        title: const Text(
-          'Stats',
-          style: TextStyle(
-            fontFamily: 'Lexend',
-            color: Colors.black,
+        automaticallyImplyLeading: false,
+        backgroundColor: Colors.grey[100],
+        title: const Padding(
+          padding: EdgeInsets.only(top: 20, left: 15),
+          child: Text(
+            'Stats',
+            style: TextStyle(
+              fontFamily: 'Lexend',
+              fontSize: 36,
+              fontWeight: FontWeight.w500,
+              color: Colors.black,
+            ),
           ),
         ),
-        actions: const [
-          Icon(
-            Icons.bolt,
+        actions: [
+          IconButton(
+            padding: const EdgeInsets.only(top: 20, right: 15),
+            icon: const Icon(Icons.bolt),
+            tooltip: 'Tap to exit',
+            iconSize: 36,
             color: Colors.black,
+            onPressed: () => Navigator.pop(context),
           ),
         ],
+        elevation: 0,
       ),
-      body: Container(
-        color: Colors.grey[100],
-        child: Column(
-          children: const [
-            TypeSelection(),
-            SizedBox(height: 20),
-            Expanded(
-              child: StatsElectricityUsageChart(),
-            ),
-            SizedBox(height: 20),
-            Expanded(
-              child: StatsDeviceConsumptionChart(),
-            ),
-            SizedBox(height: 10),
-          ],
-        ),
+      body: Column(
+        children: const [
+          TypeSelection(),
+          SizedBox(height: 15),
+          Expanded(
+            child: StatsElectricityUsageChart(),
+          ),
+          SizedBox(height: 15),
+          Expanded(
+            child: StatsDeviceConsumptionChart(),
+          ),
+          SizedBox(height: 15),
+        ],
       ),
       bottomNavigationBar: const StatsBottomAppBar(),
     );

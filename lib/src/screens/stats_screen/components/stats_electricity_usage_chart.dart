@@ -24,7 +24,9 @@ class StatsElectricityUsageChart extends StatelessWidget {
       plotOffset: -35,
       content: SplineAreaSeries<Consumption, String>(
         // Plots Spline curves for smooth transitions
-        color: Colors.grey[400],
+        borderColor: const Color(0xFF464646),
+        borderWidth: 1,
+        color: const Color(0xFFD3D3D3),
         dataSource: const [
           Consumption(day: 'First', usage: 125),
           Consumption(day: 'Mon', usage: 122),

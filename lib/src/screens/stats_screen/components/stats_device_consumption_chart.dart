@@ -23,7 +23,13 @@ class StatsDeviceConsumptionChart extends StatelessWidget {
       plotOffset: -40,
       content: ColumnSeries<Consumption, String>(
         // Plots Columns / Bar chart
-        color: Colors.grey[400],
+        dataLabelSettings: const DataLabelSettings(
+          angle: -90,
+          labelAlignment: ChartDataLabelAlignment.bottom,
+          isVisible: true,
+        ),
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
+        color: const Color(0xFFDCDEDF),
         dataSource: const [
           Consumption(day: 'First', usage: 20),
           Consumption(day: 'Mon', usage: 22),
@@ -37,7 +43,14 @@ class StatsDeviceConsumptionChart extends StatelessWidget {
         ],
         xValueMapper: (consumption, _) => consumption.day,
         yValueMapper: (consumption, _) => consumption.usage,
+        selectionBehavior: SelectionBehavior(
+          enable: true,
+          selectedColor: const Color(0xFFFF5722),
+          selectedOpacity: 0.6,
+          unselectedOpacity: 1,
+        ),
       ),
+      paddingBelow: 10,
     );
   }
 }
