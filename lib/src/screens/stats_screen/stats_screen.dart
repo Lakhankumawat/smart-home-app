@@ -25,14 +25,14 @@ class StatsScreen extends StatelessWidget {
             ),
           ),
         ),
-        actions: [
-          IconButton(
-            padding: const EdgeInsets.only(top: 20, right: 15),
-            icon: const Icon(Icons.bolt),
-            tooltip: 'Tap to exit',
-            iconSize: 36,
-            color: Colors.black,
-            onPressed: () => Navigator.pop(context),
+        actions: const [
+          Padding(
+            padding: EdgeInsets.only(top: 20, right: 15),
+            child: Icon(
+              Icons.bolt,
+              size: 36,
+              color: Colors.black,
+            ),
           ),
         ],
         elevation: 0,

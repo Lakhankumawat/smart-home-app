@@ -8,15 +8,10 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Drawer(
-      child: GestureDetector(
-        onTap: () {
-          FocusScope.of(context).requestFocus(FocusNode());
-        },
-        child: const Scaffold(
-          backgroundColor: Color(0xFFF2F2F2),
-          body: Body(),
-        ),
+    return const Drawer(
+      child: Scaffold(
+        backgroundColor: Color(0xFFF2F2F2),
+        body: Body(),
       ),
     );
   }

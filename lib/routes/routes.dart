@@ -9,6 +9,7 @@ import 'package:domus/src/screens/splash_screen/splash_screen.dart';
 import 'package:domus/src/screens/stats_screen/stats_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:domus/src/screens/home_screen/home_screen.dart';
+import 'package:domus/src/screens/savings_screen/savings_screen.dart';
 
 // Routes arranged in ascending order
 
@@ -16,6 +17,7 @@ final Map<String, WidgetBuilder> routes = {
   EditProfile.routeName: (context) => const EditProfile(),
   HomeScreen.routeName: (context) => const HomeScreen(),
   LoginScreen.routeName: (context) => const LoginScreen(),
+  SavingsScreen.routeName: (context) => const SavingsScreen(),
   SetEventScreen.routeName: (context) => const SetEventScreen(),
   SmartAC.routeName: (context) => const SmartAC(),
   SmartFan.routeName: (context) => const SmartFan(),
