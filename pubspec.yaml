@@ -8,6 +8,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
 
   cupertino_icons: ^1.0.2
   get_it: ^7.2.0
@@ -40,6 +41,7 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+    - assets/images/settings/
     - assets/images/weather/
     - assets/icons/svg/
     - assets/Lottie/
@@ -56,4 +58,13 @@ flutter:
         - asset: "assets/fonts/Poppins-700.ttf"
           style: "normal"
           weight: 700
+    - family: "ABeeZee"
+      fonts:
+        - asset: assets/fonts/ABeeZee-Regular.ttf
+          weight: 400
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-SemiBold.ttf
+          style: "normal"
+      
 
