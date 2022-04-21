@@ -10,9 +10,8 @@ class MenuListItems extends StatelessWidget {
     Key? key,
     required this.iconPath,
     required this.itemName,
-    required this.function
+    required this.function,
   }) : super(key: key);
-
 
   @override
   Widget build(BuildContext context) {
@@ -32,10 +31,10 @@ class MenuListItems extends StatelessWidget {
                 fontSize: 24,
                 fontWeight: FontWeight.w300,
               ),
-            )
+            ),
           ],
         ),
-      )
+      ),
     );
   }
 }
