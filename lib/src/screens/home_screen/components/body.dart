@@ -8,6 +8,7 @@ import 'package:domus/src/screens/smart_fan/smart_fan.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:domus/view/home_screen_view_model.dart';
+import 'package:domus/src/screens/smart_tv/smart_tv.dart';
 import 'package:flutter/material.dart';
 
 import 'add_device_widget.dart';
@@ -120,6 +121,17 @@ class Body extends StatelessWidget {
               },
               child: const Text(
                 'To SetEventScreen',
+                style: TextStyle(
+                  color: Colors.black,
+                ),
+              ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.of(context).pushNamed(SmartTV.routeName);
+              },
+              child: const Text(
+                'Smart TV Screen',
                 style: TextStyle(
                   color: Colors.black,
                 ),
