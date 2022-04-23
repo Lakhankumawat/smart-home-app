@@ -69,7 +69,7 @@ class MoodToggleButtons extends StatelessWidget {
                 ),
               ],
               onPressed: (int index) {
-                model.onToggleTapped(index);
+                model.onToggleTapped(index,context);
               },
               isSelected: model.isSelected,
             ),
