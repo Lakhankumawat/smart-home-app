@@ -19,7 +19,7 @@
 
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 ![Group 1](https://user-images.githubusercontent.com/55774240/155844381-bc4eb27d-c7aa-4325-b621-2164436cf9ac.png)
 ![Group 2](https://user-images.githubusercontent.com/55774240/155844384-0c9c4899-91c9-412e-81b9-818fc6f8ae9f.png)
@@ -137,6 +137,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/Pavel401"><img src="https://avatars.githubusercontent.com/u/47685150?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SK MABUD ALAM</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Pavel401" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Fredorixo"><img src="https://avatars.githubusercontent.com/u/80041092?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Fredorixo</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Fredorixo" title="Code">💻</a></td>
     <td align="center"><a href="https://github.com/Chitrakshi2531"><img src="https://avatars.githubusercontent.com/u/99464268?v=4?s=100" width="100px;" alt=""/><br /><sub><b>chitrakshi bohra</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=Chitrakshi2531" title="Code">💻</a></td>
+    <td align="center"><a href="https://nihaldias.codes"><img src="https://avatars.githubusercontent.com/u/58399987?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nihal Rian Dias</b></sub></a><br /><a href="https://github.com/Lakhankumawat/smart-home-app/commits?author=nrd26" title="Code">💻</a></td>
   </tr>
 </table>
 
