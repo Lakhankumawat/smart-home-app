@@ -48,6 +48,7 @@ flutter:
     - assets/icons/svg/
     - assets/Lottie/
     - assets/icons/menu_icons/
+    - assets/images/movies/
 
   fonts:
     - family: "Noto Sans"
