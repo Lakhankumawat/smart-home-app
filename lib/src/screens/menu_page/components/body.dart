@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
       padding: EdgeInsets.only(
         left: getProportionateScreenWidth(20),
         right: getProportionateScreenWidth(20),
-        bottom: getProportionateScreenHeight(15),
+        bottom: getProportionateScreenHeight(12),
       ),
       child: Column(
         children: [

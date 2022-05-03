@@ -20,7 +20,7 @@ class _SavingsState extends State<Savings> {
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(
-          horizontal: getProportionateScreenHeight(2),
+          horizontal: getProportionateScreenHeight(0),
           vertical: getProportionateScreenHeight(10)
       ),
       child: Container(
