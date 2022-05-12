@@ -1,11 +1,13 @@
 import 'package:domus/provider/getit.dart';
 import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
-import 'package:domus/src/screens/splash_screen/splash_screen.dart';
+import 'package:domus/src/logs/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'config/size_config.dart';
 
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp();
   setupLocator();
   runApp(MyApp());
 }
@@ -76,7 +78,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }

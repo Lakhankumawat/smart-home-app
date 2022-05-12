@@ -37,7 +37,7 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Hi, Lex',
+                        'Hi, Seif',
                         style: Theme.of(context).textTheme.headline1,
                       ),
                       Container(
@@ -56,7 +56,6 @@ class HomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
-
                 leadingWidth: getProportionateScreenWidth(170),
                 bottom: PreferredSize(
                   child: TabBar(

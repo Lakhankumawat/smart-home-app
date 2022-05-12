@@ -6,18 +6,23 @@ environment:
   sdk: ">=2.15.1 <3.0.0"
 
 dependencies:
+  cupertino_icons: ^1.0.2
+  cloud_firestore: ^3.1.14
+  dotted_border: ^2.0.0+2
+  font_awesome_flutter: ^9.2.0
+  flutter_screenutil: ^5.3.1
   flutter:
     sdk: flutter
-
-  cupertino_icons: ^1.0.2
+  image_picker: ^0.8.5
+  firebase_auth: ^3.3.17
+  firebase_core: ^1.16.0
+  firebase_storage: ^10.2.15
   get_it: ^7.2.0
+  google_fonts: ^2.1.0
   provider: ^6.0.2
-  dotted_border: ^2.0.0+2
   sliding_up_panel: ^2.0.0+1
   sleek_circular_slider: ^2.0.1
   flutter_svg: ^1.0.3
-  font_awesome_flutter: ^9.2.0
-  flutter_screenutil: ^5.3.1
 
 dev_dependencies:
   flutter_test:
