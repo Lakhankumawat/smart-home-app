@@ -1,0 +1,75 @@
+name: domus
+description: A home automation smart application.
+publish_to: 'none'
+version: 1.0.0+1
+environment:
+  sdk: ">=2.15.1 <3.0.0"
+
+dependencies:
+  awesome_circular_chart: ^1.0.0
+  cached_network_image: ^3.2.0
+  cupertino_icons: ^1.0.2
+  dotted_border: ^2.0.0+2
+  flutter:
+    sdk: flutter
+  flutter_screenutil: ^5.3.1
+  flutter_svg: ^1.0.3
+  font_awesome_flutter: ^9.2.0
+  get_it: ^7.2.0
+  image_picker: ^0.8.4+11
+  lottie: ^1.2.2
+  provider: ^6.0.2
+  sleek_circular_slider: ^2.0.1
+  sliding_up_panel: ^2.0.0+1
+  syncfusion_flutter_charts: ^20.1.47+1
+  table_calendar: ^3.0.4
+
+dev_dependencies:
+  flutter_lints: ^1.0.0
+
+  flutter_native_splash: ^1.3.3
+  flutter_test:
+    sdk: flutter
+
+flutter_native_splash:
+  color: "#ffffff"
+  image: assets/images/splash_1024.png
+  android: true
+  ios: true
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/fonts/
+    - assets/images/weather/
+    - assets/icons/svg/
+    - assets/Lottie/
+    - assets/icons/menu_icons/
+    - assets/images/movies/
+
+  fonts:
+    - family: "Noto Sans"
+      fonts:
+        - asset: "assets/fonts/NotoSans-Bold.ttf"
+          style: "normal"
+        - asset: "assets/fonts/NotoSans-Regular.ttf"
+          style: "normal"
+    - family: "Poppins"
+      fonts:
+        - asset: "assets/fonts/Poppins-700.ttf"
+          style: "normal"
+          weight: 700
+    - family: ABeeZee
+      fonts:
+        - asset: assets/fonts/ABeeZee-Italic.ttf
+          style: italic
+        - asset: assets/fonts/ABeeZee-Regular.ttf
+          style: normal
+    - family: Lexend
+      fonts:
+        - asset: assets/fonts/Lexend-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Lexend-ExtraLight.ttf
+          weight: 200

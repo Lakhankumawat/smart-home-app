@@ -1,0 +1,126 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Lakhankumawat",
+      "name": "LakhanKumawat ᵖ⁺",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55774240?v=4",
+      "profile": "http://lakhankumawat.me/",
+      "contributions": [
+        "code",
+        "projectManagement",
+        "question"
+      ]
+    },
+    {
+      "login": "ImgBotApp",
+      "name": "Imgbot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31427850?v=4",
+      "profile": "https://imgbot.net",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "HetviSoni",
+      "name": "HetviSoni",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76479104?v=4",
+      "profile": "https://github.com/HetviSoni",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "all-contributors",
+      "name": "All Contributors",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46410174?v=4",
+      "profile": "https://allcontributors.org",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "mariam199911",
+      "name": "mariam",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64384533?v=4",
+      "profile": "https://github.com/mariam199911",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "domesticmouse",
+      "name": "Brett Morgan",
+      "avatar_url": "https://avatars.githubusercontent.com/u/30503?v=4",
+      "profile": "https://twitter.com/DomesticMouse",
+      "contributions": [
+        "review",
+        "code"
+      ]
+    },
+    {
+      "login": "VrishtiGupta11",
+      "name": "Vrishti Gupta",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53931644?v=4",
+      "profile": "https://vrishtigupta.azurewebsites.net/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "RanchoDbest",
+      "name": "Rachana Solanki",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12000313?v=4",
+      "profile": "http://rachanasolanki.in",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Pavel401",
+      "name": "SK MABUD ALAM",
+      "avatar_url": "https://avatars.githubusercontent.com/u/47685150?v=4",
+      "profile": "https://github.com/Pavel401",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Fredorixo",
+      "name": "Fredorixo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80041092?v=4",
+      "profile": "https://github.com/Fredorixo",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Chitrakshi2531",
+      "name": "chitrakshi bohra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99464268?v=4",
+      "profile": "https://github.com/Chitrakshi2531",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "nrd26",
+      "name": "Nihal Rian Dias",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58399987?v=4",
+      "profile": "https://nihaldias.codes",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "smart-home-app",
+  "projectOwner": "Lakhankumawat",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
