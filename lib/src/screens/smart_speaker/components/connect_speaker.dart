@@ -21,7 +21,7 @@ class ConnectSpeaker extends StatelessWidget {
               onTap: () {
                 Navigator.of(context).pop();
               },
-              child: const Icon(Icons.arrow_back_outlined),
+              child: Icon(Icons.arrow_back_outlined),
             ),
           ),
           Text(
@@ -58,7 +58,7 @@ class ConnectSpeaker extends StatelessWidget {
                 horizontal: getProportionateScreenWidth(80),
                 vertical: getProportionateScreenHeight(10),
               ),
-              shape: const StadiumBorder(),
+              shape: StadiumBorder(),
             ),
           )
         ],

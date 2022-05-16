@@ -1,16 +1,41 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
-import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/body.dart';
-import 'package:domus/src/screens/menu_page/menu_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  static String routeName = '/home-screen';
-  const HomeScreen({Key? key}) : super(key: key);
+//ignore: must_be_immutable
+class HomeScreen extends StatefulWidget {
+  static final String routeName = '/home-screen';
+  String? uid,urlImage,name;
+  HomeScreen({Key? key,required this.uid, this.urlImage, this.name }) : super(key: key);
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+
+  void ReloadImage() async {
+    print('uid {${widget.uid}}');
+    await FirebaseFirestore.instance.collection('users')
+        .doc(widget.uid).get().then((value){
+          setState((){
+            widget.name = value.data()!['name'];
+            widget.urlImage = value.data()!['downloadUrl'];
+            print(widget.urlImage);
+
+          });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ReloadImage();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,11 +49,10 @@ class HomeScreen extends StatelessWidget {
             length: 3,
             child: Scaffold(
               appBar: AppBar(
-                // automaticallyImplyLeading: false,
+                automaticallyImplyLeading: false,
                 toolbarHeight: getProportionateScreenHeight(60),
                 //centerTitle: true,
                 elevation: 0,
-                iconTheme: const IconThemeData(color: Colors.black),
                 title: Padding(
                   padding: EdgeInsets.symmetric(
                     horizontal: getProportionateScreenWidth(
@@ -39,41 +63,31 @@ class HomeScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        'Hi, Lex',
+                        'Hi, ${widget.name}',
                         style: Theme.of(context).textTheme.headline1,
                       ),
                       Container(
                         width: 50,
                         height: 50,
-                        decoration: const BoxDecoration(
+                        decoration: BoxDecoration(
                           color: Color(0xffdadada),
+                            image: DecorationImage(image: NetworkImage(
+                                widget.urlImage!
+                            ) ,
+                                fit: BoxFit.cover),
                           borderRadius:
                               BorderRadius.all(Radius.elliptical(45, 45)),
                         ),
-
-                        child: IconButton(
-                          splashRadius: 25,
-                          icon: const Icon(
-                            FontAwesomeIcons.solidUser,
-                            color: Colors.amber,
-                          ),
-                          onPressed: () {
-                            // Navigator.of(context).pushNamed(EditProfile.routeName);
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),));
-                          },
-
-                        ),
-                      ),
+                      ) ,
                     ],
                   ),
                 ),
-
-                //leadingWidth: getProportionateScreenWidth(170),
+                leadingWidth: getProportionateScreenWidth(170),
                 bottom: PreferredSize(
                   child: TabBar(
                       isScrollable: true,
                       unselectedLabelColor: Colors.white.withOpacity(0.3),
-                      indicatorColor: const Color(0xFF464646),
+                      indicatorColor: Color(0xFF464646),
                       tabs: [
                         Tab(
                           child: Text(
@@ -101,26 +115,24 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              drawer: SizedBox(
-                 width: getProportionateScreenWidth(270),
-                  child: const Menu()),
               body: TabBarView(
                 children: <Widget>[
                   Body(
                     model: model,
                   ),
-                  Center(
-                    child: Text(
-                      'To be Built Soon',
-                      style: Theme.of(context).textTheme.headline3,
+                  Container(
+                    child: Body(
+                      model: model,
                     ),
                   ),
-                  const Center(
-                    child: Text('under construction'),
+                  Container(
+                    child: Body(
+                      model: model,
+                    ),
                   ),
                 ],
               ),
-              bottomNavigationBar: CustomBottomNavBar(model: model),
+              bottomNavigationBar: CustomBottomNavBar(model),
             ),
           );
         });

@@ -1,3 +1,4 @@
+// ignore_for_file: prefer_const_constructors
 import 'dart:math';
 
 import 'package:domus/provider/base_model.dart';
@@ -42,7 +43,7 @@ class HomeScreenViewModel extends BaseModel {
   void onItemTapped(int index) {
     selectedIndex = index;
     pageController.animateToPage(index,
-        duration: const Duration(milliseconds: 500), curve: Curves.easeOut);
+        duration: Duration(milliseconds: 500), curve: Curves.easeOut);
     notifyListeners();
   }
 }

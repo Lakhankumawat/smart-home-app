@@ -6,7 +6,7 @@ import 'package:sliding_up_panel/sliding_up_panel.dart';
 
 class SmartLightViewModel extends BaseModel {
   //--------------VARIABLES----------//
-  PanelController pc = PanelController();
+  PanelController pc = new PanelController();
   bool isTappedOnColor = false;
   bool isLightOff = false;
   final List<bool> isSelected = [true, false];
@@ -14,7 +14,7 @@ class SmartLightViewModel extends BaseModel {
 
   ///keeping track of all three factors - even index will do the task
   int selectedIndex = 0;
-  Color lightColor = const Color(0xFF7054FF);
+  Color lightColor = Color(0xFF7054FF);
   String lightImage = 'assets/images/purple.png';
 
   void showColorPanel() {

@@ -2,21 +2,17 @@ import 'package:domus/config/size_config.dart';
 import 'package:domus/src/screens/home_screen/components/music_widget.dart';
 import 'package:domus/src/screens/home_screen/components/savings_container.dart';
 import 'package:domus/src/screens/home_screen/components/weather_container.dart';
-import 'package:domus/src/screens/set_event_screen/set_event_screen.dart';
 import 'package:domus/src/screens/smart_ac/smart_ac.dart';
-import 'package:domus/src/screens/smart_fan/smart_fan.dart';
 import 'package:domus/src/screens/smart_light/smart_light.dart';
 import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:domus/view/home_screen_view_model.dart';
-import 'package:domus/src/screens/smart_tv/smart_tv.dart';
-import 'package:flutter/material.dart';
-
+import 'package:flutter/cupertino.dart';
 import 'add_device_widget.dart';
-import 'dark_container.dart';
+import 'darkContainer.dart';
 
 class Body extends StatelessWidget {
-  final HomeScreenViewModel model;
-  const Body({Key? key, required this.model}) : super(key: key);
+  final HomeScreenViewModel? model;
+  Body({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,18 +22,22 @@ class Body extends StatelessWidget {
           horizontal: getProportionateScreenWidth(7),
           vertical: getProportionateScreenHeight(7),
         ),
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
           color: Color(0xFFF2F2F2),
         ),
         child: Column(
           children: [
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: WeatherContainer(model: model),
+              child: WeatherContainer(context: context, model: model!),
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: SavingsContainer(model: model),
+              child: WeatherContainer(context: context, model: model!),
+            ),
+            Padding(
+              padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+              child: SavingsContainer(context: context, model: model!),
             ),
             Row(
               children: [
@@ -45,8 +45,8 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isLightOn,
-                      switchButton: model.lightSwitch,
+                      itsOn: model!.isLightOn ,
+                      switchButton: model!.lightSwitch ,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartLight.routeName);
                       },
@@ -60,8 +60,8 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isACON,
-                      switchButton: model.acSwitch,
+                      itsOn: model!.isACON,
+                      switchButton: model!.acSwitch,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartAC.routeName);
                       },
@@ -75,7 +75,7 @@ class Body extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(5)),
-              child: const MusicWidget(),
+              child: MusicWidget(context),
             ),
             Row(
               children: [
@@ -83,8 +83,8 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isSpeakerON,
-                      switchButton: model.speakerSwitch,
+                      itsOn: model!.isSpeakerON,
+                      switchButton: model!.speakerSwitch,
                       onTap: () {
                         Navigator.of(context).pushNamed(SmartSpeaker.routeName);
                       },
@@ -98,10 +98,10 @@ class Body extends StatelessWidget {
                   child: Padding(
                     padding: EdgeInsets.all(getProportionateScreenHeight(5)),
                     child: DarkContainer(
-                      itsOn: model.isFanON,
-                      switchButton: model.fanSwitch,
+                      itsOn: model!.isFanON,
+                      switchButton: model!.fanSwitch,
                       onTap: () {
-                        Navigator.of(context).pushNamed(SmartFan.routeName);
+                        Navigator.of(context).pushNamed(SmartAC.routeName);
                       },
                       iconAsset: 'assets/icons/svg/fan.svg',
                       device: 'Fan',
@@ -113,29 +113,7 @@ class Body extends StatelessWidget {
             ),
             Padding(
               padding: EdgeInsets.all(getProportionateScreenHeight(8)),
-              child: const AddNewDevice(),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(SetEventScreen.routeName);
-              },
-              child: const Text(
-                'To SetEventScreen',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.of(context).pushNamed(SmartTV.routeName);
-              },
-              child: const Text(
-                'Smart TV Screen',
-                style: TextStyle(
-                  color: Colors.black,
-                ),
-              ),
+              child: AddNewDevice(context),
             ),
           ],
         ),

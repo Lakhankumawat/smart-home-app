@@ -9,7 +9,7 @@ class BaseView<T extends BaseModel> extends StatefulWidget {
   final Function(T)? onModelDisposed;
   final Widget? child;
 
-  const BaseView({
+  BaseView({
     Key? key,
     required this.builder,
     this.onModelReady,
