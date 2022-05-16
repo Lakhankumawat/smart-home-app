@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 import 'package:domus/src/logs/register_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -15,6 +16,9 @@ class LoginScreen extends StatelessWidget{
 
   @override
   Widget build(BuildContext context) {
+
+    WidgetsFlutterBinding.ensureInitialized();
+    Firebase.initializeApp();
     return MaterialApp(
       color: Colors.white,
       debugShowCheckedModeBanner: false,
@@ -126,7 +130,6 @@ class LoginScreen extends StatelessWidget{
                     borderRadius:BorderRadius.circular(50) ,
                     onTap: () async {
                       try{
-
                         await loginAuth.signInWithEmailAndPassword(
                             email: email.text, password: password.text
                         );
