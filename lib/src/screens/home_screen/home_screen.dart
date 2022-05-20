@@ -1,6 +1,7 @@
 import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
 import 'package:domus/src/screens/edit_profile/edit_profile.dart';
+import 'package:domus/src/screens/favourites_screen/favourites_screen.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
@@ -24,9 +25,7 @@ class HomeScreen extends StatelessWidget {
             length: 3,
             child: Scaffold(
               appBar: AppBar(
-                // automaticallyImplyLeading: false,
                 toolbarHeight: getProportionateScreenHeight(60),
-                //centerTitle: true,
                 elevation: 0,
                 iconTheme: const IconThemeData(color: Colors.black),
                 title: Padding(
@@ -36,11 +35,14 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         'Hi, Lex',
                         style: Theme.of(context).textTheme.headline1,
+                      ),
+                      SizedBox(
+                        width: getProportionateScreenWidth(60),
                       ),
                       Container(
                         width: 50,
@@ -64,11 +66,36 @@ class HomeScreen extends StatelessWidget {
 
                         ),
                       ),
+                      SizedBox(
+                        width: getProportionateScreenWidth(5),
+                      ),
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: const BoxDecoration(
+                          color: Color(0xffdadada),
+                          borderRadius:
+                          BorderRadius.all(Radius.elliptical(45, 45)),
+                        ),
+
+                        child: IconButton(
+                          splashRadius: 25,
+                          icon: const Icon(
+                            Icons.star,
+                            color: Colors.amber,
+                          ),
+                          onPressed: () {
+                            // Navigator.of(context).pushNamed(EditProfile.routeName);
+                            Navigator.push(context, MaterialPageRoute(builder: (context) =>
+                                Favourites(
+                                  model:model,
+                                ),));
+                          },
+                        ),
+                      ),
                     ],
                   ),
                 ),
-
-                //leadingWidth: getProportionateScreenWidth(170),
                 bottom: PreferredSize(
                   child: TabBar(
                       isScrollable: true,
