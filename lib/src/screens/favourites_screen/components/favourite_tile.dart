@@ -27,15 +27,15 @@ class FavouriteTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Material(
       elevation: 15,
-      borderRadius: BorderRadius.all(Radius.circular(20)),
+      borderRadius: const BorderRadius.all(Radius.circular(20)),
       child: Container(
-        padding: EdgeInsets.only(top: 20),
+        padding: const EdgeInsets.only(top: 20),
         width: 200,
         // margin: EdgeInsets.only(bottom: 10),
         height: MediaQuery.of(context).size.height / 5,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: itsOn? Color.fromRGBO(0, 0, 0, 1)
+            color: itsOn? const Color.fromRGBO(0, 0, 0, 1)
             // ? const Color.fromRGBO(0, 0, 0, 1)
             // ? Colors.white
                 : const Color(0xffededed)
@@ -109,14 +109,14 @@ class FavouriteTile extends StatelessWidget {
                     ),
                     onTap: switchButton,
                   ),
-                  SizedBox(width: 15,)
+                  const SizedBox(width: 15,)
                 ],
               ),
 
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                   Text(
                     deviceCount,
                     textAlign: TextAlign.left,
@@ -143,7 +143,7 @@ class FavouriteTile extends StatelessWidget {
                     width: getProportionateScreenWidth(160),
                   ),
                   Container(
-                    padding: EdgeInsets.all(2),
+                    padding: const EdgeInsets.all(2),
                     height: 25,
                     width: 70,
                     decoration: BoxDecoration(

@@ -67,7 +67,7 @@ class DarkContainer extends StatelessWidget {
                     onTap: switchFav,
                     child:  Icon(
                       Icons.star_rounded,
-                      color: isFav ?  Colors.amber:Color(0xFF808080),
+                      color: isFav ?  Colors.amber:const Color(0xFF808080),
                       // color: Color(0xFF808080),
                     ),
                   ),

@@ -12,7 +12,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding: EdgeInsets.only(left: 10,right: 10),
+      padding: const EdgeInsets.only(left: 10,right: 10),
       width: MediaQuery.of(context).size.width,
       // height: getProportionateScreenHeight(80),
       // decoration: BoxDecoration(

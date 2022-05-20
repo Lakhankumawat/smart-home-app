@@ -1,9 +1,6 @@
 import 'package:domus/config/size_config.dart';
-import 'package:domus/src/screens/favourites_screen/components/favourite_tile.dart';
 import 'package:domus/src/screens/favourites_screen/components/favourites_list.dart';
-import 'package:domus/src/screens/smart_speaker/smart_speaker.dart';
 import 'package:flutter/material.dart';
-import 'package:domus/src/screens/favourites_screen/components/body.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 class Favourites extends StatefulWidget {
   final HomeScreenViewModel model;

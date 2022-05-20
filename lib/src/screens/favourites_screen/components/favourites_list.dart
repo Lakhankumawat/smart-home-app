@@ -14,7 +14,6 @@ class FavouriteList extends StatefulWidget {
 }
 
 class _FavouriteListState extends State<FavouriteList> {
-  @override
   List<FavouriteTile> favs =<FavouriteTile>[];
   @override
   void initState() {
@@ -91,16 +90,17 @@ class _FavouriteListState extends State<FavouriteList> {
     }
   }
 
+  @override
   Widget build(BuildContext context) {
-    return favs.isEmpty? Body() : Container(
+    return favs.isEmpty? const Body() : Container(
       color: Colors.white,
-      padding: EdgeInsets.all(10),
+      padding: const EdgeInsets.all(10),
       child: ListView.builder(
         itemCount: favs.length,
         shrinkWrap: true,
         itemBuilder: (context,index){
           return Container(
-              padding: EdgeInsets.only(bottom: 10),
+              padding: const EdgeInsets.only(bottom: 10),
               child: favs[index]
           );
         },
