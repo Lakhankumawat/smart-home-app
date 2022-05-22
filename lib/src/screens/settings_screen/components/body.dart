@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class SwitchTiles extends StatefulWidget {
+  const SwitchTiles({Key? key}) : super(key: key);
+
   @override
   State<SwitchTiles> createState() => _SwitchTilesState();
 }
