@@ -35,10 +35,11 @@ class FavouriteTile extends StatelessWidget {
         height: MediaQuery.of(context).size.height / 5,
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(20),
-            color: itsOn? const Color.fromRGBO(0, 0, 0, 1)
+            color: const Color(0xffededed),
+            // color: itsOn? const Color.fromRGBO(0, 0, 0, 1)
             // ? const Color.fromRGBO(0, 0, 0, 1)
             // ? Colors.white
-                : const Color(0xffededed)
+            //     : const Color(0xffededed)
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -55,16 +56,17 @@ class FavouriteTile extends StatelessWidget {
                   Container(
                     width: 50,
                     height: 50,
-                    decoration: BoxDecoration(
-                      color: itsOn
-                          ? const Color.fromRGBO(45, 45, 45, 1)
-                          : const Color(0xffdadada),
-                      borderRadius:
-                      const BorderRadius.all(Radius.elliptical(45, 45)),
+                    decoration: const BoxDecoration(
+                      color: Color(0xffdadada),
+                      // color: itsOn
+                      //     ? const Color.fromRGBO(45, 45, 45, 1)
+                      //     :
+                      borderRadius: BorderRadius.all(Radius.elliptical(45, 45)),
                     ),
                     child: SvgPicture.asset(
                       iconAsset,
-                      color: itsOn ? Colors.amber : const Color(0xFF808080),
+                      color:const Color(0xFF808080) ,
+                      // color: itsOn ? Colors.amber : ,
                     ),
                   ),
                   SizedBox(
@@ -74,7 +76,8 @@ class FavouriteTile extends StatelessWidget {
                     device,
                     textAlign: TextAlign.left,
                     style: Theme.of(context).textTheme.headline2!.copyWith(
-                      color: itsOn ? Colors.white : Colors.black,
+                      color: Colors.black,
+                      // color: itsOn ? Colors.white : Colors.black,
                     ),
                   ),
                   SizedBox(
@@ -87,9 +90,12 @@ class FavouriteTile extends StatelessWidget {
                       padding: const EdgeInsets.all(2),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
-                        color: itsOn ? Colors.black : const Color(0xffd6d6d6),
+                        color: Colors.grey,
+                        // color:const Color(0xffd6d6d6),
+                        // color: itsOn ? Colors.black : ,
                         border: Border.all(
-                          color: const Color.fromRGBO(255, 255, 255, 1),
+                          color:Colors.grey,
+                          // color: const Color.fromRGBO(255, 255, 255, 1),
                           width: itsOn ? 2 : 0,
                         ),
                       ),
@@ -136,7 +142,8 @@ class FavouriteTile extends StatelessWidget {
                     itsOn ? 'On' : 'Off',
                     textAlign: TextAlign.left,
                     style: Theme.of(context).textTheme.headline2!.copyWith(
-                      color: itsOn ? Colors.white : Colors.black,
+                      color: Colors.black,
+                      // color: itsOn ? Colors.white : Colors.black,
                     ),
                   ),
                   SizedBox(
