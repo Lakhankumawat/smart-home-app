@@ -14,7 +14,7 @@ class SettingScreen extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.fromLTRB(32, 64, 48, 20),
               child: Row(
-                children: [
+                children: const [
                   Text(
                     "Settings",
                     style: TextStyle(
@@ -34,12 +34,12 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            SettingTile(),
+            const SettingTile(),
             SwitchTiles(),
             const SizedBox(
               height: 24.44,
             ),
-            SettingTile(),
+            const SettingTile(),
           ],
         ));
   }

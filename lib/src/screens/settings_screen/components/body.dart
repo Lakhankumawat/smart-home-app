@@ -8,6 +8,7 @@ class SwitchTiles extends StatefulWidget {
 class _SwitchTilesState extends State<SwitchTiles> {
   @override
   Widget build(BuildContext context) {
+    // ignore: prefer_const_declarations
     final bool givenValue = false;
     return Padding(
       padding: const EdgeInsets.fromLTRB(30, 24.44, 19, 0),
@@ -16,18 +17,18 @@ class _SwitchTilesState extends State<SwitchTiles> {
         width: 326,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32),
-          color: Color.fromRGBO(241, 241, 241, 1),
+          color:const  Color.fromRGBO(241, 241, 241, 1),
         ),
         child: ListView(
           children: [
             SwitchListTile(
-              activeTrackColor: Color.fromRGBO(61, 213, 152, 1),
-              inactiveTrackColor: Color.fromRGBO(210, 210, 210, 1),
-              activeColor: Color.fromRGBO(70, 70, 70, 1),
-              inactiveThumbColor: Color.fromRGBO(70, 70, 70, 1),
+              activeTrackColor:const  Color.fromRGBO(61, 213, 152, 1),
+              inactiveTrackColor:const  Color.fromRGBO(210, 210, 210, 1),
+              activeColor: const Color.fromRGBO(70, 70, 70, 1),
+              inactiveThumbColor:const  Color.fromRGBO(70, 70, 70, 1),
               value: givenValue,
               secondary: Image.asset('assets/images/settings/star.png'),
-              title: Text("Option 1", style: TextStyle(fontFamily: 'Abeezee')),
+              title: const Text("Option 1", style: TextStyle(fontFamily: 'Abeezee')),
               onChanged: (givenValue) {
                 setState(() {
                   givenValue = true;
@@ -36,13 +37,13 @@ class _SwitchTilesState extends State<SwitchTiles> {
             ),
             SwitchListTile(
               selected: true,
-              activeTrackColor: Color.fromRGBO(61, 213, 152, 1),
-              inactiveTrackColor: Color.fromRGBO(210, 210, 210, 1),
-              activeColor: Color.fromRGBO(70, 70, 70, 1),
-              inactiveThumbColor: Color.fromRGBO(70, 70, 70, 1),
+              activeTrackColor:const  Color.fromRGBO(61, 213, 152, 1),
+              inactiveTrackColor:const  Color.fromRGBO(210, 210, 210, 1),
+              activeColor:const  Color.fromRGBO(70, 70, 70, 1),
+              inactiveThumbColor:const  Color.fromRGBO(70, 70, 70, 1),
               value: givenValue,
               secondary: Image.asset('assets/images/settings/chat.png'),
-              title: Text("Option 2", style: TextStyle(fontFamily: 'Abeezee')),
+              title: const Text("Option 2", style: TextStyle(fontFamily: 'Abeezee')),
               onChanged: (givenValue) {
                 setState(() {
                   givenValue = true;
@@ -50,13 +51,13 @@ class _SwitchTilesState extends State<SwitchTiles> {
               },
             ),
             SwitchListTile(
-              activeTrackColor: Color.fromRGBO(61, 213, 152, 1),
-              inactiveTrackColor: Color.fromRGBO(210, 210, 210, 1),
-              activeColor: Color.fromRGBO(70, 70, 70, 1),
-              inactiveThumbColor: Color.fromRGBO(70, 70, 70, 1),
+              activeTrackColor: const Color.fromRGBO(61, 213, 152, 1),
+              inactiveTrackColor: const Color.fromRGBO(210, 210, 210, 1),
+              activeColor:const  Color.fromRGBO(70, 70, 70, 1),
+              inactiveThumbColor:const  Color.fromRGBO(70, 70, 70, 1),
               value: givenValue,
               secondary: Image.asset('assets/images/settings/bell.png'),
-              title: Text("Option 3", style: TextStyle(fontFamily: 'Abeezee')),
+              title:const  Text("Option 3", style: TextStyle(fontFamily: 'Abeezee')),
               onChanged: (givenValue) {
                 setState(() {
                   givenValue = true;
@@ -82,7 +83,7 @@ class SettingTile extends StatelessWidget {
         width: 326,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(32),
-          color: Color.fromRGBO(241, 241, 241, 1),
+          color:const  Color.fromRGBO(241, 241, 241, 1),
         ),
         child: ListView(
           children: [
@@ -94,23 +95,23 @@ class SettingTile extends StatelessWidget {
                     "Option 1",
                     style: TextStyle(fontFamily: 'Abeezee'),
                   ),
-                  trailing: Icon(Icons.navigate_next)),
+                  trailing:const  Icon(Icons.navigate_next)),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
                   leading: Image.asset('assets/images/settings/bookmark.png'),
                   title:
-                      Text("Option 2", style: TextStyle(fontFamily: 'Abeezee')),
-                  trailing: Icon(Icons.navigate_next)),
+                     const  Text("Option 2", style: TextStyle(fontFamily: 'Abeezee')),
+                  trailing:const  Icon(Icons.navigate_next)),
             ),
             InkWell(
               onTap: () {},
               child: ListTile(
                   leading: Image.asset('assets/images/settings/home.png'),
                   title:
-                      Text("Option 3", style: TextStyle(fontFamily: 'Abeezee')),
-                  trailing: Icon(Icons.navigate_next)),
+                     const  Text("Option 3", style: TextStyle(fontFamily: 'Abeezee')),
+                  trailing:const  Icon(Icons.navigate_next)),
             ),
           ],
         ),
