@@ -4,6 +4,7 @@ import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/screens/favourites_screen/favourites_screen.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'components/body.dart';
@@ -81,8 +82,9 @@ class HomeScreen extends StatelessWidget {
                         child: IconButton(
                           splashRadius: 25,
                           icon: const Icon(
-                            Icons.star,
-                            color: Colors.amber,
+                            CupertinoIcons.heart_fill,
+                            color: Colors.grey,
+                            size: 30,
                           ),
                           onPressed: () {
                             // Navigator.of(context).pushNamed(EditProfile.routeName);
