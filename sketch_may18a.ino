@@ -83,7 +83,7 @@ void setup() {
   config.database_url = DATABASE_URL;
 
   auth.user.email = "seifibrahim32@gmail.com";
-  auth.user.password = "lucasfan";
+  auth.user.password = "xxxxxx";
   /* Sign up */
   if (Firebase.signUp(&config, &auth, "", "")) {
     Serial.println("ok");
