@@ -1,128 +1,191 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:domus/config/size_config.dart';
 import 'package:domus/provider/base_view.dart';
-import 'package:domus/src/screens/edit_profile/edit_profile.dart';
 import 'package:domus/src/widgets/custom_bottom_nav_bar.dart';
 import 'package:domus/view/home_screen_view_model.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 import 'components/body.dart';
-import 'package:domus/src/screens/menu_page/menu_screen.dart';
 
-class HomeScreen extends StatelessWidget {
-  static String routeName = '/home-screen';
-  const HomeScreen({Key? key}) : super(key: key);
+//ignore: must_be_immutable
+class HomeScreen extends StatefulWidget {
+  static final String routeName = '/home-screen';
+  String? uid ;
+  HomeScreen({Key? key,required this.uid, }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String? urlImage,name,uid;
+
+  void ReloadImage() async {
+    setState((){uid = widget.uid;});
+    print('uid ${uid}');
+    await FirebaseFirestore.instance.collection('users')
+        .doc(uid).get().then((value){
+          setState((){
+            name = value.data()!['name'];
+            urlImage = value.data()!['downloadUrl'];
+            print(urlImage);
+          });
+    });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    ReloadImage();
+  }
+
+  @override
+  Widget build(BuildContext context) { 
     SizeConfig().init(context);
-    return BaseView<HomeScreenViewModel>(
-        onModelReady: (model) => {
-              model.generateRandomNumber(),
-            },
-        builder: (context, model, child) {
-          return DefaultTabController(
-            length: 3,
-            child: Scaffold(
-              appBar: AppBar(
-                // automaticallyImplyLeading: false,
-                toolbarHeight: getProportionateScreenHeight(60),
-                //centerTitle: true,
-                elevation: 0,
-                iconTheme: const IconThemeData(color: Colors.black),
-                title: Padding(
-                  padding: EdgeInsets.symmetric(
-                    horizontal: getProportionateScreenWidth(
-                      4,
+    return MaterialApp(
+      color : Color(0xFFF2F2F2),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          textTheme:GoogleFonts.lexendTextTheme(
+          )
+      ),
+      home: BaseView<HomeScreenViewModel>(
+          onModelReady: (model) => {
+                model.generateRandomNumber(),
+          },
+          builder: (context, model, child) {
+            return DefaultTabController(
+              length: 1,
+              child: Scaffold(
+                backgroundColor:  Color(0xFFF2F2F2),
+                appBar: AppBar(
+                  backgroundColor: Color(0xF9F9F9F9),
+                  automaticallyImplyLeading: false,
+                  toolbarHeight: getProportionateScreenHeight(60),
+                  //centerTitle: true,
+                  elevation: 0,
+                  title: Padding(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: getProportionateScreenWidth(
+                        4,
+                      ),
+                    ),
+                    child: Row(
+                      mainAxisAlignment:  MainAxisAlignment.start,
+                      children: [
+                        ClipRRect(
+                          borderRadius: new BorderRadius.circular(10.0),
+                          child: Image.network(
+                            '$urlImage',
+                            width:50,
+                            height:50,
+                            errorBuilder: (context, error, stackTrace) {
+                              print(error); //do something
+                              return Container();
+                            },
+                            loadingBuilder: (context,child, loadingProgress) {
+                              if (loadingProgress == null) return child;
+                              return Center(
+                                child: CircularProgressIndicator(
+                                  color: Colors.black,
+                                  value: loadingProgress.expectedTotalBytes != null
+                                      ? loadingProgress.cumulativeBytesLoaded /
+                                      loadingProgress.expectedTotalBytes!
+                                      : null,
+                                ),
+                              );
+                            },
+                          ),
+                        ),
+                        SizedBox(width: 6,),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Hi, ${name!.substring(0,name!.indexOf(' '))}',
+                              style: TextStyle(
+                                color : Colors.black,
+                                fontSize: 24
+                              ),
+                            ),
+                            Text(
+                                new DateFormat.yMMMMd('en_US').format(new DateTime.now()).toString(),
+                            style: TextStyle(
+                              color: Colors.black
+                            ),)
+                          ],
+                        ),
+                        Spacer(),
+                      ],
                     ),
                   ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Hi, Lex',
-                        style: Theme.of(context).textTheme.headline1,
+                  leadingWidth: getProportionateScreenWidth(170),
+                  bottom: PreferredSize(
+                    child: TabBar(
+                      padding: EdgeInsets.only(bottom:10),
+                        indicator: CircleTabIndicator(color: Colors.black, radius: 4),
+                        isScrollable: true,
+                        unselectedLabelColor: Colors.grey.withOpacity(0.3),
+                        indicatorColor: Color(0xFF464646),
+                        tabs: [
+                          Tab(
+                            child: Text(
+                              'Living Room',
+                              style: TextStyle(
+                                color : Colors.black,
+                                  fontSize: 17
+                              ),
+                            ),
+                          ) ,
+                        ]),
+                    preferredSize: Size.fromHeight(
+                      getProportionateScreenHeight(
+                        35,
                       ),
-                      Container(
-                        width: 50,
-                        height: 50,
-                        decoration: const BoxDecoration(
-                          color: Color(0xffdadada),
-                          borderRadius:
-                              BorderRadius.all(Radius.elliptical(45, 45)),
-                        ),
-
-                        child: IconButton(
-                          splashRadius: 25,
-                          icon: const Icon(
-                            FontAwesomeIcons.solidUser,
-                            color: Colors.amber,
-                          ),
-                          onPressed: () {
-                            // Navigator.of(context).pushNamed(EditProfile.routeName);
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => const EditProfile(),));
-                          },
-
-                        ),
-                      ),
-                    ],
+                    ),
                   ),
                 ),
-
-                //leadingWidth: getProportionateScreenWidth(170),
-                bottom: PreferredSize(
-                  child: TabBar(
-                      isScrollable: true,
-                      unselectedLabelColor: Colors.white.withOpacity(0.3),
-                      indicatorColor: const Color(0xFF464646),
-                      tabs: [
-                        Tab(
-                          child: Text(
-                            'Living Room',
-                            style: Theme.of(context).textTheme.headline3,
-                          ),
-                        ),
-                        Tab(
-                          child: Text(
-                            'Dining',
-                            style: Theme.of(context).textTheme.headline4,
-                          ),
-                        ),
-                        Tab(
-                          child: Text(
-                            'Kitchen',
-                            style: Theme.of(context).textTheme.headline4,
-                          ),
-                        ),
-                      ]),
-                  preferredSize: Size.fromHeight(
-                    getProportionateScreenHeight(
-                      35,
+                body: TabBarView(
+                  children: <Widget>[
+                    Body(
+                      model: model,
                     ),
-                  ),
+                  ],
                 ),
+                bottomNavigationBar: CustomBottomNavBar(model),
               ),
-              drawer: SizedBox(
-                 width: getProportionateScreenWidth(270),
-                  child: const Menu()),
-              body: TabBarView(
-                children: <Widget>[
-                  Body(
-                    model: model,
-                  ),
-                  Center(
-                    child: Text(
-                      'To be Built Soon',
-                      style: Theme.of(context).textTheme.headline3,
-                    ),
-                  ),
-                  const Center(
-                    child: Text('under construction'),
-                  ),
-                ],
-              ),
-              bottomNavigationBar: CustomBottomNavBar(model: model),
-            ),
-          );
-        });
+            );
+          }),
+    );
+  }
+}
+
+class CircleTabIndicator extends Decoration {
+  final BoxPainter _painter;
+
+  CircleTabIndicator({required Color color, required double radius}) : _painter = _CirclePainter(color, radius);
+
+  @override
+  BoxPainter createBoxPainter([VoidCallback? onChanged]) {
+    // TODO: implement createBoxPainter
+    return _painter;
+  }
+
+}
+
+class _CirclePainter extends BoxPainter {
+  final Paint _paint;
+  final double radius;
+
+  _CirclePainter(Color color, this.radius)
+      : _paint = Paint()
+    ..color = color
+    ..isAntiAlias = true;
+
+  @override
+  void paint(Canvas canvas, Offset offset, ImageConfiguration cfg) {
+    final Offset circleOffset = offset + Offset(cfg.size!.width / 2, cfg.size!.height - radius);
+    canvas.drawCircle(circleOffset, radius, _paint);
   }
 }

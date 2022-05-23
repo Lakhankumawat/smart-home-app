@@ -1,5 +1,5 @@
 import 'package:domus/config/size_config.dart';
-import 'package:domus/src/screens/login_screen/login_screen.dart';
+import 'package:domus/src/screens/home_screen/home_screen.dart';
 import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
@@ -8,11 +8,11 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(
+      padding: EdgeInsets.symmetric(
         horizontal: 14,
         vertical: 14,
       ),
-      decoration: const BoxDecoration(
+      decoration: BoxDecoration(
         color: Color(0xFF464646),
       ),
       child: Column(
@@ -34,12 +34,12 @@ class Body extends StatelessWidget {
           Text(
             'Smart Home can change\nway you live in the future',
             style: Theme.of(context).textTheme.headline3!.copyWith(
-                  color: const Color(0xFFBDBDBD),
+                  color: Color(0xFFBDBDBD),
                 ),
           ),
           ElevatedButton(
             onPressed: () {
-	            Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(HomeScreen.routeName);
             },
             child: Text(
               'Get Started',
