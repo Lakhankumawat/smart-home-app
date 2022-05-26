@@ -10,8 +10,8 @@ class SwitchTiles extends StatefulWidget {
 class _SwitchTilesState extends State<SwitchTiles> {
   @override
   Widget build(BuildContext context) {
-    // ignore: prefer_const_declarations
-    final bool givenValue = false;
+    
+    const bool givenValue = false;
     return Padding(
       padding: const EdgeInsets.fromLTRB(30, 24.44, 19, 0),
       child: Container(

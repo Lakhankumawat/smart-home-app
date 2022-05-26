@@ -35,7 +35,7 @@ class SettingScreen extends StatelessWidget {
               ),
             ),
             const SettingTile(),
-            SwitchTiles(),
+            const SwitchTiles(),
             const SizedBox(
               height: 24.44,
             ),
