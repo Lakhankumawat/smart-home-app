@@ -17,7 +17,7 @@ import 'package:domus/src/screens/smart_tv/smart_tv.dart';
 
 final Map<String, WidgetBuilder> routes = {
   EditProfile.routeName: (context) => const EditProfile(),
-  HomeScreen.routeName: (context) => const HomeScreen(),
+  HomeScreen.routeName: (context) => HomeScreen(uid: '',),
   LoginScreen.routeName: (context) => const LoginScreen(),
   SavingsScreen.routeName: (context) => const SavingsScreen(),
   SetEventScreen.routeName: (context) => const SetEventScreen(),

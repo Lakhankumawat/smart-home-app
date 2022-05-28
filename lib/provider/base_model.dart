@@ -12,4 +12,6 @@ class BaseModel extends ChangeNotifier {
     _state = viewState;
     notifyListeners();
   }
+
+  Future? getValue({required String value}) => null;
 }
