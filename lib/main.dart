@@ -1,33 +1,33 @@
+// ignore_for_file: prefer_const_constructors
 import 'package:domus/provider/getit.dart';
 import 'package:domus/routes/routes.dart';
 import 'package:domus/service/navigation_service.dart';
-// import 'package:domus/src/screens/about_screen/about_us_screen.dart';
-import 'package:domus/src/screens/splash_screen/splash_screen.dart';
+import 'package:domus/src/logs/login_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
-void main() async {
+Future<void> main() async {
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   setupLocator();
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
 
   final ThemeMode themeMode = ThemeMode.system;
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Domus',
+      title: 'Lossy',
       navigatorKey: getIt<NavigationService>().navigatorKey,
       debugShowCheckedModeBanner: false,
       themeMode: themeMode,
       theme: ThemeData(
         fontFamily: 'Nato Sans',
-        textSelectionTheme: const TextSelectionThemeData(
-          // Set Up for TextFields
-          cursorColor: Colors.grey,
-          selectionColor: Colors.blueGrey,
-        ),
         colorScheme: const ColorScheme.light(
           primary: Color(0xFFF2F2F2),
           //secondary: Color(0xFFF4AE47),
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
           onError: Colors.white,
           brightness: Brightness.light,
         ),
-        textTheme: const TextTheme(
+        textTheme: TextTheme(
           headline1: TextStyle(
             fontStyle: FontStyle.normal,
             fontWeight: FontWeight.bold,
@@ -81,7 +81,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       routes: routes,
-      home: const SplashScreen(),
+      home: LoginScreen(),
     );
   }
 }
