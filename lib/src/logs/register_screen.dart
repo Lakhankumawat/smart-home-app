@@ -330,7 +330,7 @@ class _RegisterScreenState extends State<RegisterScreen> with TickerProviderStat
   @override
   initState() {
     super.initState();
-    controller = AnimationController(vsync: this, duration: Duration(seconds: 2));
+    controller = AnimationController(vsync: this, duration: Duration(seconds: 1));
     colorAnimation = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
         parent: controller!,
