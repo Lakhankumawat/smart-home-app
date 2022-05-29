@@ -43,7 +43,7 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin  
   @override
   void initState() {
     super.initState();
-    controller = AnimationController(vsync: this, duration: Duration(seconds: 5));
+    controller = AnimationController(vsync: this, duration: Duration(seconds: 2));
     colorAnimation = Tween(begin: 0.0, end: 1.0).animate(
         CurvedAnimation(
             parent: controller!,
