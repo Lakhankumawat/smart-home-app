@@ -11,7 +11,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   cloud_firestore: ^3.1.14
   dotted_border: ^2.0.0+2
-  firebase_database: ^9.0.14
+  firebase_database: ^9.0.15
   font_awesome_flutter: ^9.2.0
   flutter_screenutil: ^5.3.1
   flutter:
