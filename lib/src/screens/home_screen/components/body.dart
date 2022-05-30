@@ -45,6 +45,7 @@ class _BodyState extends State<Body> {
             ),
             child: Column(
               children: [
+
                 Padding(
                   padding: EdgeInsets.all(getProportionateScreenHeight(0)),
                   child: WeatherContainer(context: context, model: widget.model!),
@@ -88,6 +89,81 @@ class _BodyState extends State<Body> {
                           deviceCount: '4 devices',
                         ),
                       ),
+
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+                    child: DarkContainer(
+                      itsOn: model.isLightOn,
+                      switchButton: model.lightSwitch,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartLight.routeName);
+                      },
+                      iconAsset: 'assets/icons/svg/light.svg',
+                      device: 'Lightening',
+                      deviceCount: '4 lamps',
+                      switchFav: model.lightFav,
+                      isFav: model.isLightFav,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+                    child: DarkContainer(
+                      itsOn: model.isACON,
+                      switchButton: model.acSwitch,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartAC.routeName);
+                      },
+                      iconAsset: 'assets/icons/svg/ac.svg',
+                      device: 'AC',
+                      deviceCount: '4 devices',
+                      switchFav: model.acFav,
+                      isFav: model.isACFav,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Padding(
+              padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+              child: const MusicWidget(),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+                    child: DarkContainer(
+                      itsOn: model.isSpeakerON,
+                      switchButton: model.speakerSwitch,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartSpeaker.routeName);
+                      },
+                      iconAsset: 'assets/icons/svg/speaker.svg',
+                      device: 'Speaker',
+                      deviceCount: '1 device',
+                      switchFav: model.speakerFav,
+                      isFav: model.isSpeakerFav,
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: Padding(
+                    padding: EdgeInsets.all(getProportionateScreenHeight(5)),
+                    child: DarkContainer(
+                      itsOn: model.isFanON,
+                      switchButton: model.fanSwitch,
+                      onTap: () {
+                        Navigator.of(context).pushNamed(SmartFan.routeName);
+                      },
+                      iconAsset: 'assets/icons/svg/fan.svg',
+                      device: 'Fan',
+                      deviceCount: '2 devices',
+                      switchFav: model.fanFav,
+                      isFav: model.isFanFav,
+
                     ),
                   ],
                 ),

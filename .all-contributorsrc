@@ -115,6 +115,24 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "kashvigarg",
+      "name": "kashu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97344852?v=4",
+      "profile": "https://github.com/kashvigarg",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "seifibrahim32",
+      "name": "Seif Ashraf",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58334300?v=4",
+      "profile": "http://linkedin.com/in/seifashraf10112000",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
