@@ -12,14 +12,28 @@ class HomeScreenViewModel extends BaseModel {
   bool isACON = false;
   bool isSpeakerON = false;
   bool isFanON = false;
-
+  bool isLightFav = false;
+  bool isACFav = false;
+  bool isSpeakerFav = false;
+  bool isFanFav = false;
   void generateRandomNumber() {
     randomNumber = Random().nextInt(8);
     notifyListeners();
   }
-
-  void lightSwitch() {
-    isLightOn = !isLightOn;
+  void lightFav(){
+    isLightFav = !isLightFav;
+    notifyListeners();
+  }
+  void acFav(){
+    isACFav = !isACFav;
+    notifyListeners();
+  }
+  void speakerFav() {
+    isSpeakerFav = !isSpeakerFav;
+    notifyListeners();
+  }
+  void fanFav() {
+    isFanFav = !isFanFav;
     notifyListeners();
   }
 
@@ -35,6 +49,10 @@ class HomeScreenViewModel extends BaseModel {
 
   void fanSwitch() {
     isFanON = !isFanON;
+    notifyListeners();
+  }
+  void lightSwitch() {
+    isLightOn = !isLightOn;
     notifyListeners();
   }
 

@@ -40,6 +40,7 @@ flutter_native_splash:
 flutter:
   uses-material-design: true
   assets:
+    - assets/images/favourite.png
     - assets/images/
     - assets/icons/
     - assets/fonts/
