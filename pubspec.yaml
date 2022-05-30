@@ -45,6 +45,7 @@ flutter:
     - assets/icons/
     - assets/fonts/
     - assets/images/weather/
+    - assets/images/settings/
     - assets/icons/svg/
     - assets/Lottie/
     - assets/icons/menu_icons/
