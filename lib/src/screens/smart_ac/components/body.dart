@@ -11,7 +11,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+      padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -30,14 +30,14 @@ class Body extends StatelessWidget {
                     onTap: () {
                       Navigator.of(context).pop();
                     },
-                    child: const Icon(Icons.arrow_back_outlined)),
+                    child: Icon(Icons.arrow_back_outlined)),
                 Stack(
                   children: [
                     Text(
                       'Air\nConditioner',
                       style: Theme.of(context).textTheme.headline1!.copyWith(
                             fontSize: 45,
-                            color: const Color(0xFFBDBDBD).withOpacity(0.5),
+                            color: Color(0xFFBDBDBD).withOpacity(0.5),
                           ),
                     ),
                     Text(
@@ -63,10 +63,10 @@ class Body extends StatelessWidget {
                 startAngle: 250,
                 angleRange: 360,
                 customColors: CustomSliderColors(
-                  trackColor: const Color(0xFFBDBDBD),
-                  progressBarColor: const Color(0xFF464646),
+                  trackColor: Color(0xFFBDBDBD),
+                  progressBarColor: Color(0xFF464646),
                   // hideShadow: true,
-                  shadowColor: const Color(0xFFBDBDBD).withOpacity(0.1),
+                  shadowColor: Color(0xFFBDBDBD).withOpacity(0.1),
                   shadowMaxOpacity: 1,
                   shadowStep: 25,
                 ),
@@ -95,7 +95,7 @@ class Body extends StatelessWidget {
                   child: Column(
                     children: [
                       Text(
-                        '${value.toInt()}°',
+                        '${value.toInt()}\°',
                         style: Theme.of(context).textTheme.headline1,
                       ),
                       Text(
@@ -121,7 +121,7 @@ class Body extends StatelessWidget {
                     'Samsung AC',
                     style: Theme.of(context).textTheme.headline2,
                   ),
-                  const SizedBox(
+                  SizedBox(
                     height: 5,
                   ),
                   Text(
@@ -131,10 +131,10 @@ class Body extends StatelessWidget {
                 ],
               ),
               Switch.adaptive(
-                inactiveThumbColor: const Color(0xFFE4E4E4),
+                inactiveThumbColor: Color(0xFFE4E4E4),
                 inactiveTrackColor: Colors.white,
                 activeColor: Colors.white,
-                activeTrackColor: const Color(0xFF464646),
+                activeTrackColor: Color(0xFF464646),
                 value: model.isACon,
                 onChanged: (value) {
                   model.acSwitch(value);
@@ -166,7 +166,7 @@ class Body extends StatelessWidget {
             ),
             child: ToggleButtons(
               selectedColor: Colors.white,
-              fillColor: const Color(0xFF464646),
+              fillColor: Color(0xFF464646),
               renderBorder: false,
               borderRadius: BorderRadius.circular(15),
               textStyle: Theme.of(context)
@@ -183,12 +183,12 @@ class Body extends StatelessWidget {
                         'assets/icons/svg/cool.svg',
                         color: model.isSelected[0]
                             ? Colors.white
-                            : const Color(0xFF808080),
+                            : Color(0xFF808080),
                         height: getProportionateScreenHeight(
                           22,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'Cool',
                         textAlign: TextAlign.center,
                       ),
@@ -204,12 +204,12 @@ class Body extends StatelessWidget {
                         'assets/icons/svg/air.svg',
                         color: model.isSelected[1]
                             ? Colors.white
-                            : const Color(0xFF808080),
+                            : Color(0xFF808080),
                         height: getProportionateScreenHeight(
                           22,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'Air',
                         textAlign: TextAlign.center,
                       ),
@@ -225,12 +225,12 @@ class Body extends StatelessWidget {
                         'assets/icons/svg/sun.svg',
                         color: model.isSelected[2]
                             ? Colors.white
-                            : const Color(0xFF808080),
+                            : Color(0xFF808080),
                         height: getProportionateScreenHeight(
                           22,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'Hot',
                         textAlign: TextAlign.center,
                       ),
@@ -246,12 +246,12 @@ class Body extends StatelessWidget {
                         'assets/icons/svg/eco.svg',
                         color: model.isSelected[3]
                             ? Colors.white
-                            : const Color(0xFF808080),
+                            : Color(0xFF808080),
                         height: getProportionateScreenHeight(
                           22,
                         ),
                       ),
-                      const Text(
+                      Text(
                         'Eco',
                         textAlign: TextAlign.center,
                       ),

@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class Body extends StatelessWidget {
   final SmartLightViewModel model;
-  const Body({Key? key, required this.model}) : super(key: key);
+  Body({Key? key, required this.model}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +37,7 @@ class Body extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context).pop();
                             },
-                            child: const Icon(Icons.arrow_back_outlined)),
+                            child: Icon(Icons.arrow_back_outlined)),
                         Stack(
                           children: [
                             Text(
@@ -47,8 +47,7 @@ class Body extends StatelessWidget {
                                   .headline1!
                                   .copyWith(
                                     fontSize: 45,
-                                    color: const Color(0xFFBDBDBD)
-                                        .withOpacity(0.5),
+                                    color: Color(0xFFBDBDBD).withOpacity(0.5),
                                   ),
                             ),
                             Text(
@@ -68,10 +67,10 @@ class Body extends StatelessWidget {
                           height: getProportionateScreenHeight(4),
                         ),
                         Switch.adaptive(
-                          inactiveThumbColor: const Color(0xFFE4E4E4),
+                          inactiveThumbColor: Color(0xFFE4E4E4),
                           inactiveTrackColor: Colors.white,
                           activeColor: Colors.white,
-                          activeTrackColor: const Color(0xFF464646),
+                          activeTrackColor: Color(0xFF464646),
                           value: model.isLightOff,
                           onChanged: (value) {
                             model.lightSwitch(value);
@@ -152,7 +151,7 @@ class Body extends StatelessWidget {
                 ),
                 child: ToggleButtons(
                   selectedColor: Colors.white,
-                  fillColor: const Color(0xFF464646),
+                  fillColor: Color(0xFF464646),
                   renderBorder: false,
                   borderRadius: BorderRadius.circular(15),
                   textStyle: Theme.of(context)
@@ -162,14 +161,14 @@ class Body extends StatelessWidget {
                   children: <Widget>[
                     SizedBox(
                       width: getProportionateScreenWidth(115),
-                      child: const Text(
+                      child: Text(
                         'Warm',
                         textAlign: TextAlign.center,
                       ),
                     ),
                     SizedBox(
                       width: getProportionateScreenWidth(115),
-                      child: const Text(
+                      child: Text(
                         'Cold',
                         textAlign: TextAlign.center,
                       ),
@@ -200,11 +199,10 @@ class Body extends StatelessWidget {
               SliderTheme(
                 data: SliderThemeData(
                     trackHeight: getProportionateScreenHeight(5),
-                    thumbColor: const Color(0xFF464646),
-                    activeTrackColor: const Color(0xFF464646),
+                    thumbColor: Color(0xFF464646),
+                    activeTrackColor: Color(0xFF464646),
                     inactiveTrackColor: Colors.white,
-                    thumbShape:
-                        const RoundSliderThumbShape(enabledThumbRadius: 8)),
+                    thumbShape: RoundSliderThumbShape(enabledThumbRadius: 8)),
                 child: Slider(
                   min: 0,
                   max: 100,

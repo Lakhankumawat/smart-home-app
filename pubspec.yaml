@@ -6,36 +6,43 @@ environment:
   sdk: ">=2.15.1 <3.0.0"
 
 dependencies:
+
   awesome_circular_chart: ^1.0.0
-  cached_network_image: ^3.2.0
   cupertino_icons: ^1.0.2
+  cloud_firestore: ^3.1.14
   dotted_border: ^2.0.0+2
+  firebase_database: ^9.0.15
+  font_awesome_flutter: ^9.2.0
+  flutter_screenutil: ^5.3.1
   flutter:
     sdk: flutter
-  flutter_screenutil: ^5.3.1
+  firebase_auth: ^3.3.18
+  firebase_core: ^1.17.1
+  firebase_storage: ^10.2.15
+  flutter_native_splash: ^2.2.1
   flutter_svg: ^1.0.3
-  font_awesome_flutter: ^9.2.0
   get_it: ^7.2.0
-  image_picker: ^0.8.4+11
-  lottie: ^1.2.2
+  google_fonts: ^2.1.0
+  image_picker: ^0.8.5
+  intl: ^0.17.0
+  lottie: ^1.3.0
   provider: ^6.0.2
-  sleek_circular_slider: ^2.0.1
   sliding_up_panel: ^2.0.0+1
-  syncfusion_flutter_charts: ^20.1.47+1
-  table_calendar: ^3.0.4
+  sleek_circular_slider: ^2.0.1
+  table_calendar: ^3.0.5
+  syncfusion_flutter_charts: ^20.1.56
 
 dev_dependencies:
-  flutter_lints: ^1.0.0
-
-  flutter_native_splash: ^1.3.3
   flutter_test:
     sdk: flutter
+  #flutter_lints: ^1.0.0
 
 flutter_native_splash:
   color: "#ffffff"
   image: assets/images/splash_1024.png
   android: true
   ios: true
+
 
 flutter:
   uses-material-design: true
@@ -44,12 +51,11 @@ flutter:
     - assets/images/
     - assets/icons/
     - assets/fonts/
+    - assets/images/empty_avatar.png
+    - assets/images/login_img.png
     - assets/images/weather/
     - assets/images/settings/
     - assets/icons/svg/
-    - assets/Lottie/
-    - assets/icons/menu_icons/
-    - assets/images/movies/
 
   fonts:
     - family: "Noto Sans"
@@ -63,15 +69,4 @@ flutter:
         - asset: "assets/fonts/Poppins-700.ttf"
           style: "normal"
           weight: 700
-    - family: ABeeZee
-      fonts:
-        - asset: assets/fonts/ABeeZee-Italic.ttf
-          style: italic
-        - asset: assets/fonts/ABeeZee-Regular.ttf
-          style: normal
-    - family: Lexend
-      fonts:
-        - asset: assets/fonts/Lexend-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Lexend-ExtraLight.ttf
-          weight: 200
+

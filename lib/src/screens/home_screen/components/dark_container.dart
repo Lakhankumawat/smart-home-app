@@ -9,8 +9,6 @@ class DarkContainer extends StatelessWidget {
   final String deviceCount;
   final bool itsOn;
   final VoidCallback switchButton;
-  final bool isFav;
-  final VoidCallback switchFav;
   const DarkContainer({
     Key? key,
     required this.iconAsset,
@@ -19,8 +17,6 @@ class DarkContainer extends StatelessWidget {
     required this.deviceCount,
     required this.itsOn,
     required this.switchButton,
-    required this.isFav,
-    required this.switchFav,
   }) : super(key: key);
 
   @override
@@ -63,13 +59,9 @@ class DarkContainer extends StatelessWidget {
                       color: itsOn ? Colors.amber : const Color(0xFF808080),
                     ),
                   ),
-                  GestureDetector(
-                    onTap: switchFav,
-                    child:  Icon(
-                      Icons.star_rounded,
-                      color: isFav ?  Colors.amber:const Color(0xFF808080),
-                      // color: Color(0xFF808080),
-                    ),
+                  const Icon(
+                    Icons.star_rounded,
+                    color: Color(0xFF808080),
                   ),
                 ],
               ),
