@@ -20,14 +20,14 @@ class SmartSpeaker extends StatelessWidget {
               minHeight: getProportionateScreenHeight(70),
               controller: model.pc,
               backdropEnabled: true,
-              boxShadow: [],
+              boxShadow: const [],
               body: Scaffold(
-                backgroundColor: Color(0xFFF2F2F2),
+                backgroundColor: const Color(0xFFF2F2F2),
                 body: Body(
                   model: model,
                 ),
               ),
-              panel: ExpandableBottomSheet(context: context, model: model),
+              panel: ExpandableBottomSheet(model: model),
             ),
           );
         });
