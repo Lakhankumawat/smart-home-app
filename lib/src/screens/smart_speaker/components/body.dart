@@ -157,7 +157,6 @@ class Body extends StatelessWidget {
                       ),
                       style: ElevatedButton.styleFrom(
                         elevation: 0.0,
-                        primary: const Color(0xFF464646),
                         shape: const CircleBorder(),
                         padding: const EdgeInsets.all(8),
                       ),

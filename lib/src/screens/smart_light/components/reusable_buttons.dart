@@ -24,7 +24,7 @@ class ResuableButton extends StatelessWidget {
                   ),
             ),
             style: ElevatedButton.styleFrom(
-              primary: const Color(0xFF464646),
+              //primary: const Color(0xFF464646),
               padding: const EdgeInsets.symmetric(vertical: 15),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12), // <-- Radius
@@ -38,7 +38,7 @@ class ResuableButton extends StatelessWidget {
               style: Theme.of(context).textTheme.headline2,
             ),
             style: OutlinedButton.styleFrom(
-              primary: const Color(0xFF464646),
+              // primary: const Color(0xFF464646),
               padding: const EdgeInsets.symmetric(vertical: 15),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
