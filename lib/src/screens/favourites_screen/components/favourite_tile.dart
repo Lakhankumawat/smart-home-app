@@ -34,12 +34,12 @@ class FavouriteTile extends StatelessWidget {
         // margin: EdgeInsets.only(bottom: 10),
         height: MediaQuery.of(context).size.height / 5,
         decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(20),
-            color: const Color(0xffededed),
-            // color: itsOn? const Color.fromRGBO(0, 0, 0, 1)
-            // ? const Color.fromRGBO(0, 0, 0, 1)
-            // ? Colors.white
-            //     : const Color(0xffededed)
+          borderRadius: BorderRadius.circular(20),
+          color: const Color(0xffededed),
+          // color: itsOn? const Color.fromRGBO(0, 0, 0, 1)
+          // ? const Color.fromRGBO(0, 0, 0, 1)
+          // ? Colors.white
+          //     : const Color(0xffededed)
         ),
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -65,7 +65,7 @@ class FavouriteTile extends StatelessWidget {
                     ),
                     child: SvgPicture.asset(
                       iconAsset,
-                      color:const Color(0xFF808080) ,
+                      color: const Color(0xFF808080),
                       // color: itsOn ? Colors.amber : ,
                     ),
                   ),
@@ -75,10 +75,10 @@ class FavouriteTile extends StatelessWidget {
                   Text(
                     device,
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
-                      color: Colors.black,
-                      // color: itsOn ? Colors.white : Colors.black,
-                    ),
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                          color: Colors.black,
+                          // color: itsOn ? Colors.white : Colors.black,
+                        ),
                   ),
                   SizedBox(
                     width: getProportionateScreenWidth(100),
@@ -94,7 +94,7 @@ class FavouriteTile extends StatelessWidget {
                         // color:const Color(0xffd6d6d6),
                         // color: itsOn ? Colors.black : ,
                         border: Border.all(
-                          color:Colors.grey,
+                          color: Colors.grey,
                           // color: const Color.fromRGBO(255, 255, 255, 1),
                           width: itsOn ? 2 : 0,
                         ),
@@ -115,14 +115,17 @@ class FavouriteTile extends StatelessWidget {
                     ),
                     onTap: switchButton,
                   ),
-                  const SizedBox(width: 15,)
+                  const SizedBox(
+                    width: 15,
+                  )
                 ],
               ),
-
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 15,),
+                  const SizedBox(
+                    height: 15,
+                  ),
                   Text(
                     deviceCount,
                     textAlign: TextAlign.left,
@@ -141,10 +144,10 @@ class FavouriteTile extends StatelessWidget {
                   Text(
                     itsOn ? 'On' : 'Off',
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
-                      color: Colors.black,
-                      // color: itsOn ? Colors.white : Colors.black,
-                    ),
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                          color: Colors.black,
+                          // color: itsOn ? Colors.white : Colors.black,
+                        ),
                   ),
                   SizedBox(
                     width: getProportionateScreenWidth(160),
@@ -154,13 +157,14 @@ class FavouriteTile extends StatelessWidget {
                     height: 25,
                     width: 70,
                     decoration: BoxDecoration(
-                      color:Colors.grey.shade300 ,
+                      color: Colors.grey.shade300,
                       borderRadius: BorderRadius.circular(10),
                     ),
                     child: Center(
-                      child: Text("Kitchen",
+                      child: Text(
+                        "Kitchen",
                         style: TextStyle(
-                          color:Colors.grey.shade700,
+                          color: Colors.grey.shade700,
                         ),
                       ),
                     ),

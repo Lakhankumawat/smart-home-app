@@ -43,14 +43,14 @@ class ColorPickerSheet extends StatelessWidget {
               children: [
                 Text(
                   'Color',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 Text(
                   'Pick Light Color',
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                 ),
               ],
             ),

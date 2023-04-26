@@ -45,14 +45,14 @@ class ExpandableBottomSheet extends StatelessWidget {
                   children: [
                     Text(
                       'Schedule',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
                     const SizedBox(
                       height: 5,
                     ),
                     Text(
                       'Set schedule speaker',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     )
                   ],
                 ),
@@ -80,11 +80,11 @@ class ExpandableBottomSheet extends StatelessWidget {
               children: [
                 Text(
                   'Volume',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
                 Text(
                   '${model.speakerVolume.toInt()}%',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
               ],
             ),
@@ -110,11 +110,11 @@ class ExpandableBottomSheet extends StatelessWidget {
               children: [
                 Text(
                   'Off',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   '100%',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),
@@ -129,14 +129,14 @@ class ExpandableBottomSheet extends StatelessWidget {
                   children: [
                     Text(
                       'Marshell sound dock',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
                     const SizedBox(
                       height: 5,
                     ),
                     Text(
                       'on',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     )
                   ],
                 ),
@@ -163,14 +163,14 @@ class ExpandableBottomSheet extends StatelessWidget {
                   children: [
                     Text(
                       'Bass',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
                     const SizedBox(
                       height: 5,
                     ),
                     Text(
                       'off',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     )
                   ],
                 ),

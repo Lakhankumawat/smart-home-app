@@ -19,7 +19,7 @@ class ResuableButton extends StatelessWidget {
             onPressed: onPress,
             child: Text(
               buttonText,
-              style: Theme.of(context).textTheme.headline2!.copyWith(
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
                     color: Colors.white,
                   ),
             ),
@@ -35,7 +35,7 @@ class ResuableButton extends StatelessWidget {
             onPressed: onPress,
             child: Text(
               buttonText,
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             style: OutlinedButton.styleFrom(
               // primary: const Color(0xFF464646),

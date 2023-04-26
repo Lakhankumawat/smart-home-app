@@ -45,14 +45,14 @@ class ExpandableBottomSheet extends StatelessWidget {
                   children: [
                     Text(
                       'Schedule',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: Theme.of(context).textTheme.displayMedium,
                     ),
                     const SizedBox(
                       height: 5,
                     ),
                     Text(
                       'Set schedule room fan',
-                      style: Theme.of(context).textTheme.headline5,
+                      style: Theme.of(context).textTheme.headlineSmall,
                     )
                   ],
                 ),
@@ -80,11 +80,11 @@ class ExpandableBottomSheet extends StatelessWidget {
               children: [
                 Text(
                   'Timer',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
                 Text(
                   'time',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
               ],
             ),
@@ -93,23 +93,23 @@ class ExpandableBottomSheet extends StatelessWidget {
               children: [
                 Text(
                   '2H',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   '4H',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   '6H',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   '8H',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
                 Text(
                   '10H',
-                  style: Theme.of(context).textTheme.bodyText1,
+                  style: Theme.of(context).textTheme.bodyLarge,
                 ),
               ],
             ),

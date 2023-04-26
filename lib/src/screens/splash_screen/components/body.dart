@@ -27,23 +27,23 @@ class Body extends StatelessWidget {
           ),
           Text(
             'Sweet & Smart Home',
-            style: Theme.of(context).textTheme.headline1!.copyWith(
+            style: Theme.of(context).textTheme.displayLarge!.copyWith(
                   color: Colors.white,
                 ),
           ),
           Text(
             'Smart Home can change\nway you live in the future',
-            style: Theme.of(context).textTheme.headline3!.copyWith(
+            style: Theme.of(context).textTheme.displaySmall!.copyWith(
                   color: const Color(0xFFBDBDBD),
                 ),
           ),
           ElevatedButton(
             onPressed: () {
-	            Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);
+              Navigator.of(context).pushReplacementNamed(LoginScreen.routeName);
             },
             child: Text(
               'Get Started',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             style: ElevatedButton.styleFrom(
               elevation: 0,

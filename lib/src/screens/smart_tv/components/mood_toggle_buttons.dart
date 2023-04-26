@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:domus/view/smart_tv_view_model.dart';
 
 class MoodToggleButtons extends StatelessWidget {
-  const MoodToggleButtons({Key? key, required this.model})
-      : super(key: key);
+  const MoodToggleButtons({Key? key, required this.model}) : super(key: key);
 
   final SmartTvViewModel model;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding:  EdgeInsets.symmetric(
+      padding: EdgeInsets.symmetric(
         horizontal: getProportionateScreenWidth(
           15,
         ),
@@ -21,7 +20,7 @@ class MoodToggleButtons extends StatelessWidget {
         children: [
           Text(
             'Mood',
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           SizedBox(
             height: getProportionateScreenHeight(9),
@@ -69,7 +68,7 @@ class MoodToggleButtons extends StatelessWidget {
                 ),
               ],
               onPressed: (int index) {
-                model.onToggleTapped(index,context);
+                model.onToggleTapped(index, context);
               },
               isSelected: model.isSelected,
             ),
