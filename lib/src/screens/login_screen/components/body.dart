@@ -103,7 +103,7 @@ class Body extends StatelessWidget {
           ),
         ),
         SizedBox(height: getProportionateScreenHeight(10)),
-        const Center(child: Text('Don\'t have an account yet?'))
+        const Center(child: Text('Don\'t have an account yet? '))
       ],
     );
   }
