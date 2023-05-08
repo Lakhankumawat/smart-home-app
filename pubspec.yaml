@@ -12,6 +12,7 @@ dependencies:
   dotted_border: ^2.0.0+2
   flutter:
     sdk: flutter
+  flutter_plugin_android_lifecycle: ^2.0.11
   flutter_screenutil: ^5.3.1
   flutter_svg: ^1.0.3
   font_awesome_flutter: ^9.2.0
