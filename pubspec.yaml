@@ -13,21 +13,21 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_screenutil: ^5.3.1
-  flutter_svg: ^1.0.3
-  font_awesome_flutter: ^9.2.0
+  flutter_svg: ^2.0.7
+  font_awesome_flutter: ^10.4.0
   get_it: ^7.2.0
   image_picker: ^0.8.4+11
-  lottie: ^1.2.2
+  lottie: ^2.4.0
   provider: ^6.0.2
   sleek_circular_slider: ^2.0.1
   sliding_up_panel: ^2.0.0+1
-  syncfusion_flutter_charts: ^20.1.47+1
+  syncfusion_flutter_charts: ^22.1.34
   table_calendar: ^3.0.4
 
 dev_dependencies:
-  flutter_lints: ^1.0.0
+  flutter_lints: ^2.0.1
 
-  flutter_native_splash: ^1.3.3
+  flutter_native_splash: ^2.3.1
   flutter_test:
     sdk: flutter
 
