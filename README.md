@@ -1,4 +1,5 @@
-<img  align="left" src="http://estruyf-github.azurewebsites.net/api/VisitorHit?user=LakhanKumawat&repo=smart-home-app&countColorcountColor&countColor=%237B1E7B"/><img align="right" src="https://img.shields.io/github/repo-size/Lakhankumawat/smart-home-app?style=for-the-badge&logo=appveyor" alt="GitHub repo size"/>
+<img  align="left" src="https://komarev.com/ghpvc/?username=Lakhankumawat&repo=smart-home-app&style=for-the-badge&label=VISITORS+COUNT&color=%237B1E7B"/>
+<img align="right" src="https://img.shields.io/github/repo-size/Lakhankumawat/smart-home-app?style=for-the-badge&logo=appveyor" alt="GitHub repo size"/>
 
 
 
