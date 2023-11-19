@@ -23,6 +23,7 @@ dependencies:
   sliding_up_panel: ^2.0.0+1
   syncfusion_flutter_charts: ^23.1.44
   table_calendar: ^3.0.4
+  mqtt_client: ^10.0.0
 
 dev_dependencies:
   flutter_lints: ^3.0.1
