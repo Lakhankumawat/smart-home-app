@@ -55,11 +55,11 @@ class _UploadImageState extends State<UploadImage> {
                 getImageFromGallery();
               },
               child: ClipRRect(
+                borderRadius: BorderRadius.circular(35),
                 child: Image.file(
                   _image!,
                   fit: BoxFit.cover,
                 ),
-                borderRadius: BorderRadius.circular(35),
               ),
             ),
     );

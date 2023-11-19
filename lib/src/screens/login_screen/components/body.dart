@@ -26,8 +26,8 @@ class Body extends StatelessWidget {
 				        crossAxisAlignment: CrossAxisAlignment.start,
 
 				      children: [
-				      	Text('SMART',style: Theme.of(context).textTheme.headline2!.copyWith(color: Colors.black, fontSize: 33),),
-					      Text('HOME', style:  Theme.of(context).textTheme.headline1!.copyWith(color: Colors.black, fontSize: 64),)
+				      	Text('SMART',style: Theme.of(context).textTheme.displayMedium!.copyWith(color: Colors.black, fontSize: 33),),
+					      Text('HOME', style:  Theme.of(context).textTheme.displayLarge!.copyWith(color: Colors.black, fontSize: 64),)
 				      ],
 		        )),
 	        ],
@@ -75,8 +75,8 @@ class Body extends StatelessWidget {
 		          padding: const EdgeInsets.all(16.0),
 		          decoration:BoxDecoration(
 			          color: const Color(0xFF464646),
-			          borderRadius:BorderRadius.circular(70.0), ),
-		          child: const Text('Get Started', style: TextStyle(color: Colors.white),),alignment: Alignment.center,),
+			          borderRadius:BorderRadius.circular(70.0), ),alignment: Alignment.center,
+		          child: const Text('Get Started', style: TextStyle(color: Colors.white),),),
 	            ),
 	          ),
 	          SizedBox(height: getProportionateScreenHeight(10)),

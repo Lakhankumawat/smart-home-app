@@ -9,9 +9,9 @@ class StatsDeviceConsumptionChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return StatsChart(
       title: 'Consumption by device',
-      subtitle: Row(
+      subtitle: const Row(
         crossAxisAlignment: CrossAxisAlignment.end,
-        children: const [
+        children: [
           Icon(
             Icons.warning,
             size: 18,

@@ -26,39 +26,39 @@ class ConnectSpeaker extends StatelessWidget {
           ),
           Text(
             'Kakao Mini C',
-            style: Theme.of(context).textTheme.headline1,
+            style: Theme.of(context).textTheme.displayLarge,
           ),
           Text(
             'Smart Speaker',
-            style: Theme.of(context).textTheme.headline3,
+            style: Theme.of(context).textTheme.displaySmall,
           ),
           SizedBox(
             height: getProportionateScreenHeight(40),
           ),
           Material(
+            color: Colors.transparent,
             child: Image.asset(
               'assets/images/kakao_mini.png',
               height: getProportionateScreenHeight(300),
               width: getProportionateScreenWidth(150),
               fit: BoxFit.contain,
             ),
-            color: Colors.transparent,
           ),
           SizedBox(
             height: getProportionateScreenHeight(40),
           ),
           OutlinedButton(
             onPressed: () {},
-            child: Text(
-              'Connect',
-              style: Theme.of(context).textTheme.headline3,
-            ),
             style: OutlinedButton.styleFrom(
               padding: EdgeInsets.symmetric(
                 horizontal: getProportionateScreenWidth(80),
                 vertical: getProportionateScreenHeight(10),
               ),
               shape: const StadiumBorder(),
+            ),
+            child: Text(
+              'Connect',
+              style: Theme.of(context).textTheme.displaySmall,
             ),
           )
         ],

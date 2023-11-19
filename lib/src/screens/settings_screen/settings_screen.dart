@@ -10,11 +10,11 @@ class SettingScreen extends StatelessWidget {
     return Material(
         color: const Color.fromRGBO(250, 250, 250, 1),
         child: ListView(
-          children: [
+          children: const [
             Padding(
-              padding: const EdgeInsets.fromLTRB(32, 64, 48, 20),
+              padding: EdgeInsets.fromLTRB(32, 64, 48, 20),
               child: Row(
-                children: const [
+                children: [
                   Text(
                     "Settings",
                     style: TextStyle(
@@ -34,12 +34,12 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-            const SettingTile(),
-            const SwitchTiles(),
-            const SizedBox(
+            SettingTile(),
+            SwitchTiles(),
+            SizedBox(
               height: 24.44,
             ),
-            const SettingTile(),
+            SettingTile(),
           ],
         ));
   }

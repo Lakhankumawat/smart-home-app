@@ -22,7 +22,7 @@ class AdvanceSettings extends StatelessWidget {
           children: [
             Text(
               'Tone & intensity',
-              style: Theme.of(context).textTheme.headline2,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
             const Icon(Icons.arrow_forward_ios_outlined)
           ],

@@ -23,11 +23,11 @@ class Intensity extends StatelessWidget {
             children: [
               Text(
                 'Intensity',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.displayMedium,
               ),
               Text(
                 '${model.lightIntensity.toInt()}%',
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.displayMedium,
               ),
             ],
           ),
@@ -60,11 +60,11 @@ class Intensity extends StatelessWidget {
             children: [
               Text(
                 'Off',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
               Text(
                 '100%',
-                style: Theme.of(context).textTheme.bodyText1,
+                style: Theme.of(context).textTheme.bodyLarge,
               ),
             ],
           ),

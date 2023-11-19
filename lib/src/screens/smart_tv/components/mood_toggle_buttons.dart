@@ -21,7 +21,7 @@ class MoodToggleButtons extends StatelessWidget {
         children: [
           Text(
             'Mood',
-            style: Theme.of(context).textTheme.headline2,
+            style: Theme.of(context).textTheme.displayMedium,
           ),
           SizedBox(
             height: getProportionateScreenHeight(9),
@@ -36,6 +36,10 @@ class MoodToggleButtons extends StatelessWidget {
               fillColor: const Color(0xFF464646),
               renderBorder: false,
               borderRadius: BorderRadius.circular(15),
+              onPressed: (int index) {
+                model.onToggleTapped(index,context);
+              },
+              isSelected: model.isSelected,
               children: <Widget>[
                 SizedBox(
                   width: getProportionateScreenWidth(80),
@@ -68,10 +72,6 @@ class MoodToggleButtons extends StatelessWidget {
                   ),
                 ),
               ],
-              onPressed: (int index) {
-                model.onToggleTapped(index,context);
-              },
-              isSelected: model.isSelected,
             ),
           ),
           SizedBox(

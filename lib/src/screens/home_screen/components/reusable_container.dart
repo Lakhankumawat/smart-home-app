@@ -49,7 +49,7 @@ class ReusableCard extends StatelessWidget {
               onTap: onTap,
               child: Text(
                 title,
-                style: Theme.of(context).textTheme.headline2,
+                style: Theme.of(context).textTheme.displayMedium,
               ),
             ),
           ],

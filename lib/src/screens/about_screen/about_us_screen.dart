@@ -20,10 +20,10 @@ class AboutUs extends StatelessWidget {
           trailing: SvgPicture.asset('assets/icons/svg/info.svg')
           // Icon(Icons.info, color: Colors.black, size: 32,),
         ),
-        Padding(
-          padding: const EdgeInsets.only(top: 12),
+        const Padding(
+          padding: EdgeInsets.only(top: 12),
           child: Center(child: Column(
-            children: const [
+            children: [
               Text('Domus',style: TextStyle(fontFamily: 'Lexend',
                 fontSize: 48,
                 fontWeight: FontWeight.w700

@@ -79,7 +79,7 @@ class DarkContainer extends StatelessWidget {
                   Text(
                     device,
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                           color: itsOn ? Colors.white : Colors.black,
                         ),
                   ),
@@ -101,7 +101,7 @@ class DarkContainer extends StatelessWidget {
                   Text(
                     itsOn ? 'On' : 'Off',
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                           color: itsOn ? Colors.white : Colors.black,
                         ),
                   ),

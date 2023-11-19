@@ -75,7 +75,7 @@ class FavouriteTile extends StatelessWidget {
                   Text(
                     device,
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                       color: Colors.black,
                       // color: itsOn ? Colors.white : Colors.black,
                     ),
@@ -84,6 +84,7 @@ class FavouriteTile extends StatelessWidget {
                     width: getProportionateScreenWidth(100),
                   ),
                   GestureDetector(
+                    onTap: switchButton,
                     child: Container(
                       width: 48,
                       height: 25.6,
@@ -113,7 +114,6 @@ class FavouriteTile extends StatelessWidget {
                         ],
                       ),
                     ),
-                    onTap: switchButton,
                   ),
                   const SizedBox(width: 15,)
                 ],
@@ -141,7 +141,7 @@ class FavouriteTile extends StatelessWidget {
                   Text(
                     itsOn ? 'On' : 'Off',
                     textAlign: TextAlign.left,
-                    style: Theme.of(context).textTheme.headline2!.copyWith(
+                    style: Theme.of(context).textTheme.displayMedium!.copyWith(
                       color: Colors.black,
                       // color: itsOn ? Colors.white : Colors.black,
                     ),

@@ -41,11 +41,11 @@ class MusicWidget extends StatelessWidget {
               children: [
                 Text(
                   'Music',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: Theme.of(context).textTheme.displayMedium,
                 ),
                 Text(
                   'Give a Little Bit',
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             ),

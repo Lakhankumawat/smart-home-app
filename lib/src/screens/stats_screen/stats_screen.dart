@@ -37,8 +37,8 @@ class StatsScreen extends StatelessWidget {
         ],
         elevation: 0,
       ),
-      body: Column(
-        children: const [
+      body: const Column(
+        children: [
           TypeSelection(),
           SizedBox(height: 15),
           Expanded(

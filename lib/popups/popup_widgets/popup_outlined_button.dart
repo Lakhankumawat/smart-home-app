@@ -14,10 +14,6 @@ class PopupOutlinedButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return OutlinedButton(
       onPressed: onPressed,
-      child: Text(
-        text,
-        style: const TextStyle(color: Color(0xFF464646)),
-      ),
       style: ButtonStyle(
         side: MaterialStateProperty.all(
           const BorderSide(
@@ -25,6 +21,10 @@ class PopupOutlinedButton extends StatelessWidget {
             width: 1.5,
           ),
         ),
+      ),
+      child: Text(
+        text,
+        style: const TextStyle(color: Color(0xFF464646)),
       ),
     );
   }

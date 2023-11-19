@@ -17,12 +17,6 @@ class ResuableButton extends StatelessWidget {
     return active
         ? ElevatedButton(
             onPressed: onPress,
-            child: Text(
-              buttonText,
-              style: Theme.of(context).textTheme.headline2!.copyWith(
-                    color: Colors.white,
-                  ),
-            ),
             style: ElevatedButton.styleFrom(
               //primary: const Color(0xFF464646),
               padding: const EdgeInsets.symmetric(vertical: 15),
@@ -30,19 +24,25 @@ class ResuableButton extends StatelessWidget {
                 borderRadius: BorderRadius.circular(12), // <-- Radius
               ),
             ),
+            child: Text(
+              buttonText,
+              style: Theme.of(context).textTheme.displayMedium!.copyWith(
+                    color: Colors.white,
+                  ),
+            ),
           )
         : OutlinedButton(
             onPressed: onPress,
-            child: Text(
-              buttonText,
-              style: Theme.of(context).textTheme.headline2,
-            ),
             style: OutlinedButton.styleFrom(
               // primary: const Color(0xFF464646),
               padding: const EdgeInsets.symmetric(vertical: 15),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(12),
               ),
+            ),
+            child: Text(
+              buttonText,
+              style: Theme.of(context).textTheme.displayMedium,
             ),
           );
   }

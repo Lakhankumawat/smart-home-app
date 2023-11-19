@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
                     children: [
                       Text(
                         'Hi, Lex',
-                        style: Theme.of(context).textTheme.headline1,
+                        style: Theme.of(context).textTheme.displayLarge,
                       ),
                       SizedBox(
                         width: getProportionateScreenWidth(60),
@@ -99,6 +99,11 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
                 bottom: PreferredSize(
+                  preferredSize: Size.fromHeight(
+                    getProportionateScreenHeight(
+                      35,
+                    ),
+                  ),
                   child: TabBar(
                       isScrollable: true,
                       unselectedLabelColor: Colors.white.withOpacity(0.3),
@@ -107,27 +112,22 @@ class HomeScreen extends StatelessWidget {
                         Tab(
                           child: Text(
                             'Living Room',
-                            style: Theme.of(context).textTheme.headline3,
+                            style: Theme.of(context).textTheme.displaySmall,
                           ),
                         ),
                         Tab(
                           child: Text(
                             'Dining',
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineMedium,
                           ),
                         ),
                         Tab(
                           child: Text(
                             'Kitchen',
-                            style: Theme.of(context).textTheme.headline4,
+                            style: Theme.of(context).textTheme.headlineMedium,
                           ),
                         ),
                       ]),
-                  preferredSize: Size.fromHeight(
-                    getProportionateScreenHeight(
-                      35,
-                    ),
-                  ),
                 ),
               ),
               drawer: SizedBox(
@@ -141,7 +141,7 @@ class HomeScreen extends StatelessWidget {
                   Center(
                     child: Text(
                       'To be Built Soon',
-                      style: Theme.of(context).textTheme.headline3,
+                      style: Theme.of(context).textTheme.displaySmall,
                     ),
                   ),
                   const Center(

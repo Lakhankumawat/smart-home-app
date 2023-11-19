@@ -14,12 +14,12 @@ class PopupFilledButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.all(const Color(0xFF464646)),
+      ),
       child: Text(
         text,
         style: const TextStyle(color: Colors.white),
-      ),
-      style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all(const Color(0xFF464646)),
       ),
     );
   }
